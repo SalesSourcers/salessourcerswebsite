@@ -241,12 +241,12 @@ function setVideoModal(open, videoId = "", title = "Client video testimonial") {
   videoModal.setAttribute("aria-hidden", String(!open));
   document.body.classList.toggle("modal-open", open || calendlyModal.classList.contains("open") || offerModal.classList.contains("open"));
   videoFrame.title = title;
-  videoFrame.src = open ? `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1` : "";
+  const origin = window.location.origin.startsWith("http") ? `&origin=${encodeURIComponent(window.location.origin)}` : "";
+  videoFrame.src = open ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1${origin}` : "";
 }
 
 document.querySelectorAll("[data-youtube-id]").forEach((trigger) => {
   trigger.addEventListener("click", (event) => {
-    if (event.target.closest("iframe")) return;
     setVideoModal(true, trigger.dataset.youtubeId, trigger.dataset.videoTitle || "Client video testimonial");
   });
 });
