@@ -42,6 +42,7 @@ let testimonialsExpanded = false;
 let offerAutoOpened = false;
 let popupEngaged = false;
 let popupShownThisSession = false;
+const halfScreenCases = window.matchMedia("(max-width: 980px)");
 
 const methodContent = [
   {
@@ -197,11 +198,12 @@ methodSteps.forEach((step, index) => {
 selectMethodStep(0);
 
 function updateCaseStudies() {
-  caseStudies.forEach((study) => {
+  const collapsedCaseCount = halfScreenCases.matches ? 4 : 3;
+  caseStudies.forEach((study, index) => {
     const categories = study.dataset.category.split(" ");
     const matchesFilter = selectedCaseFilter === "all" || categories.includes(selectedCaseFilter);
-    const isPrimary = study.dataset.primary === "true";
-    study.hidden = !matchesFilter || (selectedCaseFilter === "all" && !casesExpanded && !isPrimary);
+    const isVisibleWhenCollapsed = index < collapsedCaseCount;
+    study.hidden = !matchesFilter || (selectedCaseFilter === "all" && !casesExpanded && !isVisibleWhenCollapsed);
   });
   caseMore.hidden = selectedCaseFilter !== "all";
   caseMore.setAttribute("aria-expanded", String(casesExpanded));
@@ -224,6 +226,7 @@ caseMore.addEventListener("click", () => {
 });
 
 updateCaseStudies();
+halfScreenCases.addEventListener("change", updateCaseStudies);
 
 testimonialMore.addEventListener("click", () => {
   testimonialsExpanded = !testimonialsExpanded;
