@@ -245,7 +245,8 @@ function setVideoModal(open, videoId = "", title = "Client video testimonial") {
 }
 
 document.querySelectorAll("[data-youtube-id]").forEach((trigger) => {
-  trigger.addEventListener("click", () => {
+  trigger.addEventListener("click", (event) => {
+    if (event.target.closest("iframe")) return;
     setVideoModal(true, trigger.dataset.youtubeId, trigger.dataset.videoTitle || "Client video testimonial");
   });
 });
