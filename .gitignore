@@ -1,0 +1,11 @@
+*.log
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+.env.*
+salessourcers-website-review.zip
+linkedin-app/
+linkedin-strategy/
+outputs/
+qa-team-abel.png
