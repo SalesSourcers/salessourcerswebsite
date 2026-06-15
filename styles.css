@@ -905,7 +905,7 @@ main { display: flex; flex-direction: column; }
 .offer-modal-card { position: relative; z-index: 2; width: min(650px,100%); max-height: calc(100vh - 40px); padding: 38px; overflow: auto; border-radius: 22px; background: white; box-shadow: 0 40px 100px rgba(0,0,0,.35); }
 .offer-modal-card.strategy-complete { width: min(920px,100%); padding: 30px; }
 .offer-modal-card.strategy-complete .modal-footnote { display: none; }
-.modal-close { position: absolute; top: 15px; right: 15px; width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; background: white; font-size: 23px; cursor: pointer; }
+.modal-close { position: absolute; top: 15px; right: 15px; width: 36px; height: 36px; padding: 0; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: white; font-size: 21px; line-height: 1; cursor: pointer; }
 .modal-label { color: #a56560; font-family: "DM Mono"; font-size: 8px; letter-spacing: .1em; }
 .offer-modal-card h2 { max-width: 520px; margin: 15px 0; font-size: 47px; line-height: 1.03; letter-spacing: -.055em; }
 .offer-modal-card > p { color: #777; font-size: 13px; }
@@ -914,7 +914,7 @@ main { display: flex; flex-direction: column; }
 .modal-deliverables { margin: 24px 0; display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; }
 .modal-deliverables > div { padding: 16px; border-radius: 10px; background: var(--off-white); }
 .modal-deliverables span, .modal-deliverables strong, .modal-deliverables small { display: block; }
-.modal-deliverables span { color: var(--rose); font-family: "DM Mono"; font-size: 8px; }
+.modal-deliverables span { color: var(--rose); font-family: "DM Mono"; font-size: 10px; font-weight: 700; letter-spacing: .08em; }
 .modal-deliverables strong { margin: 28px 0 5px; font-size: 11px; }
 .modal-deliverables small { color: #888; font-size: 8px; }
 .offer-modal-card .button { width: 100%; }

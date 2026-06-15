@@ -29,7 +29,7 @@ img { display:block; max-width:100%; }
 .case-hero-side { display:grid; gap:14px; }
 .outcome-card { padding:26px; border:1px solid var(--line); border-radius:20px; background:white; box-shadow:0 20px 60px rgba(0,0,0,.06); }
 .outcome-card span,.outcome-card strong,.outcome-card small { display:block; }
-.outcome-card span { color:#999; font-family:"DM Mono"; font-size:8px; letter-spacing:.1em; }
+.outcome-card span { color:#999; font-family:"DM Mono"; font-size:10px; font-weight:700; letter-spacing:.1em; }
 .outcome-card strong { margin:34px 0 7px; color:var(--accent); font-size:45px; line-height:1; letter-spacing:-.06em; }
 .outcome-card small { color:#777; font-size:10px; }
 .company-profile { margin-top:58px; display:grid; grid-template-columns:1.15fr 1fr .75fr 1.2fr; overflow:hidden; gap:1px; border:1px solid var(--line); border-radius:16px; background:var(--line); }
@@ -58,18 +58,20 @@ img { display:block; max-width:100%; }
 .context-section { padding-top:100px; padding-bottom:100px; display:grid; grid-template-columns:1.05fr .95fr; gap:95px; background:white; }
 .challenge-list { display:grid; gap:10px; align-content:end; }
 .challenge-list article { padding:23px; display:grid; grid-template-columns:42px 1fr; gap:15px; border:1px solid var(--line); border-radius:14px; background:var(--soft); }
-.challenge-list span,.campaign-grid > article > span,.lessons-grid span { color:var(--accent); font-family:"DM Mono"; font-size:9px; }
+.challenge-list span,.campaign-grid > article > span,.lessons-grid span { color:var(--accent); font-family:"DM Mono"; font-size:11px; font-weight:700; letter-spacing:.08em; }
 .challenge-list p { margin:0; color:#555; font-size:12px; }
 .campaign-section { padding-top:100px; padding-bottom:100px; color:white; background:var(--ink); }
 .split-intro { display:grid; grid-template-columns:1.15fr .85fr; gap:95px; align-items:end; }
 .split-intro > p { margin:0; color:#888; font-size:14px; }
 .campaign-grid { margin-top:58px; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; overflow:hidden; border:1px solid #363636; border-radius:18px; background:#363636; }
 .campaign-grid article { min-height:260px; padding:25px; background:#151515; }
+.campaign-grid article + article { border-left:1px solid #363636; }
 .campaign-grid h3 { margin:73px 0 10px; font-size:18px; line-height:1.2; }
 .campaign-grid p { margin:0; color:#777; font-size:10px; }
 .signal-strategy { margin-top:22px; display:grid; grid-template-columns:1.05fr repeat(3,1fr); gap:1px; overflow:hidden; border:1px solid #363636; border-radius:18px; background:#363636; }
 .signal-strategy-intro,.signal-strategy article { min-height:230px; padding:25px; background:#151515; }
-.signal-strategy-intro span,.signal-strategy article span { color:var(--accent); font-family:"DM Mono"; font-size:8px; letter-spacing:.08em; }
+.signal-strategy article + article { border-left:1px solid #363636; }
+.signal-strategy-intro span,.signal-strategy article span { color:var(--accent); font-family:"DM Mono"; font-size:11px; font-weight:700; letter-spacing:.08em; }
 .signal-strategy-intro h3 { margin:72px 0 0; font-size:26px; line-height:1.1; letter-spacing:-.04em; }
 .signal-strategy h4 { margin:70px 0 10px; font-size:18px; line-height:1.12; }
 .signal-strategy p { margin:0; color:#888; font-size:10px; }
@@ -95,7 +97,8 @@ img { display:block; max-width:100%; }
 .impact-section { padding-top:100px; padding-bottom:100px; display:grid; grid-template-columns:1.05fr .95fr; gap:95px; background:white; }
 .outcome-list { display:grid; gap:1px; align-self:end; overflow:hidden; border:1px solid var(--line); border-radius:16px; background:var(--line); }
 .outcome-list article { min-height:105px; padding:22px; display:grid; grid-template-columns:42px 1fr; gap:15px; background:var(--soft); }
-.outcome-list span { color:var(--accent); font-family:"DM Mono"; font-size:9px; }
+.outcome-list article + article { border-top:1px solid var(--line); }
+.outcome-list span { color:var(--accent); font-family:"DM Mono"; font-size:11px; font-weight:700; letter-spacing:.08em; }
 .outcome-list p { margin:0; color:#555; font-size:12px; }
 .lessons-section { padding-top:100px; padding-bottom:100px; background:var(--soft); }
 .lessons-grid { margin-top:55px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
@@ -123,7 +126,7 @@ img { display:block; max-width:100%; }
 .media-modal-backdrop { position:absolute; inset:0; background:rgba(0,0,0,.72); backdrop-filter:blur(9px); }
 .media-modal-card { position:relative; z-index:2; width:min(980px,100%); height:min(760px,calc(100vh - 44px)); overflow:hidden; border-radius:22px; background:white; box-shadow:0 40px 120px rgba(0,0,0,.45); }
 .media-modal-card iframe { width:100%; height:100%; border:0; }
-.modal-close { position:absolute; z-index:4; top:14px; right:14px; width:36px; height:36px; border:1px solid var(--line); border-radius:50%; background:white; font-size:23px; cursor:pointer; }
+.modal-close { position:absolute; z-index:4; top:14px; right:14px; width:36px; height:36px; padding:0; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; background:white; font-size:21px; line-height:1; cursor:pointer; }
 body.modal-open { overflow:hidden; }
 @media(max-width:850px) {
   .case-hero-grid,.context-section,.impact-section,.split-intro,.relevance-section { grid-template-columns:1fr; gap:38px; }
@@ -151,9 +154,11 @@ body.modal-open { overflow:hidden; }
   .campaign-grid,.lessons-grid { display:flex; overflow-x:auto; gap:10px; border:0; background:transparent; scroll-snap-type:x mandatory; scrollbar-width:none; }
   .campaign-grid::-webkit-scrollbar,.lessons-grid::-webkit-scrollbar { display:none; }
   .campaign-grid article,.lessons-grid article { min-width:80vw; border:1px solid #363636; border-radius:15px; scroll-snap-align:start; }
+  .campaign-grid article + article,.lessons-grid article + article { border-left:1px solid #363636; }
   .signal-strategy { display:flex; gap:10px; overflow-x:auto; border:0; background:transparent; scroll-snap-type:x mandatory; scrollbar-width:none; }
   .signal-strategy::-webkit-scrollbar { display:none; }
   .signal-strategy-intro,.signal-strategy article { min-width:80vw; border:1px solid #363636; border-radius:15px; scroll-snap-align:start; }
+  .signal-strategy article + article { border-left:1px solid #363636; }
   .case-inline-cta { align-items:flex-start; flex-direction:column; }
   .lessons-grid article { border-color:var(--line); }
   .testimonial-video { min-height:220px; }
