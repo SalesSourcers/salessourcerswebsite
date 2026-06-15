@@ -1,4 +1,4 @@
-﻿const cases = {
+const cases = {
   "content-rebels": {
     name: "Content Rebels",
     industry: "Marketing agency",
@@ -606,7 +606,7 @@ const profile = [
   ["INDUSTRY", data.industry],
   ["HEADQUARTERS", data.location],
   ["COMPANY SIZE", data.size],
-  ["WEBSITE", `<a href="${data.website}" target="_blank" rel="noopener">${new URL(data.website).hostname.replace("www.", "")} ↗</a>`]
+  ["WEBSITE", `<a href="${data.website}" target="_blank" rel="noopener noreferrer">${new URL(data.website).hostname.replace("www.", "")} -&gt;</a>`]
 ];
 document.querySelector("[data-profile]").innerHTML = profile.map(([label, value]) =>
   `<div class="profile-item"><span>${label}</span><strong>${value}</strong></div>`

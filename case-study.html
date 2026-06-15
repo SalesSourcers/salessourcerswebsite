@@ -15,8 +15,8 @@
 <body>
   <header class="case-header">
     <a class="case-brand" href="index.html" aria-label="SalesSourcers home"><img src="assets/salessourcers-logo.png" alt="SalesSourcers"></a>
-    <a class="back-link" href="index.html#results">&larr; Client results</a>
-    <a class="case-cta" href="https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1">Schedule a call &nearr;</a>
+    <a class="back-link" href="index.html#results">&lt;- Client results</a>
+    <a class="case-cta" href="https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1">Schedule a call -&gt;</a>
   </header>
 
   <main>
@@ -41,7 +41,7 @@
       <div class="case-video-panel" data-video-wrap>
         <button class="embedded-video-poster" type="button" data-video-play>
           <img data-video-thumb alt="">
-          <span class="video-play-button">&#9654;</span>
+          <span class="video-play-button" aria-hidden="true"></span>
           <small>CLIENT VIDEO TESTIMONIAL</small>
         </button>
         <iframe data-video title="Client video testimonial" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -70,7 +70,7 @@
       <div class="signal-strategy" data-signal-strategy></div>
       <div class="case-inline-cta">
         <span>Want to see the signals and strategy for your business?</span>
-        <a href="https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1">Book a strategy session &nearr;</a>
+        <a href="https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1">Book a strategy session -&gt;</a>
       </div>
     </section>
 
@@ -79,7 +79,7 @@
         <span data-field="quoteLabel"></span>
         <p data-field="quote"></p>
         <footer><img data-founder-image alt="" hidden><div><strong data-field="quoteName"></strong><small data-field="quoteRole"></small></div></footer>
-        <a data-source-link target="_blank" rel="noopener">View original case source &nearr;</a>
+        <a data-source-link target="_blank" rel="noopener noreferrer">View original case source -&gt;</a>
       </blockquote>
     </section>
 
@@ -110,21 +110,21 @@
       </div>
       <p data-field="fit"></p>
       <div class="relevance-actions">
-        <a class="relevance-cta" href="https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1">Book a strategy session &nearr;</a>
-        <a data-website target="_blank" rel="noopener">Visit client website &nearr;</a>
+        <a class="relevance-cta" href="https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1">Book a strategy session -&gt;</a>
+        <a data-website target="_blank" rel="noopener noreferrer">Visit client website -&gt;</a>
       </div>
     </section>
 
     <nav class="case-navigation" aria-label="Case study navigation">
-      <a href="index.html#results">&larr; All client results</a>
-      <a data-next-case>Next case study &rarr;</a>
+      <a href="index.html#results">&lt;- All client results</a>
+      <a data-next-case>Next case study -&gt;</a>
     </nav>
 
     <section class="case-close">
       <span>YOUR MARKET / YOUR OPPORTUNITY</span>
       <h2>Build an outbound motion that gives you more control over who enters pipeline.</h2>
       <p>We will assess your market, offer and sales capacity, then tell you plainly whether SalesSourcers is the right partner.</p>
-      <a href="https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1" class="primary-link">Schedule a call &nearr;</a>
+      <a href="https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1" class="primary-link">Schedule a call -&gt;</a>
     </section>
   </main>
 
@@ -136,7 +136,7 @@
   <div class="media-modal calendly-modal" aria-hidden="true" data-calendly-modal>
     <div class="media-modal-backdrop" data-calendly-close></div>
     <div class="media-modal-card calendly-modal-card" role="dialog" aria-modal="true" aria-label="Schedule a call">
-      <button class="modal-close" type="button" data-calendly-close aria-label="Close scheduler">&times;</button>
+      <button class="modal-close" type="button" data-calendly-close aria-label="Close scheduler">x</button>
       <iframe data-calendly-frame title="Schedule a SalesSourcers call"></iframe>
     </div>
   </div>

@@ -208,8 +208,8 @@ function updateCaseStudies() {
   caseMore.hidden = selectedCaseFilter !== "all";
   caseMore.setAttribute("aria-expanded", String(casesExpanded));
   caseMore.innerHTML = casesExpanded
-    ? 'Show fewer results <span>↑</span>'
-    : 'View more client results <span>↓</span>';
+    ? "Show fewer results"
+    : "View more client results";
 }
 
 caseFilters.forEach((filter) => {
@@ -235,8 +235,8 @@ testimonialMore.addEventListener("click", () => {
   });
   testimonialMore.setAttribute("aria-expanded", String(testimonialsExpanded));
   testimonialMore.innerHTML = testimonialsExpanded
-    ? 'Show fewer testimonials <span>↑</span>'
-    : 'View more testimonials <span>↓</span>';
+    ? "Show fewer testimonials"
+    : "View more testimonials";
 });
 
 function setVideoModal(open, videoId = "", title = "Client video testimonial") {
@@ -399,7 +399,7 @@ opportunityForm.addEventListener("submit", async (event) => {
   } catch {
     if (strategySendStatus) strategySendStatus.textContent = "The calendar is ready below, but the form did not send. Please email zane@salessourcers.com so we can create your strategy.";
     submitButton.disabled = false;
-    submitButton.innerHTML = 'Try again <span>↗</span>';
+    submitButton.innerHTML = "Try again <span>-&gt;</span>";
   }
 });
 
