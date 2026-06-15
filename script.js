@@ -14,6 +14,36 @@ const offerIntroItems = document.querySelectorAll("[data-offer-intro]");
 const strategyThankYou = document.querySelector(".strategy-thank-you");
 const strategyCalendlyFrame = document.querySelector("[data-strategy-calendly]");
 const strategySendStatus = document.querySelector("[data-strategy-status]");
+const regionSelector = document.querySelector("[data-region-selector]");
+const regionButtons = document.querySelectorAll(".strategy-region-btn");
+const turnstileContainer = document.querySelector("[data-turnstile]");
+
+const SS = window.SS_CONFIG || {};
+const CAL = SS.calendly || {};
+const CAL_DEFAULT = CAL.default || "https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1";
+function regionUrl(region) {
+  const u = region && CAL[region];
+  return u && String(u).trim() ? u : CAL_DEFAULT;
+}
+function pickRegion() {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    if (/^Australia\//.test(tz)) return "au";
+    if (/^America\//.test(tz)) return "us";
+    return "uk"; // UK/Europe default (covers Europe/Asia/Africa/Pacific until refined)
+  } catch (_) {
+    return "uk";
+  }
+}
+// Only surface the picker once 2+ distinct region links exist; otherwise the iframe just uses the default.
+const showRegionSelector = new Set(["uk", "us", "au"].map(regionUrl)).size >= 2;
+let selectedRegion = pickRegion();
+function applyRegion(region) {
+  selectedRegion = region;
+  regionButtons.forEach((b) => b.classList.toggle("is-active", b.dataset.region === region));
+  if (strategyCalendlyFrame) strategyCalendlyFrame.src = regionUrl(region);
+}
+regionButtons.forEach((b) => b.addEventListener("click", () => applyRegion(b.dataset.region)));
 const dashboardTourToggle = document.querySelector(".dashboard-tour-toggle");
 const caseFilters = document.querySelectorAll(".case-filter");
 const caseStudies = document.querySelectorAll(".case-study-mini[data-category]");
@@ -268,7 +298,9 @@ function setCalendlyModal(open, url = "") {
 document.querySelectorAll('a[href*="calendly.com"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    setCalendlyModal(true, link.href);
+    // Auto-route generic "Schedule a call" links by region; preserve any link pointing elsewhere.
+    const url = link.href === CAL_DEFAULT ? regionUrl(selectedRegion) : link.href;
+    setCalendlyModal(true, url);
   });
 });
 
@@ -372,6 +404,24 @@ opportunityForm.addEventListener("submit", async (event) => {
   const submitButton = opportunityForm.querySelector('[type="submit"]');
   const status = opportunityForm.querySelector(".form-status");
   const formData = new FormData(opportunityForm);
+
+  // Honeypot: bots fill the hidden field. Pretend success, send nothing.
+  if ((formData.get("hp") || "").toString().trim()) {
+    opportunityForm.hidden = true;
+    strategyThankYou.hidden = false;
+    return;
+  }
+
+  const tokenEl = opportunityForm.querySelector('[name="cf-turnstile-response"]');
+  const payload = {
+    name: (formData.get("name") || "").toString().trim(),
+    workEmail: (formData.get("email") || "").toString().trim(),
+    company: (formData.get("company") || "").toString().trim(),
+    website: (formData.get("website") || "").toString().trim(),
+    region: selectedRegion,
+    turnstileToken: tokenEl ? tokenEl.value : ""
+  };
+
   submitButton.disabled = true;
   submitButton.textContent = "Sending...";
   status.textContent = "";
@@ -379,17 +429,18 @@ opportunityForm.addEventListener("submit", async (event) => {
   offerModalCard.classList.add("strategy-complete");
   opportunityForm.hidden = true;
   strategyThankYou.hidden = false;
-  strategyCalendlyFrame.src = "https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1";
+  if (showRegionSelector && regionSelector) regionSelector.hidden = false;
+  applyRegion(selectedRegion); // loads the region's Calendly into the iframe + highlights the button
   if (strategySendStatus) strategySendStatus.textContent = "Sending your request now...";
   offerModalCard.scrollTop = 0;
   requestAnimationFrame(() => { offerModalCard.scrollTop = 0; });
   strategyThankYou.querySelector("h3").focus();
 
   try {
-    const response = await fetch(opportunityForm.action, {
+    const response = await fetch(SS.relayPath || "/api/strategy-request", {
       method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" }
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(payload)
     });
     if (!response.ok) throw new Error("Request failed");
     strategySubmitted = true;
@@ -402,6 +453,19 @@ opportunityForm.addEventListener("submit", async (event) => {
     submitButton.innerHTML = "Try again <span>-&gt;</span>";
   }
 });
+
+// Optional Cloudflare Turnstile: only loads + renders when a site key is configured.
+if (SS.turnstileSiteKey && turnstileContainer) {
+  turnstileContainer.hidden = false;
+  const ts = document.createElement("script");
+  ts.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
+  ts.async = true;
+  ts.defer = true;
+  ts.onload = () => {
+    if (window.turnstile) window.turnstile.render(turnstileContainer, { sitekey: SS.turnstileSiteKey });
+  };
+  document.head.appendChild(ts);
+}
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
