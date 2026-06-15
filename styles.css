@@ -1228,3 +1228,17 @@ body.modal-open { overflow: hidden; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Honeypot (anti-spam): visually hidden, off-screen, not announced to AT. */
+.hp-field { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+
+/* Cloudflare Turnstile widget spacing (only shown when configured). */
+.form-turnstile { margin: 14px 0 4px; }
+
+/* Strategy booking — region selector. */
+.strategy-region { margin: 4px 0 14px; }
+.strategy-region-label { display: block; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.strategy-region-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.strategy-region-btn { padding: 8px 16px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--ink); font: inherit; font-size: 14px; cursor: pointer; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+.strategy-region-btn:hover { border-color: var(--ink); }
+.strategy-region-btn.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
