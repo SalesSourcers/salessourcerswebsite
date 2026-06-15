@@ -721,9 +721,8 @@
         <div class="strategy-region" data-region-selector hidden>
           <span class="strategy-region-label">Pick your region</span>
           <div class="strategy-region-options">
-            <button type="button" class="strategy-region-btn" data-region="uk">UK / Europe</button>
-            <button type="button" class="strategy-region-btn" data-region="us">US</button>
-            <button type="button" class="strategy-region-btn" data-region="au">Australia</button>
+            <button type="button" class="strategy-region-btn" data-region="intl">Europe / North America</button>
+            <button type="button" class="strategy-region-btn" data-region="anz">Australia / NZ</button>
           </div>
         </div>
         <iframe class="strategy-calendly-frame" data-strategy-calendly title="Book a SalesSourcers strategy walkthrough"></iframe>
@@ -753,16 +752,14 @@
       relayPath: "/api/strategy-request",
       turnstileSiteKey: "", // set the Cloudflare Turnstile site key to enable the widget on the strategy form
       calendly: {
-        default: "https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1",
-        // TODO: drop in the per-region Calendly event links. Empty values fall back to `default`.
-        // The region selector appears once at least two distinct region links are set.
-        uk: "",
-        us: "",
-        au: ""
+        // Region routing. `default` is the fallback for unmatched timezones (Europe/North America host).
+        default: "https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1",
+        intl: "https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1",
+        anz: "https://calendly.com/zane-xgu/salessourcers-introductory-call-clone?hide_gdpr_banner=1"
       }
     };
   </script>
-  <script src="script.js?v=20"></script>
+  <script src="script.js?v=21"></script>
 </body>
 </html>
 

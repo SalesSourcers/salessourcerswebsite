@@ -28,15 +28,14 @@ function regionUrl(region) {
 function pickRegion() {
   try {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
-    if (/^Australia\//.test(tz)) return "au";
-    if (/^America\//.test(tz)) return "us";
-    return "uk"; // UK/Europe default (covers Europe/Asia/Africa/Pacific until refined)
+    if (/^Australia\//.test(tz) || /^Pacific\/(Auckland|Chatham)$/.test(tz)) return "anz";
+    return "intl"; // Europe / North America host — also the catch-all for other regions
   } catch (_) {
-    return "uk";
+    return "intl";
   }
 }
 // Only surface the picker once 2+ distinct region links exist; otherwise the iframe just uses the default.
-const showRegionSelector = new Set(["uk", "us", "au"].map(regionUrl)).size >= 2;
+const showRegionSelector = new Set(["intl", "anz"].map(regionUrl)).size >= 2;
 let selectedRegion = pickRegion();
 function applyRegion(region) {
   selectedRegion = region;
@@ -298,9 +297,8 @@ function setCalendlyModal(open, url = "") {
 document.querySelectorAll('a[href*="calendly.com"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    // Auto-route generic "Schedule a call" links by region; preserve any link pointing elsewhere.
-    const url = link.href === CAL_DEFAULT ? regionUrl(selectedRegion) : link.href;
-    setCalendlyModal(true, url);
+    // All "Schedule a call" CTAs auto-route to the visitor's region (by timezone).
+    setCalendlyModal(true, regionUrl(selectedRegion));
   });
 });
 
