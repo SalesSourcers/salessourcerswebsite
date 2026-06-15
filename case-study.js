@@ -28,7 +28,7 @@ const cases = {
       ["Multi-channel follow-up", "Coordinate calling, email and structured follow-up rather than relying on one isolated touchpoint."],
       ["Low-touch handoff", "Qualify context before booking so the founder could focus on the conversations most likely to convert."]
     ],
-    quoteLabel: "CLIENT VIDEO TESTIMONIAL",
+    quoteLabel: "CLIENT QUOTE",
     quote: "We just didn't have the time to do our own lead generation and SalesSourcers completely removed this burden. The quality of meetings has been outstanding. The sales side of the business has never been busier.",
     founderImage: "assets/founder-sarah.webp",
     quoteName: "Sarah Spence",
@@ -78,7 +78,7 @@ const cases = {
       ["Prioritise quality", "Use fit, role and timing to decide where calling and personalised follow-up should concentrate."],
       ["Coach from calls", "Use conversation feedback to sharpen the message and improve how the offer was positioned."]
     ],
-    quoteLabel: "CLIENT VIDEO TESTIMONIAL",
+    quoteLabel: "CLIENT QUOTE",
     quote: "Our outbound sales was pretty much non-existent until SalesSourcers arrived. We were happily surprised with the level of success this partnership delivered. The ROI has been phenomenal.",
     founderImage: "assets/founder-keith.png",
     quoteName: "Keith Abramson",
@@ -128,7 +128,7 @@ const cases = {
       ["Own the follow-up", "Keep every suitable lead moving instead of allowing interest to fade between client commitments."],
       ["Support conversion", "Give leadership clearer context and a repeatable structure for progressing qualified conversations."]
     ],
-    quoteLabel: "CLIENT VIDEO TESTIMONIAL",
+    quoteLabel: "CLIENT QUOTE",
     quote: "Handing sales over to a team that could prospect, pitch and close freed me to focus on delivery. We hit six figures in new revenue within months.",
     founderImage: "assets/founder-mareike.png",
     quoteName: "Mareike Niedermeier",
@@ -178,7 +178,7 @@ const cases = {
       ["Coordinate channels", "Use email, calling and structured follow-up to progress interest into qualified demos."],
       ["Learn from response", "Use replies and live conversations to refine the product narrative and target market."]
     ],
-    quoteLabel: "CLIENT VIDEO TESTIMONIAL",
+    quoteLabel: "CLIENT QUOTE",
     quote: "We had no strategy for outbound. We were blasting emails and getting nowhere. SalesSourcers completely turned that around and gave us a clear process to convert leads into clients.",
     founderImage: "assets/founder-conor.webp",
     quoteName: "Conor Davies",
@@ -279,7 +279,7 @@ const cases = {
       ["Run multi-channel outreach", "Use cold calling to create live commercial conversations and personalised email to support timing, context and follow-up."],
       ["Convert early traction", "Qualify opportunities tightly and move serious prospects into the founder's calendar with enough context to progress."]
     ],
-    quoteLabel: "CLIENT VIDEO TESTIMONIAL",
+    quoteLabel: "CLIENT QUOTE",
     quote: "SalesSourcers is the only truly effective lead generation service I've worked with. They take a bespoke approach that is often more effective than in-house SDRs.",
     founderImage: "assets/founder-tom.webp",
     quoteName: "Tom Maples",
@@ -378,7 +378,7 @@ const cases = {
       ["Personalise the reason", "Connect each message to a specific gap or growth event rather than a broad agency introduction."],
       ["Track every conversion", "Use structured follow-up and CRM visibility to understand how outreach progressed."]
     ],
-    quoteLabel: "CLIENT VIDEO TESTIMONIAL",
+    quoteLabel: "CLIENT QUOTE",
     quote: "We went from waiting on referrals to having a steady flow of quality meetings. The process was simple, focused and it worked faster than we expected.",
     founderImage: "assets/founder-daniel.png",
     quoteName: "Daniel Baird",
@@ -428,7 +428,7 @@ const cases = {
       ["Test the pain points", "Compare messages across regions and buyer situations to identify what created response."],
       ["Manage execution", "Own data, messaging, deliverability, calling and continuous optimisation end to end."]
     ],
-    quoteLabel: "CLIENT VIDEO TESTIMONIAL",
+    quoteLabel: "CLIENT QUOTE",
     quote: "Breaking into a new market seemed daunting, but the structured outreach and constant testing gave us clarity fast. We now have a steady pipeline and real wins in a space we hadn't touched before.",
     founderImage: "assets/founder-kevin.png",
     quoteName: "Kevin van der Eijk",
@@ -478,7 +478,7 @@ const cases = {
       ["Tailor the message", "Connect outreach to the prospect's current acquisition activity rather than leading with a generic agency pitch."],
       ["Create a direct channel", "Manage outreach and follow-up without relying on partners to introduce each opportunity."]
     ],
-    quoteLabel: "CLIENT VIDEO TESTIMONIAL",
+    quoteLabel: "CLIENT QUOTE",
     quote: "I didn't think we would close a deal and have the amount of conversations we are having in the first month.",
     founderImage: "assets/founder-jaryd.png",
     quoteName: "Jaryd Neethling",
