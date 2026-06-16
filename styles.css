@@ -905,7 +905,12 @@ main { display: flex; flex-direction: column; }
 .offer-modal-card { position: relative; z-index: 2; width: min(650px,100%); max-height: calc(100vh - 40px); padding: 38px; overflow: auto; border-radius: 22px; background: white; box-shadow: 0 40px 100px rgba(0,0,0,.35); }
 .offer-modal-card.strategy-complete { width: min(920px,100%); padding: 30px; }
 .offer-modal-card.strategy-complete .modal-footnote { display: none; }
-.modal-close { position: absolute; top: 15px; right: 15px; width: 36px; height: 36px; padding: 0; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: white; font-size: 21px; line-height: 1; cursor: pointer; }
+.modal-close { position: absolute; top: 19px; right: 19px; width: 40px; height: 40px; padding: 0; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: white; color: transparent; font-size: 0; line-height: 1; cursor: pointer; box-shadow: 0 10px 24px rgba(0,0,0,.08); }
+.modal-close::before,
+.modal-close::after { content: ""; position: absolute; width: 15px; height: 2px; border-radius: 2px; background: var(--ink); }
+.modal-close::before { transform: rotate(45deg); }
+.modal-close::after { transform: rotate(-45deg); }
+.offer-modal-card.strategy-complete .modal-close { top: 24px; right: 24px; }
 .modal-label { color: #a56560; font-family: "DM Mono"; font-size: 8px; letter-spacing: .1em; }
 .offer-modal-card h2 { max-width: 520px; margin: 15px 0; font-size: 47px; line-height: 1.03; letter-spacing: -.055em; }
 .offer-modal-card > p { color: #777; font-size: 13px; }
@@ -1206,6 +1211,7 @@ body.modal-open { overflow: hidden; }
   .timeline-item, .timeline-item:first-child { padding: 0 4px; }
   .team-card { min-width: 78vw; }
   .offer-modal-card { padding: 31px 20px 24px; }
+  .modal-close { top: 14px; right: 14px; width: 38px; height: 38px; }
   .media-modal { padding: 12px; }
   .media-modal-card { border-radius: 16px; }
   .calendly-modal-card { height: min(700px, calc(100vh - 24px)); }
