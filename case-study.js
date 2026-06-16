@@ -676,20 +676,86 @@ nextLink.href = `case-study.html?case=${nextKey}`;
 
 const calendlyModal = document.querySelector("[data-calendly-modal]");
 const calendlyFrame = document.querySelector("[data-calendly-frame]");
+const regionButtons = document.querySelectorAll("[data-region-option]");
+const calendlyRoutes = {
+  emea: {
+    label: "US / UK / Europe",
+    owner: "Zaid",
+    url: "https://calendly.com/zaid-wasati/salessourcers-strat-session"
+  },
+  apac: {
+    label: "APAC / Australia / New Zealand",
+    owner: "Zane",
+    url: "https://calendly.com/zane-xgu/salessourcers-strategy-session"
+  }
+};
+let selectedRegion = detectVisitorRegion();
+
+function detectVisitorRegion() {
+  let timeZone = "";
+  let locale = "";
+  try {
+    timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    locale = navigator.language || "";
+  } catch {
+    return "emea";
+  }
+
+  const apacTimeZone = /^(Australia|Pacific\/Auckland|Pacific\/Chatham|Asia\/(Singapore|Kuala_Lumpur|Hong_Kong|Manila|Tokyo|Seoul|Bangkok|Jakarta|Ho_Chi_Minh|Taipei|Shanghai|Brunei|Makassar|Perth|Dhaka|Kolkata))/i.test(timeZone);
+  const apacLocale = /-(AU|NZ|SG|MY|PH|HK|JP|KR|TH|ID|VN|TW|CN|IN)$/i.test(locale);
+  return apacTimeZone || apacLocale ? "apac" : "emea";
+}
+
+function calendlyUrl(region = selectedRegion) {
+  const route = calendlyRoutes[region] || calendlyRoutes.emea;
+  return `${route.url}?hide_gdpr_banner=1`;
+}
+
+function updateRegionButtons() {
+  regionButtons.forEach((button) => {
+    const active = button.dataset.regionOption === selectedRegion;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function updateCalendlyLinks() {
+  document.querySelectorAll("[data-calendly-route]").forEach((link) => {
+    link.href = calendlyUrl();
+  });
+}
+
+function setSelectedRegion(region, updateOpenFrame = true) {
+  if (!calendlyRoutes[region]) return;
+  selectedRegion = region;
+  updateRegionButtons();
+  updateCalendlyLinks();
+  if (updateOpenFrame && calendlyModal.classList.contains("open")) {
+    calendlyFrame.src = calendlyUrl();
+  }
+}
 
 function setCalendlyModal(open, url = "") {
   calendlyModal.classList.toggle("open", open);
   calendlyModal.setAttribute("aria-hidden", String(!open));
   document.body.classList.toggle("modal-open", open);
-  calendlyFrame.src = open ? url : "";
+  calendlyFrame.src = open ? (url || calendlyUrl()) : "";
 }
 
 document.querySelectorAll('a[href*="calendly.com"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    setCalendlyModal(true, link.href);
+    setCalendlyModal(true, link.dataset.calendlyRoute !== undefined ? calendlyUrl() : link.href);
   });
 });
+
+regionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setSelectedRegion(button.dataset.regionOption);
+  });
+});
+
+setSelectedRegion(selectedRegion, false);
 
 document.querySelectorAll("[data-calendly-close]").forEach((close) => {
   close.addEventListener("click", () => setCalendlyModal(false));

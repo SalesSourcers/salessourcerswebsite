@@ -14,35 +14,10 @@ const offerIntroItems = document.querySelectorAll("[data-offer-intro]");
 const strategyThankYou = document.querySelector(".strategy-thank-you");
 const strategyCalendlyFrame = document.querySelector("[data-strategy-calendly]");
 const strategySendStatus = document.querySelector("[data-strategy-status]");
-const regionSelector = document.querySelector("[data-region-selector]");
-const regionButtons = document.querySelectorAll(".strategy-region-btn");
 const turnstileContainer = document.querySelector("[data-turnstile]");
 
 const SS = window.SS_CONFIG || {};
 const CAL = SS.calendly || {};
-const CAL_DEFAULT = CAL.default || "https://calendly.com/zane-xgu/introductory-call?hide_gdpr_banner=1";
-function regionUrl(region) {
-  const u = region && CAL[region];
-  return u && String(u).trim() ? u : CAL_DEFAULT;
-}
-function pickRegion() {
-  try {
-    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
-    if (/^Australia\//.test(tz) || /^Pacific\/(Auckland|Chatham)$/.test(tz)) return "anz";
-    return "intl"; // Europe / North America host — also the catch-all for other regions
-  } catch (_) {
-    return "intl";
-  }
-}
-// Only surface the picker once 2+ distinct region links exist; otherwise the iframe just uses the default.
-const showRegionSelector = new Set(["intl", "anz"].map(regionUrl)).size >= 2;
-let selectedRegion = pickRegion();
-function applyRegion(region) {
-  selectedRegion = region;
-  regionButtons.forEach((b) => b.classList.toggle("is-active", b.dataset.region === region));
-  if (strategyCalendlyFrame) strategyCalendlyFrame.src = regionUrl(region);
-}
-regionButtons.forEach((b) => b.addEventListener("click", () => applyRegion(b.dataset.region)));
 const dashboardTourToggle = document.querySelector(".dashboard-tour-toggle");
 const caseFilters = document.querySelectorAll(".case-filter");
 const caseStudies = document.querySelectorAll(".case-study-mini[data-category]");
@@ -60,6 +35,8 @@ const methodLabel = document.querySelector("[data-method-label]");
 const methodTitle = document.querySelector("[data-method-title]");
 const methodCopy = document.querySelector("[data-method-copy]");
 const methodPoints = document.querySelector("[data-method-points]");
+const autoresponseField = document.querySelector("[data-autoresponse]");
+const regionButtons = document.querySelectorAll("[data-region-option]");
 
 let dashboardTourIndex = 0;
 let dashboardTourPlaying = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -72,6 +49,77 @@ let offerAutoOpened = false;
 let popupEngaged = false;
 let popupShownThisSession = false;
 const halfScreenCases = window.matchMedia("(max-width: 980px)");
+const calendlyRoutes = {
+  emea: {
+    label: "US / UK / Europe",
+    owner: "Zaid",
+    url: cleanCalendlyBase(CAL.emea || CAL.intl || CAL.default || "https://calendly.com/zaid-wasati/salessourcers-strat-session")
+  },
+  apac: {
+    label: "APAC / Australia / New Zealand",
+    owner: "Zane",
+    url: cleanCalendlyBase(CAL.apac || CAL.anz || "https://calendly.com/zane-xgu/salessourcers-strategy-session")
+  }
+};
+let selectedRegion = detectVisitorRegion();
+
+function cleanCalendlyBase(url) {
+  return String(url || "").replace(/\?.*$/, "").replace(/\/$/, "");
+}
+
+function detectVisitorRegion() {
+  let timeZone = "";
+  let locale = "";
+  try {
+    timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    locale = navigator.language || "";
+  } catch {
+    return "emea";
+  }
+
+  const apacTimeZone = /^(Australia|Pacific\/Auckland|Pacific\/Chatham|Asia\/(Singapore|Kuala_Lumpur|Hong_Kong|Manila|Tokyo|Seoul|Bangkok|Jakarta|Ho_Chi_Minh|Taipei|Shanghai|Brunei|Makassar|Perth|Dhaka|Kolkata))/i.test(timeZone);
+  const apacLocale = /-(AU|NZ|SG|MY|PH|HK|JP|KR|TH|ID|VN|TW|CN|IN)$/i.test(locale);
+  return apacTimeZone || apacLocale ? "apac" : "emea";
+}
+
+function calendlyUrl(region = selectedRegion) {
+  const route = calendlyRoutes[region] || calendlyRoutes.emea;
+  return `${route.url}?hide_gdpr_banner=1`;
+}
+
+function updateRegionButtons() {
+  regionButtons.forEach((button) => {
+    const active = button.dataset.regionOption === selectedRegion;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function setSelectedRegion(region, updateOpenFrames = true) {
+  if (!calendlyRoutes[region]) return;
+  selectedRegion = region;
+  updateRegionButtons();
+  updateCalendlyLinks();
+  updateAutoresponse();
+  if (updateOpenFrames && calendlyModal.classList.contains("open")) {
+    calendlyFrame.src = calendlyUrl();
+  }
+  if (updateOpenFrames && strategyThankYou && !strategyThankYou.hidden && strategyCalendlyFrame) {
+    strategyCalendlyFrame.src = calendlyUrl();
+  }
+}
+
+function updateCalendlyLinks() {
+  document.querySelectorAll("[data-calendly-route]").forEach((link) => {
+    link.href = calendlyUrl();
+  });
+}
+
+function updateAutoresponse() {
+  if (!autoresponseField) return;
+  const route = calendlyRoutes[selectedRegion] || calendlyRoutes.emea;
+  autoresponseField.value = `Thanks for requesting your SalesSourcers outbound strategy. We have received your details and will send your personalised strategy within 48 hours. If you would like to walk through the strategy with us, you can book a call with ${route.owner} here: ${route.url}`;
+}
 
 const methodContent = [
   {
@@ -291,20 +339,27 @@ function setCalendlyModal(open, url = "") {
   calendlyModal.classList.toggle("open", open);
   calendlyModal.setAttribute("aria-hidden", String(!open));
   document.body.classList.toggle("modal-open", open || videoModal.classList.contains("open") || offerModal.classList.contains("open"));
-  calendlyFrame.src = open ? url : "";
+  calendlyFrame.src = open ? (url || calendlyUrl()) : "";
 }
 
 document.querySelectorAll('a[href*="calendly.com"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    // All "Schedule a call" CTAs auto-route to the visitor's region (by timezone).
-    setCalendlyModal(true, regionUrl(selectedRegion));
+    setCalendlyModal(true, link.dataset.calendlyRoute !== undefined ? calendlyUrl() : link.href);
   });
 });
 
 calendlyCloseButtons.forEach((button) => {
   button.addEventListener("click", () => setCalendlyModal(false));
 });
+
+regionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setSelectedRegion(button.dataset.regionOption);
+  });
+});
+
+setSelectedRegion(selectedRegion, false);
 
 function setOfferModal(open) {
   offerModal.classList.toggle("open", open);
@@ -401,6 +456,7 @@ opportunityForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const submitButton = opportunityForm.querySelector('[type="submit"]');
   const status = opportunityForm.querySelector(".form-status");
+  updateAutoresponse();
   const formData = new FormData(opportunityForm);
 
   // Honeypot: bots fill the hidden field. Pretend success, send nothing.
@@ -427,8 +483,7 @@ opportunityForm.addEventListener("submit", async (event) => {
   offerModalCard.classList.add("strategy-complete");
   opportunityForm.hidden = true;
   strategyThankYou.hidden = false;
-  if (showRegionSelector && regionSelector) regionSelector.hidden = false;
-  applyRegion(selectedRegion); // loads the region's Calendly into the iframe + highlights the button
+  strategyCalendlyFrame.src = calendlyUrl();
   if (strategySendStatus) strategySendStatus.textContent = "Sending your request now...";
   offerModalCard.scrollTop = 0;
   requestAnimationFrame(() => { offerModalCard.scrollTop = 0; });

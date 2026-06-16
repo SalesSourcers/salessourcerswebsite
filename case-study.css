@@ -127,6 +127,12 @@ img { display:block; max-width:100%; }
 .media-modal-card { position:relative; z-index:2; width:min(980px,100%); height:min(760px,calc(100vh - 44px)); overflow:hidden; border-radius:22px; background:white; box-shadow:0 40px 120px rgba(0,0,0,.45); }
 .media-modal-card iframe { width:100%; height:100%; border:0; }
 .modal-close { position:absolute; z-index:4; top:14px; right:14px; width:36px; height:36px; padding:0; display:grid; place-items:center; border:1px solid var(--line); border-radius:50%; background:white; font-size:21px; line-height:1; cursor:pointer; }
+.scheduler-routing { margin:0; padding:8px; display:flex; align-items:center; gap:7px; border:1px solid var(--line); border-radius:999px; background:white; box-shadow:0 10px 35px rgba(0,0,0,.08); }
+.scheduler-routing span { margin:0 5px 0 8px; color:#8a8a8a; font-family:"DM Mono"; font-size:8px; letter-spacing:.08em; text-transform:uppercase; white-space:nowrap; }
+.scheduler-routing button { min-height:34px; padding:0 13px; border:1px solid transparent; border-radius:999px; color:#686868; background:transparent; font-size:10px; font-weight:800; cursor:pointer; }
+.scheduler-routing button.active { color:var(--ink); border-color:#e7c3bf; background:var(--rose); }
+.scheduler-routing-modal { position:absolute; z-index:3; left:18px; right:66px; top:15px; }
+.calendly-modal-card iframe { padding-top:66px; box-sizing:border-box; }
 body.modal-open { overflow:hidden; }
 @media(max-width:850px) {
   .case-hero-grid,.context-section,.impact-section,.split-intro,.relevance-section { grid-template-columns:1fr; gap:38px; }
@@ -171,4 +177,9 @@ body.modal-open { overflow:hidden; }
   .site-footer span { text-align:left; }
   .media-modal { padding:12px; }
   .media-modal-card { height:min(700px,calc(100vh - 24px)); border-radius:16px; }
+  .scheduler-routing { align-items:stretch; flex-direction:column; border-radius:18px; }
+  .scheduler-routing span { margin:4px 8px 2px; white-space:normal; }
+  .scheduler-routing button { width:100%; }
+  .scheduler-routing-modal { left:12px; right:58px; top:12px; }
+  .calendly-modal-card iframe { padding-top:130px; }
 }
