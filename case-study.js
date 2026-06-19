@@ -210,9 +210,9 @@ const cases = {
     accent: "#0d0d0d",
     headline: "A specialist service built a deliberate route into premium hotel, spa and luxury retail accounts.",
     summary: "SalesSourcers mapped priority markets across the GCC and Southeast Asia, tracked live buying signals and created a multi-channel system for reaching high-value brands.",
-    primaryMetric: "12 months",
-    primaryLabel: "of structured market development",
-    metrics: [["GCC + SE Asia", "priority regions"], ["Premium brands", "target accounts"], ["Multi-channel", "campaign model"], ["Predictable", "pipeline outcome"]],
+    primaryMetric: "721%",
+    primaryLabel: "return on investment",
+    metrics: [["470", "qualified leads"], ["141", "sales meetings"], ["31", "new clients"], ["721%", "ROI"]],
     challengeTitle: "The business knew which brands it wanted, but referrals and advertising could not reach them consistently.",
     challenge: "Pipeline was uneven, sales cycles were long and the team lacked a repeatable route into premium hospitality and retail accounts with the strongest potential value.",
     challenges: [
@@ -234,12 +234,12 @@ const cases = {
     quoteName: "Saif Madhat",
     quoteRole: "Founder, iScent",
     video: null,
-    impactTitle: "Pipeline became more predictable and better aligned with the premium accounts the business wanted.",
-    impact: "Over twelve months, iScent moved from reactive demand generation toward a structured market-development system capable of opening conversations with premium hotel and fashion brands.",
+    impactTitle: "A predictable pipeline opened doors to premium global brands.",
+    impact: "Within twelve months, the campaign generated 470 qualified leads, 141 sales meetings, 31 new clients and a 721% ROI. iScent moved from unpredictable referrals to a scalable outbound motion into premium hotel and fashion house accounts.",
     outcomes: [
-      "Target-account selection became proactive rather than dependent on whoever responded to advertising.",
-      "Buying signals gave each approach a more credible and timely reason for contact.",
-      "Consistent follow-up supported the longer sales cycles common in premium hospitality and retail."
+      "The campaign generated 470 qualified leads and 141 sales meetings across premium hospitality and retail accounts.",
+      "Thirty-one new clients were won, creating a 721% ROI from the outbound programme.",
+      "iScent moved from unpredictable referrals to becoming the go-to scent-marketing partner for world-class global brands."
     ],
     lessons: [
       ["Timing creates relevance", "Openings and refurbishments gave the outreach a commercial reason beyond a generic introduction."],
