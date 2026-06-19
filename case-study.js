@@ -460,9 +460,9 @@ const cases = {
     accent: "#f07b34",
     headline: "A direct outbound system reduced partner dependency and created the first client in month one.",
     summary: "SalesSourcers built a complete franchise market, used advertising activity as an intent signal and created a direct route to prospects that had previously been reached through partners or paid channels.",
-    primaryMetric: "Month one",
-    primaryLabel: "first outbound client closed",
-    metrics: [["23", "qualified leads"], ["10", "sales meetings"], ["1", "new client"], ["$10K-$15K", "potential monthly recurring revenue"]],
+    primaryMetric: "$15K MRR",
+    primaryLabel: "closed in first month",
+    metrics: [["23", "qualified leads"], ["10", "sales meetings"], ["1", "new client"], ["$15K MRR", "closed in first month"]],
     challengeTitle: "Partners and paid channels created demand, but reduced margin and control.",
     challenge: "The agency depended on partners that took a meaningful share of commission, while competitive advertising channels produced too little quality and volume to support predictable growth.",
     challenges: [
