@@ -21,3 +21,5 @@ Disallow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://www.salessourcers.com/sitemap.xml
