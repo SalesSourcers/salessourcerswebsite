@@ -578,7 +578,9 @@ const signalPlans = {
   conveyor: [["Signals used", "Industries where Conveyor had proof, SEO gaps, paid media activity, content inconsistency and companies with visible demand-generation pressure."], ["Account logic", "Prioritise segments where existing case studies made the outreach credible and the agency could speak from relevant experience."], ["Outreach angle", "Lead with proof and a specific commercial gap, then use structured follow-up so prospecting continued even when leadership was busy."]]
 };
 const params = new URLSearchParams(window.location.search);
-const key = cases[params.get("case")] ? params.get("case") : order[0];
+const pathSlug = (window.location.pathname.match(/\/case-studies\/([^/?#]+)/) || [])[1];
+const requestedCase = params.get("case") || pathSlug;
+const key = cases[requestedCase] ? requestedCase : order[0];
 const data = cases[key];
 
 document.documentElement.style.setProperty("--accent", data.accent);
@@ -672,7 +674,7 @@ websiteLink.href = data.website;
 const currentIndex = order.indexOf(key);
 const nextKey = order[(currentIndex + 1) % order.length];
 const nextLink = document.querySelector("[data-next-case]");
-nextLink.href = `case-study.html?case=${nextKey}`;
+nextLink.href = `/case-studies/${nextKey}/`;
 
 const calendlyModal = document.querySelector("[data-calendly-modal]");
 const calendlyFrame = document.querySelector("[data-calendly-frame]");
