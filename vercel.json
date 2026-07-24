@@ -32,7 +32,23 @@
     { "source": "/built-a-direct-outbound-system-that-replaced-partner-dependency-with-a-self-sustaining-sales-pipeline", "destination": "/case-study.html?case=franchise-rocket", "permanent": true },
     { "source": "/built-a-direct-outbound-system-that-replaced-partner-dependency-with-a-self-sustaining-sales-pipeline/", "destination": "/case-study.html?case=franchise-rocket", "permanent": true },
     { "source": "/built-a-scalable-outbound-engine-that-kept-the-pipeline-full-and-freed-leadership-to-focus-on-growth", "destination": "/case-study.html?case=conveyor", "permanent": true },
-    { "source": "/built-a-scalable-outbound-engine-that-kept-the-pipeline-full-and-freed-leadership-to-focus-on-growth/", "destination": "/case-study.html?case=conveyor", "permanent": true }
+    { "source": "/built-a-scalable-outbound-engine-that-kept-the-pipeline-full-and-freed-leadership-to-focus-on-growth/", "destination": "/case-study.html?case=conveyor", "permanent": true },
+    { "source": "/about-us", "destination": "/#about", "permanent": true },
+    { "source": "/about-us/", "destination": "/#about", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/our-services", "destination": "/", "permanent": true },
+    { "source": "/resources", "destination": "/", "permanent": true },
+    { "source": "/resources/", "destination": "/", "permanent": true },
+    { "source": "/clientstories/:slug", "destination": "/#results", "permanent": true },
+    { "source": "/book-a-call", "destination": "/", "permanent": true },
+    { "source": "/book-a-call-2", "destination": "/", "permanent": true },
+    { "source": "/book-a-call-3", "destination": "/", "permanent": true },
+    { "source": "/tag/:slug/feed", "destination": "/", "permanent": true },
+    { "source": "/tag/:slug/feed/", "destination": "/", "permanent": true },
+    { "source": "/category/:slug/feed", "destination": "/", "permanent": true },
+    { "source": "/category/:slug/feed/", "destination": "/", "permanent": true },
+    { "source": "/feed", "destination": "/", "permanent": true },
+    { "source": "/feed/", "destination": "/", "permanent": true }
   ],
   "headers": [
     {
