@@ -582,6 +582,7 @@ const pathSlug = (window.location.pathname.match(/\/case-studies\/([^/?#]+)/) ||
 const requestedCase = params.get("case") || pathSlug;
 const key = cases[requestedCase] ? requestedCase : order[0];
 const data = cases[key];
+const toAbs = (p) => (p && !/^(https?:)?\/\//.test(p) && p[0] !== "/") ? "/" + p : p;
 
 document.documentElement.style.setProperty("--accent", data.accent);
 document.title = `${data.name} Case Study | SalesSourcers`;
@@ -590,7 +591,7 @@ document.querySelector('meta[name="description"]').content = data.summary;
 document.querySelectorAll("[data-field]").forEach((element) => {
   const field = element.dataset.field;
   if (field === "logo") {
-    element.src = data.logo;
+    element.src = toAbs(data.logo);
     element.alt = data.name;
   } else {
     element.textContent = data[field] || "";
@@ -599,7 +600,7 @@ document.querySelectorAll("[data-field]").forEach((element) => {
 
 const founderImage = document.querySelector("[data-founder-image]");
 if (data.founderImage) {
-  founderImage.src = data.founderImage;
+  founderImage.src = toAbs(data.founderImage);
   founderImage.alt = data.quoteName;
   founderImage.hidden = false;
 }
@@ -654,7 +655,7 @@ if (data.video) {
   const videoFrame = document.querySelector("[data-video]");
   const videoThumb = document.querySelector("[data-video-thumb]");
   const videoPlay = document.querySelector("[data-video-play]");
-  videoThumb.src = videoThumbs[key] || `https://img.youtube.com/vi/${data.video}/maxresdefault.jpg`;
+  videoThumb.src = toAbs(videoThumbs[key]) || `https://img.youtube.com/vi/${data.video}/maxresdefault.jpg`;
   videoThumb.alt = `${data.quoteName} video testimonial`;
   videoPlay.addEventListener("click", () => {
     videoFrame.src = `https://www.youtube-nocookie.com/embed/${data.video}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
