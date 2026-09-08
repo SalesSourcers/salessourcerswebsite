@@ -397,6 +397,11 @@
       ],
       "destination": "/case-studies/conveyor/",
       "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "destination": "/#results",
+      "permanent": true
     }
   ],
   "headers": [
