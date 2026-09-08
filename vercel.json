@@ -1,65 +1,403 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
-    { "source": "/services", "destination": "/", "permanent": true },
-    { "source": "/services/", "destination": "/", "permanent": true },
-    { "source": "/studies", "destination": "/", "permanent": true },
-    { "source": "/studies/", "destination": "/", "permanent": true },
-    { "source": "/case-studies", "destination": "/", "permanent": true },
-    { "source": "/case-studies/", "destination": "/", "permanent": true },
-    { "source": "/tag/:slug", "destination": "/", "permanent": true },
-    { "source": "/tag/:slug/", "destination": "/", "permanent": true },
-    { "source": "/category/:slug", "destination": "/", "permanent": true },
-    { "source": "/category/:slug/", "destination": "/", "permanent": true },
-    { "source": "/created-a-sustainable-lead-generation-system-that-delivered-consistent-growth-and-freed-time-for-client-work", "destination": "/case-studies/content-rebels/", "permanent": true },
-    { "source": "/created-a-sustainable-lead-generation-system-that-delivered-consistent-growth-and-freed-time-for-client-work/", "destination": "/case-studies/content-rebels/", "permanent": true },
-    { "source": "/revived-outbound-sales-with-a-focused-strategy-that-delivered-immediate-traction-and-high-value-meetings", "destination": "/case-studies/cypago/", "permanent": true },
-    { "source": "/revived-outbound-sales-with-a-focused-strategy-that-delivered-immediate-traction-and-high-value-meetings/", "destination": "/case-studies/cypago/", "permanent": true },
-    { "source": "/sales-sourcers-helped-an-australian-marketing-agency-build-a-repeatable-sales-engine-and-hit-six-figures-in-new-revenue", "destination": "/case-studies/sales-savvy/", "permanent": true },
-    { "source": "/sales-sourcers-helped-an-australian-marketing-agency-build-a-repeatable-sales-engine-and-hit-six-figures-in-new-revenue/", "destination": "/case-studies/sales-savvy/", "permanent": true },
-    { "source": "/enabled-a-smooth-transition-from-agency-to-saas-with-a-predictable-sales-pipeline", "destination": "/case-studies/outbox/", "permanent": true },
-    { "source": "/enabled-a-smooth-transition-from-agency-to-saas-with-a-predictable-sales-pipeline/", "destination": "/case-studies/outbox/", "permanent": true },
-    { "source": "/created-a-steady-pipeline-that-opened-doors-to-premium-global-clients", "destination": "/case-studies/iscent/", "permanent": true },
-    { "source": "/created-a-steady-pipeline-that-opened-doors-to-premium-global-clients/", "destination": "/case-studies/iscent/", "permanent": true },
-    { "source": "/transformed-referral-driven-sales-into-a-scalable-outbound-growth-engine", "destination": "/case-studies/revcat/", "permanent": true },
-    { "source": "/transformed-referral-driven-sales-into-a-scalable-outbound-growth-engine/", "destination": "/case-studies/revcat/", "permanent": true },
-    { "source": "/secured-enterprise-level-opportunities-with-a-targeted-outbound-strategy-focused-on-high-value-decision-makers", "destination": "/case-studies/easygenerator/", "permanent": true },
-    { "source": "/secured-enterprise-level-opportunities-with-a-targeted-outbound-strategy-focused-on-high-value-decision-makers/", "destination": "/case-studies/easygenerator/", "permanent": true },
-    { "source": "/built-a-scalable-outbound-system-that-turned-a-referral-based-agency-into-a-predictable-growth-engine", "destination": "/case-studies/the-recipe/", "permanent": true },
-    { "source": "/built-a-scalable-outbound-system-that-turned-a-referral-based-agency-into-a-predictable-growth-engine/", "destination": "/case-studies/the-recipe/", "permanent": true },
-    { "source": "/launched-a-scalable-outbound-strategy-that-helped-enter-new-markets-and-generate-early-wins", "destination": "/case-studies/fivex/", "permanent": true },
-    { "source": "/launched-a-scalable-outbound-strategy-that-helped-enter-new-markets-and-generate-early-wins/", "destination": "/case-studies/fivex/", "permanent": true },
-    { "source": "/built-a-direct-outbound-system-that-replaced-partner-dependency-with-a-self-sustaining-sales-pipeline", "destination": "/case-studies/franchise-rocket/", "permanent": true },
-    { "source": "/built-a-direct-outbound-system-that-replaced-partner-dependency-with-a-self-sustaining-sales-pipeline/", "destination": "/case-studies/franchise-rocket/", "permanent": true },
-    { "source": "/built-a-scalable-outbound-engine-that-kept-the-pipeline-full-and-freed-leadership-to-focus-on-growth", "destination": "/case-studies/conveyor/", "permanent": true },
-    { "source": "/built-a-scalable-outbound-engine-that-kept-the-pipeline-full-and-freed-leadership-to-focus-on-growth/", "destination": "/case-studies/conveyor/", "permanent": true },
-    { "source": "/about-us", "destination": "/#about", "permanent": true },
-    { "source": "/about-us/", "destination": "/#about", "permanent": true },
-    { "source": "/home", "destination": "/", "permanent": true },
-    { "source": "/our-services", "destination": "/", "permanent": true },
-    { "source": "/resources", "destination": "/", "permanent": true },
-    { "source": "/resources/", "destination": "/", "permanent": true },
-    { "source": "/clientstories/:slug", "destination": "/#results", "permanent": true },
-    { "source": "/book-a-call", "destination": "/", "permanent": true },
-    { "source": "/book-a-call-2", "destination": "/", "permanent": true },
-    { "source": "/book-a-call-3", "destination": "/", "permanent": true },
-    { "source": "/tag/:slug/feed", "destination": "/", "permanent": true },
-    { "source": "/tag/:slug/feed/", "destination": "/", "permanent": true },
-    { "source": "/category/:slug/feed", "destination": "/", "permanent": true },
-    { "source": "/category/:slug/feed/", "destination": "/", "permanent": true },
-    { "source": "/feed", "destination": "/", "permanent": true },
-    { "source": "/feed/", "destination": "/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "content-rebels" }], "destination": "/case-studies/content-rebels/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "cypago" }], "destination": "/case-studies/cypago/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "sales-savvy" }], "destination": "/case-studies/sales-savvy/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "outbox" }], "destination": "/case-studies/outbox/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "iscent" }], "destination": "/case-studies/iscent/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "revcat" }], "destination": "/case-studies/revcat/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "easygenerator" }], "destination": "/case-studies/easygenerator/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "the-recipe" }], "destination": "/case-studies/the-recipe/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "fivex" }], "destination": "/case-studies/fivex/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "franchise-rocket" }], "destination": "/case-studies/franchise-rocket/", "permanent": true },
-    { "source": "/case-study.html", "has": [{ "type": "query", "key": "case", "value": "conveyor" }], "destination": "/case-studies/conveyor/", "permanent": true }
+    {
+      "source": "/services",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/studies",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/studies/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:slug",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:slug/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/created-a-sustainable-lead-generation-system-that-delivered-consistent-growth-and-freed-time-for-client-work",
+      "destination": "/case-studies/content-rebels/",
+      "permanent": true
+    },
+    {
+      "source": "/created-a-sustainable-lead-generation-system-that-delivered-consistent-growth-and-freed-time-for-client-work/",
+      "destination": "/case-studies/content-rebels/",
+      "permanent": true
+    },
+    {
+      "source": "/revived-outbound-sales-with-a-focused-strategy-that-delivered-immediate-traction-and-high-value-meetings",
+      "destination": "/case-studies/cypago/",
+      "permanent": true
+    },
+    {
+      "source": "/revived-outbound-sales-with-a-focused-strategy-that-delivered-immediate-traction-and-high-value-meetings/",
+      "destination": "/case-studies/cypago/",
+      "permanent": true
+    },
+    {
+      "source": "/sales-sourcers-helped-an-australian-marketing-agency-build-a-repeatable-sales-engine-and-hit-six-figures-in-new-revenue",
+      "destination": "/case-studies/sales-savvy/",
+      "permanent": true
+    },
+    {
+      "source": "/sales-sourcers-helped-an-australian-marketing-agency-build-a-repeatable-sales-engine-and-hit-six-figures-in-new-revenue/",
+      "destination": "/case-studies/sales-savvy/",
+      "permanent": true
+    },
+    {
+      "source": "/enabled-a-smooth-transition-from-agency-to-saas-with-a-predictable-sales-pipeline",
+      "destination": "/case-studies/outbox/",
+      "permanent": true
+    },
+    {
+      "source": "/enabled-a-smooth-transition-from-agency-to-saas-with-a-predictable-sales-pipeline/",
+      "destination": "/case-studies/outbox/",
+      "permanent": true
+    },
+    {
+      "source": "/created-a-steady-pipeline-that-opened-doors-to-premium-global-clients",
+      "destination": "/case-studies/iscent/",
+      "permanent": true
+    },
+    {
+      "source": "/created-a-steady-pipeline-that-opened-doors-to-premium-global-clients/",
+      "destination": "/case-studies/iscent/",
+      "permanent": true
+    },
+    {
+      "source": "/transformed-referral-driven-sales-into-a-scalable-outbound-growth-engine",
+      "destination": "/case-studies/revcat/",
+      "permanent": true
+    },
+    {
+      "source": "/transformed-referral-driven-sales-into-a-scalable-outbound-growth-engine/",
+      "destination": "/case-studies/revcat/",
+      "permanent": true
+    },
+    {
+      "source": "/secured-enterprise-level-opportunities-with-a-targeted-outbound-strategy-focused-on-high-value-decision-makers",
+      "destination": "/case-studies/easygenerator/",
+      "permanent": true
+    },
+    {
+      "source": "/secured-enterprise-level-opportunities-with-a-targeted-outbound-strategy-focused-on-high-value-decision-makers/",
+      "destination": "/case-studies/easygenerator/",
+      "permanent": true
+    },
+    {
+      "source": "/built-a-scalable-outbound-system-that-turned-a-referral-based-agency-into-a-predictable-growth-engine",
+      "destination": "/case-studies/the-recipe/",
+      "permanent": true
+    },
+    {
+      "source": "/built-a-scalable-outbound-system-that-turned-a-referral-based-agency-into-a-predictable-growth-engine/",
+      "destination": "/case-studies/the-recipe/",
+      "permanent": true
+    },
+    {
+      "source": "/launched-a-scalable-outbound-strategy-that-helped-enter-new-markets-and-generate-early-wins",
+      "destination": "/case-studies/fivex/",
+      "permanent": true
+    },
+    {
+      "source": "/launched-a-scalable-outbound-strategy-that-helped-enter-new-markets-and-generate-early-wins/",
+      "destination": "/case-studies/fivex/",
+      "permanent": true
+    },
+    {
+      "source": "/built-a-direct-outbound-system-that-replaced-partner-dependency-with-a-self-sustaining-sales-pipeline",
+      "destination": "/case-studies/franchise-rocket/",
+      "permanent": true
+    },
+    {
+      "source": "/built-a-direct-outbound-system-that-replaced-partner-dependency-with-a-self-sustaining-sales-pipeline/",
+      "destination": "/case-studies/franchise-rocket/",
+      "permanent": true
+    },
+    {
+      "source": "/built-a-scalable-outbound-engine-that-kept-the-pipeline-full-and-freed-leadership-to-focus-on-growth",
+      "destination": "/case-studies/conveyor/",
+      "permanent": true
+    },
+    {
+      "source": "/built-a-scalable-outbound-engine-that-kept-the-pipeline-full-and-freed-leadership-to-focus-on-growth/",
+      "destination": "/case-studies/conveyor/",
+      "permanent": true
+    },
+    {
+      "source": "/about-us",
+      "destination": "/#about",
+      "permanent": true
+    },
+    {
+      "source": "/about-us/",
+      "destination": "/#about",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/our-services",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/our-services/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/resources",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/resources/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/clientstories/:slug",
+      "destination": "/#results",
+      "permanent": true
+    },
+    {
+      "source": "/book-a-call",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/book-a-call/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/book-a-call-2",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/book-a-call-2/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/book-a-call-3",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/book-a-call-3/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:slug/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:slug/feed/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:slug/feed/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "content-rebels"
+        }
+      ],
+      "destination": "/case-studies/content-rebels/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "cypago"
+        }
+      ],
+      "destination": "/case-studies/cypago/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "sales-savvy"
+        }
+      ],
+      "destination": "/case-studies/sales-savvy/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "outbox"
+        }
+      ],
+      "destination": "/case-studies/outbox/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "iscent"
+        }
+      ],
+      "destination": "/case-studies/iscent/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "revcat"
+        }
+      ],
+      "destination": "/case-studies/revcat/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "easygenerator"
+        }
+      ],
+      "destination": "/case-studies/easygenerator/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "the-recipe"
+        }
+      ],
+      "destination": "/case-studies/the-recipe/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "fivex"
+        }
+      ],
+      "destination": "/case-studies/fivex/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "franchise-rocket"
+        }
+      ],
+      "destination": "/case-studies/franchise-rocket/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "case",
+          "value": "conveyor"
+        }
+      ],
+      "destination": "/case-studies/conveyor/",
+      "permanent": true
+    }
   ],
   "headers": [
     {
@@ -69,18 +407,44 @@
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://img.youtube.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://challenges.cloudflare.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com https://calendly.com https://challenges.cloudflare.com; form-action 'self'; upgrade-insecure-requests"
         },
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), accelerometer=(), gyroscope=()" },
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin-allow-popups" },
-        { "key": "X-Permitted-Cross-Domain-Policies", "value": "none" }
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=(), usb=(), bluetooth=(), accelerometer=(), gyroscope=()"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin-allow-popups"
+        },
+        {
+          "key": "X-Permitted-Cross-Domain-Policies",
+          "value": "none"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }

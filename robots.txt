@@ -1,31 +1,51 @@
 # SalesSourcers robots.txt
-# Block pure AI-training crawlers (no search or citation value to us)
-User-agent: GPTBot
-Disallow: /
+#
+# Policy changed 2026-09-08: AI crawlers are now allowed.
+# Previously GPTBot, CCBot, anthropic-ai and ClaudeBot were blocked while
+# OAI-SearchBot and PerplexityBot were allowed, which was half-open - it kept
+# us out of the corpora that answer "who should we hire for outbound" while
+# still permitting the live search bots. B2B buyers now routinely shortlist
+# through LLMs, and AI answers frequently cite pages that do not rank in the
+# top ten, so being readable is worth more to us than being withheld.
 
-User-agent: CCBot
-Disallow: /
-
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-# Allow AI search and citation bots so SalesSourcers can surface in AI answers
+# --- AI search, answer and citation crawlers ---
 User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
-# Everyone else (traditional search engines included)
+User-agent: CCBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# --- Everyone else, traditional search engines included ---
 User-agent: *
 Allow: /
 

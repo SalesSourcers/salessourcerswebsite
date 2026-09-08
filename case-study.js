@@ -1,6 +1,8 @@
 const cases = {
   "content-rebels": {
     name: "Content Rebels",
+    seoTitle: "Marketing Agency Lead Generation Case Study | SalesSourcers",
+    seoDescription: "How a Sydney marketing agency replaced referral dependency with a repeatable outbound system: 93 qualified leads, 47 meetings and $212K revenue in 3 months.",
     industry: "Marketing agency",
     location: "Sydney, Australia",
     size: "11-50 employees",
@@ -51,6 +53,8 @@ const cases = {
   },
   "cypago": {
     name: "Cypago",
+    seoTitle: "Cybersecurity SDR Outsourcing Case Study | SalesSourcers",
+    seoDescription: "How a cybersecurity SaaS vendor booked 61 meetings with CISO-level buyers and closed $120K, after an internal SDR team and three agencies had failed.",
     industry: "Cybersecurity SaaS",
     location: "New York, United States",
     size: "11-50 employees",
@@ -101,6 +105,8 @@ const cases = {
   },
   "sales-savvy": {
     name: "Sales Savvy",
+    seoTitle: "Outsourced Sales for an eCommerce Agency | SalesSourcers",
+    seoDescription: "How an eCommerce marketing agency used an outsourced sales department to remove the founder bottleneck: 23 sales meetings and six-figure growth in 2 months.",
     industry: "eCommerce marketing agency",
     location: "Sydney, Australia",
     size: "1-10 employees",
@@ -151,6 +157,8 @@ const cases = {
   },
   "outbox": {
     name: "Outbox AI",
+    seoTitle: "Outbound for an AI Agency Moving to SaaS | SalesSourcers",
+    seoDescription: "How a Perth AI agency moving into SaaS turned scattered email activity into a repeatable process: 111 qualified leads and 12 new clients in 3 months.",
     industry: "AI agency turned SaaS",
     location: "Perth, Australia",
     size: "1-10 employees",
@@ -201,6 +209,8 @@ const cases = {
   },
   "iscent": {
     name: "iScent",
+    seoTitle: "Appointment Setting in Luxury Hospitality | SalesSourcers",
+    seoDescription: "How a scent marketing specialist reached premium hotel, spa and luxury retail buyers across the GCC and Southeast Asia: 141 meetings and 721% ROI.",
     industry: "Product and scent marketing",
     location: "Dubai, United Arab Emirates",
     size: "11-50 employees",
@@ -251,6 +261,8 @@ const cases = {
   },
   "revcat": {
     name: "Revcat",
+    seoTitle: "B2B SaaS Outbound Case Study: Revcat | SalesSourcers",
+    seoDescription: "How a London B2B SaaS founder turned founder-led selling into a repeatable channel: first outbound client in week one, 49 meetings and $380K pipeline.",
     industry: "B2B SaaS",
     location: "London, United Kingdom",
     size: "1-10 employees",
@@ -302,6 +314,8 @@ const cases = {
   },
   "easygenerator": {
     name: "Easygenerator",
+    seoTitle: "Enterprise SaaS Appointment Setting | SalesSourcers",
+    seoDescription: "How an eLearning platform reached senior L&D buyers inside 10,000-plus employee companies: 12 enterprise meetings with C-suite and VP-level buyers.",
     industry: "eLearning and B2B SaaS",
     location: "Rotterdam, Netherlands",
     size: "201-500 employees",
@@ -351,6 +365,8 @@ const cases = {
   },
   "the-recipe": {
     name: "The Recipe",
+    seoTitle: "Outbound for a New Zealand Agency | SalesSourcers",
+    seoDescription: "How an Auckland marketing agency replaced referral dependence with a forecastable opportunity engine: 86 qualified leads and 29 verified sales meetings.",
     industry: "Marketing agency",
     location: "Auckland, New Zealand",
     size: "1-10 employees",
@@ -401,6 +417,8 @@ const cases = {
   },
   "fivex": {
     name: "FiveX",
+    seoTitle: "Testing a New Market with Outbound | SalesSourcers",
+    seoDescription: "How an Amsterdam B2B SaaS company tested a new market with two coordinated outbound campaigns: 45 qualified leads and 23 sales meetings.",
     industry: "B2B SaaS and services",
     location: "Amsterdam, Netherlands",
     size: "11-50 employees",
@@ -451,6 +469,8 @@ const cases = {
   },
   "franchise-rocket": {
     name: "Franchise Rocket",
+    seoTitle: "Outbound for a Franchise Marketing Agency | SalesSourcers",
+    seoDescription: "How a Sydney franchise marketing agency reduced partner dependency with direct outbound and closed its first client in month one at $15K MRR.",
     industry: "Marketing agency",
     location: "Sydney, Australia",
     size: "11-50 employees",
@@ -501,6 +521,8 @@ const cases = {
   },
   "conveyor": {
     name: "Conveyor",
+    seoTitle: "Building Consistent Agency Pipeline | SalesSourcers",
+    seoDescription: "How a Philadelphia marketing agency turned stop-start prospecting into steady pipeline that no longer depended on leadership bandwidth: 45 qualified leads.",
     industry: "Marketing agency",
     location: "Philadelphia, United States",
     size: "11-50 employees",
@@ -585,8 +607,8 @@ const data = cases[key];
 const toAbs = (p) => (p && !/^(https?:)?\/\//.test(p) && p[0] !== "/") ? "/" + p : p;
 
 document.documentElement.style.setProperty("--accent", data.accent);
-document.title = `${data.name} Case Study | SalesSourcers`;
-document.querySelector('meta[name="description"]').content = data.summary;
+document.title = data.seoTitle || `${data.name} Case Study | SalesSourcers`;
+document.querySelector('meta[name="description"]').content = data.seoDescription || data.summary;
 
 document.querySelectorAll("[data-field]").forEach((element) => {
   const field = element.dataset.field;
