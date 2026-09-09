@@ -23,9 +23,11 @@ const jsonld = (obj) => JSON.stringify(obj, null, 2).replace(/<\//g, "<\\/");
 
 const NAV = [
   ["/#system", "What we do"],
+  ["/services/", "Services"],
+  ["/industries/", "Industries"],
+  ["/pricing/", "Pricing"],
   ["/#dashboard", "Dashboard"],
   ["/#results", "Results"],
-  ["/#packages", "Packages"],
   ["/#about", "About"],
   ["/#team", "Team"],
   ["/#careers", "Careers"],
