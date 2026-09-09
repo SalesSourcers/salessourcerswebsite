@@ -35,7 +35,7 @@ const cases = {
     founderImage: "assets/founder-sarah.webp",
     quoteName: "Sarah Spence",
     quoteRole: "Founder, Content Rebels",
-    video: "4z8frEw4mbY",
+    video: null,
     impactTitle: "Pipeline continued to grow while leadership reclaimed time for higher-value work.",
     impact: "Within three months, the campaign converted 93 qualified leads into 47 sales meetings, six new clients and $212K in revenue. More importantly, new business no longer stopped when the founder became busy with delivery.",
     outcomes: [
@@ -576,7 +576,6 @@ const cases = {
 const order = ["content-rebels", "cypago", "sales-savvy", "outbox", "iscent", "revcat", "easygenerator", "the-recipe", "fivex", "franchise-rocket", "conveyor"];
 
 const videoThumbs = {
-  "content-rebels": "assets/testimonial-content-rebels-v2.webp",
   cypago: "assets/testimonial-cypago-v2.webp",
   "sales-savvy": "assets/testimonial-sales-savvy-v2.webp",
   outbox: "assets/testimonial-outbox.webp",
