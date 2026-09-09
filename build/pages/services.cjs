@@ -1,5 +1,67 @@
 const { refs, asideCta, asideFacts, asideLinks, HOW_IT_RUNS, STANDARD_FAQS } = require("./shared.cjs");
 
+/* ============================= 0. SERVICES HUB ============================= */
+const hub = {
+  path: "/services/",
+  title: "Outbound Services | Outsourced SDR & Cold Calling | SalesSourcers",
+  description: "The four ways we build outbound pipeline: outsourced SDR, B2B appointment setting, cold calling and lead generation. What each covers and which one you need.",
+  serviceName: "Outbound services",
+  serviceType: "Sales development representative outsourcing",
+  breadcrumbName: "Services",
+  kicker: "SERVICES",
+  h1: "Four ways in. One motion underneath.",
+  standfirst: "Most agencies sell these as separate products. They are the same programme described from different angles, and the one you should ask for depends on what you already have.",
+  ctaLabel: "Get my outbound strategy",
+  answerLabel: "Which one do you need?",
+  answer: [
+    "If you have nobody prospecting, you want <strong>an outsourced SDR</strong>. If you have closers but an empty calendar, you want <strong>appointment setting</strong>. If your buyers answer phones, you want <strong>cold calling</strong>. If you are not yet sure who to target, you want <strong>lead generation</strong>.",
+    "Underneath, all four run the same way: define the market, build the playbook, live in week three, coached three times a week, every call recorded.",
+  ],
+  body: `        <h2>The four, and what actually separates them</h2>
+        <h3>Outsourced SDR</h3>
+        <p>A dedicated rep who works your accounts and nobody else's. You are buying the person and the management around them - recruitment, training, coaching and replacement all move to us. Choose this when the constraint is that nobody is prospecting and nobody has the hours to manage someone who does. <a href="/outsourced-sdr/">Outsourced SDR services</a>.</p>
+        <h3>B2B appointment setting</h3>
+        <p>The same work, bought by the outcome rather than the head. Choose this when you already have closers and the problem is a thin calendar. The thing to interrogate is the qualification bar, because a meeting number is the easiest metric in B2B to hit dishonestly. <a href="/b2b-appointment-setting/">B2B appointment setting</a>.</p>
+        <h3>Cold calling</h3>
+        <p>The channel rather than the arrangement. Choose this when your buyers are reachable by phone and email alone has stalled. Between 1,500 and 5,000 targeted calls a month, recorded, with the recordings available to you. <a href="/cold-calling-services/">Cold calling services</a>.</p>
+        <h3>B2B lead generation</h3>
+        <p>The widest of the four, and the term most abused. Ours ends in a booked conversation, not a list or a form fill. Choose this when the market itself is still an open question and the definition work matters as much as the outreach. <a href="/b2b-lead-generation/">B2B lead generation</a>.</p>
+        <h2>What is identical across all four</h2>
+        <p>The engagement does not change shape depending on which name you bought. Strategy and build in weeks one and two, live in week three, manager coaching three times a week, every call recorded with AI notes, and reporting broken down by role, region and message.</p>
+        <p>If you are comparing us with hiring instead, the <a href="/outsourced-sdr-vs-in-house/">loaded-cost comparison</a> is the honest place to start. If you want to know what it costs, <a href="/pricing/">the pricing page</a> explains the drivers rather than hiding behind a form.</p>`,
+  aside:
+    asideCta("Not sure which one?", "Tell us what you already have and we will say which of the four actually fits - including if the answer is none of them.") +
+    "\n" +
+    asideLinks("The four services", [
+      ["/outsourced-sdr/", "Outsourced SDR", "A dedicated rep, live in week three"],
+      ["/b2b-appointment-setting/", "Appointment setting", "Bought by the meeting"],
+      ["/cold-calling-services/", "Cold calling", "1,500-5,000 calls a month"],
+      ["/b2b-lead-generation/", "Lead generation", "Ends in a conversation"],
+    ]),
+  caseRefs: refs("cypago", "revcat", "iscent"),
+  caseRefsHeading: "What the work produces.",
+  faqs: [
+    {
+      q: "What is the difference between outsourced SDR and appointment setting?",
+      a: "Mostly what you are buying rather than what happens. Outsourced SDR gives you a dedicated person whose recruitment, training, coaching and replacement are our problem. Appointment setting buys the outcome instead. The work underneath is the same, so the question that matters in either case is the qualification bar.",
+    },
+    {
+      q: "Can we start with one and add another?",
+      a: "There is nothing to add. All four descriptions cover one programme, so a campaign that starts as email-led appointment setting and becomes phone-heavy is a change of emphasis, not a new contract.",
+    },
+    ...STANDARD_FAQS,
+  ],
+  links: [
+    { href: "/pricing/", label: "What it costs" },
+    { href: "/outsourced-sdr-vs-in-house/", label: "Outsourced vs in-house" },
+    { href: "/industries/", label: "Industries we work in" },
+    { href: "/australia/", label: "Outbound in Australia" },
+    { href: "/uk/", label: "Outbound in the UK" },
+  ],
+  ctaHeadingA: "Find out which one",
+  ctaHeadingB: "you actually need.",
+};
+
 /* ============================ 1. OUTSOURCED SDR ============================ */
 const outsourcedSdr = {
   path: "/outsourced-sdr/",
@@ -344,4 +406,4 @@ ${HOW_IT_RUNS}
   ctaHeadingB: "Start having conversations.",
 };
 
-module.exports = [outsourcedSdr, appointmentSetting, coldCalling, leadGeneration];
+module.exports = [hub, outsourcedSdr, appointmentSetting, coldCalling, leadGeneration];
