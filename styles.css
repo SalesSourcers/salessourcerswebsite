@@ -1255,3 +1255,7 @@ body.modal-open { overflow: hidden; }
 .form-turnstile { margin: 14px 0 4px; }
 
 /* Strategy booking — region selector. */
+
+/* contextual in-body links in section intros (light and dark sections) */
+.section-heading p a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rose); text-decoration-thickness: 1px; }
+.section-heading p a:hover { text-decoration-color: currentColor; }

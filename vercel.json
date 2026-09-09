@@ -177,7 +177,17 @@
       "permanent": true
     },
     {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/our-services",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/our-services/",
       "destination": "/",
       "permanent": true
     },
@@ -202,12 +212,27 @@
       "permanent": true
     },
     {
+      "source": "/book-a-call/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/book-a-call-2",
       "destination": "/",
       "permanent": true
     },
     {
+      "source": "/book-a-call-2/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/book-a-call-3",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/book-a-call-3/",
       "destination": "/",
       "permanent": true
     },
@@ -239,18 +264,6 @@
     {
       "source": "/feed/",
       "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/case-study.html",
-      "has": [
-        {
-          "type": "query",
-          "key": "case",
-          "value": "content-rebels"
-        }
-      ],
-      "destination": "/#results",
       "permanent": true
     },
     {
@@ -381,6 +394,11 @@
         }
       ],
       "destination": "/case-studies/conveyor/",
+      "permanent": true
+    },
+    {
+      "source": "/case-study.html",
+      "destination": "/#results",
       "permanent": true
     }
   ],
