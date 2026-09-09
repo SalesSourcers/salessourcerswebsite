@@ -4,28 +4,27 @@ const { refs, asideCta, asideFacts, asideLinks, STANDARD_FAQS } = require("./sha
 const australia = {
   path: "/australia/",
   title: "Outsourced SDR & Appointment Setting in Australia | SalesSourcers",
-  description: "Outsourced SDR and B2B appointment setting for Australian companies. Local time zone calling, an APAC lead, and five completed campaigns across AU and NZ.",
+  description: "Outsourced SDR and B2B appointment setting for Australian companies. Calling in local business hours, with five completed campaigns across Australia and NZ.",
   serviceName: "Outsourced SDR services in Australia",
   serviceType: "Sales development representative outsourcing",
   areaServed: ["Australia", "New Zealand", "Asia Pacific"],
   kicker: "AUSTRALIA & NEW ZEALAND",
   h1: "Outbound built for the Australian market.",
-  standfirst: "Five of our completed campaigns ran for companies in Sydney, Perth and Auckland. Calls happen in local business hours, and APAC engagements are led from within the region.",
-  ctaLabel: "Book with our APAC team",
+  standfirst: "Five of our completed campaigns ran for companies in Sydney, Perth and Auckland, and campaigns are staffed for the market being sold into rather than the market we sit in.",
+  ctaLabel: "Get my outbound strategy",
   answerLabel: "In short",
   answer: [
     "We run <strong>outsourced SDR and appointment setting campaigns for Australian and New Zealand companies</strong>, with calling inside local business hours rather than shifted to a European desk.",
-    "APAC engagements are led by Zane, based in the region. Our completed Australian and New Zealand work spans marketing agencies, eCommerce and AI-to-SaaS companies in Sydney, Perth and Auckland.",
+    "We hire SDRs across the UK, South Africa, the United States and Australia, and staff a campaign for the market it sells into. Our completed Australian and New Zealand work spans marketing agencies, eCommerce and AI-to-SaaS companies in Sydney, Perth and Auckland.",
   ],
-  body: `        <h2>Why the time zone is the whole problem</h2>
-        <p>Most outsourced SDR providers serving Australia are not in Australia. Their reps call in a European or North American shift, which lands either at the very start or the very end of an Australian working day.</p>
-        <p>Cold calling is unusually sensitive to this. A call at the wrong hour is not simply less likely to connect; it is more likely to annoy the person who answers it. Campaigns run from the wrong time zone tend to show acceptable dial counts and poor connect rates, and the reason is rarely diagnosed correctly.</p>
-        <p>Our APAC campaigns are led from within the region and calls are placed in local business hours across the eastern and western states.</p>
+  body: `        <h2>Why the calling window matters</h2>
+        <p>Cold calling is unusually sensitive to the hour it happens. A call at the wrong time is not simply less likely to connect; it is more likely to irritate the person who answers. A campaign dialling Australia from a European shift lands either at the very start or the very end of the working day, and the symptom is an acceptable dial count with a poor connect rate - which is rarely diagnosed correctly.</p>
+        <p>We staff a campaign for the market it sells into, so Australian and New Zealand calling happens inside local business hours across the eastern and western states.</p>
         <div class="stat-strip">
           <div><b>5</b><span>Completed AU / NZ campaigns</span></div>
           <div><b>Sydney</b><span>Perth &amp; Auckland</span></div>
           <div><b>Local hours</b><span>Calling window</span></div>
-          <div><b>Region-led</b><span>APAC engagements</span></div>
+          <div><b>Narrow</b><span>Targeting for a smaller TAM</span></div>
         </div>
         <h2>What we have actually run here</h2>
         <p>Australia and New Zealand are not a new market for us. Nearly half of our published case studies are companies based in the region.</p>
@@ -46,13 +45,13 @@ const australia = {
         <p>The model is the same everywhere: strategy and build in weeks one and two, live in week three, then manager coaching three times a week with every call recorded and annotated. What changes for APAC is the calling window, the seniority conventions, and who leads the account.</p>
         <p>Packages run at 1,500, 3,000 or 5,000 targeted calls a month, matched to 10 to 15, 15 to 25, or 25 to 40 expected meetings. For most Australian markets the middle tier is the honest starting point, because the addressable market rarely justifies the top one.</p>`,
   aside:
-    asideCta("Book with the APAC team", "Australian and New Zealand enquiries go to Zane, who leads our APAC engagements from the region.") +
+    asideCta("Book a strategy session", "We will map your addressable market in Australia and New Zealand and show you the segments worth working first.") +
     "\n" +
     asideFacts("Australia at a glance", [
       "<strong>5</strong> completed AU / NZ campaigns",
       "<strong>Sydney, Perth, Auckland</strong> client base",
       "Calls placed in <strong>local business hours</strong>",
-      "APAC engagements <strong>led from the region</strong>",
+      "Staffed for the market <strong>being sold into</strong>",
       "Narrow targeting suited to a smaller TAM",
     ]) +
     "\n" +
@@ -66,7 +65,7 @@ const australia = {
   faqs: [
     {
       q: "Do you have SDRs who call in Australian business hours?",
-      a: "Yes. Calls for Australian and New Zealand campaigns are placed inside local business hours across the eastern and western states, rather than shifted to a European or North American desk. APAC engagements are led from within the region.",
+      a: "Yes. Calls for Australian and New Zealand campaigns are placed inside local business hours across the eastern and western states. We hire SDRs across the UK, South Africa, the United States and Australia, and staff each campaign for the market it sells into rather than the market we sit in.",
     },
     {
       q: "Have you worked with Australian companies before?",
@@ -110,7 +109,7 @@ const uk = {
     "UK agencies that publish rates typically charge &pound;3,000 to &pound;12,000 per month. We price against your specific market after a complimentary strategy session rather than from a rate card.",
   ],
   body: `        <h2>A crowded market, and how to read it</h2>
-        <p>The UK has more outsourced SDR providers per capita than almost anywhere. Air Marketing, Concept, Operatix, SalesRoads and The Lead Generation Company are all established, credible and long-standing. It is a genuinely competitive market, which is good for buyers who know what to compare.</p>
+        <p>The UK has no shortage of outsourced SDR providers, and most of them are perfectly credible. That makes the choice harder rather than easier, because at the proposal stage every provider's case studies look broadly alike.</p>
         <p>Three questions separate providers more reliably than any case study:</p>
         <ul>
           <li><strong>Is the SDR dedicated or shared?</strong> A shared pool never learns your market, because nobody stays in it long enough.</li>
