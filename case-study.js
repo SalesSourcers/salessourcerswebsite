@@ -1,54 +1,4 @@
 const cases = {
-  "content-rebels": {
-    name: "Content Rebels",
-    industry: "Marketing agency",
-    location: "Sydney, Australia",
-    size: "11-50 employees",
-    website: "https://contentrebels.com.au/",
-    source: "https://www.salessourcers.com/created-a-sustainable-lead-generation-system-that-delivered-consistent-growth-and-freed-time-for-client-work/",
-    logo: "assets/client-content-rebels-color.png",
-    accent: "#f04f6e",
-    headline: "A referral-led agency built a repeatable route to new clients without adding more work for the founder.",
-    summary: "SalesSourcers combined intent-led targeting, personalised outreach and a low-touch sales process to keep qualified opportunities moving while the Content Rebels team focused on client delivery.",
-    primaryMetric: "$212K",
-    primaryLabel: "revenue generated in three months",
-    metrics: [["93", "qualified leads"], ["47", "sales meetings"], ["6", "new clients"], ["3 months", "campaign period"]],
-    challengeTitle: "Strong delivery and a valuable network were not enough to make pipeline predictable.",
-    challenge: "Founder Sarah Spence was balancing operations, client work and sales. Referral volume had started to slow, but building and managing a new prospecting function internally would have taken time she did not have.",
-    challenges: [
-      "New business relied heavily on referrals from the agency's existing marketing network.",
-      "Leadership had no spare capacity to research accounts, run outreach and manage every follow-up.",
-      "The agency needed qualified opportunities without creating a sales process that demanded constant founder involvement."
-    ],
-    approachTitle: "Design the campaign around both buyer intent and the founder's available capacity.",
-    approach: "The programme prioritised companies showing active demand for marketing support, then created a simple path from first contact to a qualified conversation that Sarah could progress efficiently.",
-    campaign: [
-      ["Intent-led market", "Identify prospects actively searching for marketing support or showing credible purchase signals."],
-      ["Segmented outreach", "Group accounts by need and personalise the reason for contacting each buyer."],
-      ["Multi-channel follow-up", "Coordinate calling, email and structured follow-up rather than relying on one isolated touchpoint."],
-      ["Low-touch handoff", "Qualify context before booking so the founder could focus on the conversations most likely to convert."]
-    ],
-    quoteLabel: "CLIENT QUOTE",
-    quote: "We just didn't have the time to do our own lead generation and SalesSourcers completely removed this burden. The quality of meetings has been outstanding. The sales side of the business has never been busier.",
-    founderImage: "assets/founder-sarah.webp",
-    quoteName: "Sarah Spence",
-    quoteRole: "Founder, Content Rebels",
-    video: null,
-    impactTitle: "Pipeline continued to grow while leadership reclaimed time for higher-value work.",
-    impact: "Within three months, the campaign converted 93 qualified leads into 47 sales meetings, six new clients and $212K in revenue. More importantly, new business no longer stopped when the founder became busy with delivery.",
-    outcomes: [
-      "A sustainable source of opportunities replaced the uncertainty of waiting for referrals.",
-      "Meeting qualification protected the founder's time and made each sales conversation more useful.",
-      "The agency gained evidence that outbound could produce both volume and commercially relevant clients."
-    ],
-    lessons: [
-      ["Target demand, not just fit", "The strongest accounts had both an ICP match and a current reason to explore marketing support."],
-      ["Match the process to capacity", "The sales motion was designed around how much time leadership could realistically give to closing."],
-      ["Measure revenue, not activity", "Success was judged by qualified meetings, new clients and revenue rather than sends or dials."]
-    ],
-    fitTitle: "Relevant for agencies with strong delivery but inconsistent founder-led growth.",
-    fit: "This model is best suited to agencies that know which clients they want, have evidence their offer works and need a managed route to those buyers without making the founder the full-time SDR."
-  },
   "cypago": {
     name: "Cypago",
     industry: "Cybersecurity SaaS",
@@ -551,7 +501,7 @@ const cases = {
   }
 };
 
-const order = ["content-rebels", "cypago", "sales-savvy", "outbox", "iscent", "revcat", "easygenerator", "the-recipe", "fivex", "franchise-rocket", "conveyor"];
+const order = ["cypago", "sales-savvy", "outbox", "iscent", "revcat", "easygenerator", "the-recipe", "fivex", "franchise-rocket", "conveyor"];
 
 const videoThumbs = {
   cypago: "assets/testimonial-cypago-v2.webp",
@@ -564,7 +514,6 @@ const videoThumbs = {
 };
 
 const signalPlans = {
-  "content-rebels": [["Signals used", "Marketing teams hiring, paid media activity, weak organic visibility and companies already investing in content but lacking clear conversion assets."], ["Account logic", "Prioritise businesses with enough budget to pay agency fees and enough visible acquisition pressure to justify a sales conversation now."], ["Outreach angle", "Lead with the specific gap in their current marketing motion, then use calling to qualify urgency, budget and founder fit before booking Sarah's time."]],
   cypago: [["Signals used", "Security leadership changes, compliance hiring, public GRC initiatives, audit pressure and companies with complex cloud or vendor-risk environments."], ["Account logic", "Filter for senior cybersecurity ownership and organisations where compliance automation could create measurable operational savings."], ["Outreach angle", "Open with the risk or workload signal, not a generic platform pitch, then qualify whether the buyer owned the compliance or security operations pain."]],
   "sales-savvy": [["Signals used", "eCommerce brands increasing ad spend, weak retention mechanics, founder-led growth and stores showing active acquisition but inconsistent conversion."], ["Account logic", "Focus on brands with enough transaction volume to benefit from specialist retention and performance marketing support."], ["Outreach angle", "Position the call around missed revenue and founder capacity, then progress suitable prospects through a two-step sales process."]],
   outbox: [["Signals used", "Service-heavy companies with slow response times, high inbound enquiry volume, manual booking workflows and visible customer support bottlenecks."], ["Account logic", "Segment by operational pain where AI voice or chat agents could produce a practical commercial outcome within weeks."], ["Outreach angle", "Avoid broad AI language. Tie the message to response speed, booking efficiency or support coverage, then test which niche produced the clearest buying intent."]],
