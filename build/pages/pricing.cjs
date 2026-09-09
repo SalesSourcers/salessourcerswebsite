@@ -12,6 +12,7 @@ const pricing = {
   description: "What outsourced SDR and appointment setting actually cost, what drives the price up or down, and how the total compares with hiring an SDR in-house.",
   serviceName: "Outsourced SDR pricing",
   serviceType: "Sales development outsourcing",
+  breadcrumbName: "Pricing",
   kicker: "PRICING",
   h1: "What outsourced SDR actually costs.",
   standfirst: "An honest walk through the market ranges, the variables that move your number, and the in-house comparison most cost calculations get wrong.",
@@ -45,9 +46,9 @@ const pricing = {
         <h2>What a programme costs here</h2>
         <p>Our packages are built around meeting capacity rather than a rate card, because the honest answer to "what will this cost" depends on the market you want us to work.</p>
         <div class="stat-strip">
-          <div><b>10-15</b><span>Meetings / mo - 1,500 calls</span></div>
-          <div><b>15-25</b><span>Meetings / mo - 3,000 calls</span></div>
-          <div><b>25-40</b><span>Meetings / mo - 5,000 calls</span></div>
+          <div><b>10-15</b><span>Expected meetings / mo - 1,500 calls</span></div>
+          <div><b>15-25</b><span>Expected meetings / mo - 3,000 calls</span></div>
+          <div><b>25-40</b><span>Expected meetings / mo - 5,000 calls</span></div>
         </div>
         <p>We price against your specific market after the strategy session, so the number reflects real reachable volume rather than a guess. That session is complimentary and you keep the output whether or not you engage us.</p>
         <h2>The comparison most people get wrong</h2>
@@ -63,14 +64,15 @@ const pricing = {
           <li>Replacement cover at the provider's cost</li>
           <li>Reporting by role, region and message, not just totals</li>
         </ul>
-        <p>If a quote is materially cheaper than the market range, one of those is usually missing. Ask which.</p>`,
+        <p>If a quote is materially cheaper than the market range, one of those is usually missing. Ask which.</p>
+        <p class="source-note">Where the market figures come from: the &pound;3,000-&pound;12,000 monthly and &pound;150-&pound;400 per-meeting ranges are compiled from the rates UK outsourced SDR agencies publish openly on their own sites, surveyed September 2026. They are other firms' published prices, not ours, and not an industry study.</p>`,
   aside:
     asideCta("Get a real number", "We price against your actual market after a complimentary strategy session. You keep the market map either way.") +
     "\n" +
     asideFacts("UK market ranges", [
       "<strong>&pound;3,000-&pound;12,000</strong> per month on retainer",
       "<strong>&pound;150-&pound;400</strong> per booked meeting",
-      "Published rates from UK outsourced SDR agencies",
+      "Compiled from UK agencies' own published rates, Sept 2026",
       "Seniority of the buyer is the biggest single driver",
     ]) +
     "\n" +
@@ -120,6 +122,7 @@ const vsInHouse = {
   description: "An honest comparison of outsourcing sales development against hiring an SDR, including the ramp, management and attrition costs most calculations miss.",
   serviceName: "Outsourced SDR vs in-house comparison",
   serviceType: "Sales development outsourcing",
+  breadcrumbName: "Outsourced vs in-house",
   kicker: "COMPARISON",
   h1: "Outsourced SDR vs hiring in-house.",
   standfirst: "The comparison is usually run as retainer against base salary, which is not a like-for-like number. Here is the version that includes ramp, management and attrition.",

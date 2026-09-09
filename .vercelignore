@@ -1,0 +1,12 @@
+# The generator sources. The site deploys the committed HTML in the repo root;
+# build/generate.cjs is run locally and its output is committed, so nothing here
+# is needed at runtime. Without this Vercel serves build/**.cjs as static files,
+# which published the internal pricing-policy comment in build/pages/pricing.cjs.
+#
+# NOTE: .gitignore and .vercelignore are separate lists. Adding a path to one
+# does nothing for the other.
+build/
+
+# Local worktrees and scratch, if they ever end up inside the repo.
+_wt/
+scratch/

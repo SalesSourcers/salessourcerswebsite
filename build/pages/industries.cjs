@@ -28,7 +28,7 @@ const hub = {
         <h3>Cybersecurity</h3>
         <p>Security buyers are the hardest audience in B2B to reach cold, and the one where generic outreach fails most visibly. Our Cypago campaign followed an internal team and three agencies that had not worked. <a href="/industries/cybersecurity/">Cybersecurity lead generation</a>.</p>
         <h3>Marketing agencies</h3>
-        <p>Our largest single vertical - five campaigns across Sydney, Auckland, Philadelphia and beyond, almost all solving the same underlying problem: referral dependency and a founder who has become the bottleneck. <a href="/industries/marketing-agencies/">Lead generation for agencies</a>.</p>
+        <p>Five campaigns across Sydney, Auckland, Philadelphia and beyond, almost all solving the same underlying problem: referral dependency and a founder who has become the bottleneck. <a href="/industries/marketing-agencies/">Lead generation for agencies</a>.</p>
         <h2>If your sector is not listed</h2>
         <p>We have also run campaigns in scent and product marketing into premium hospitality and luxury retail, in eLearning, and in franchising. The question we ask on a first call is not whether we have your exact vertical on the list. It is whether your buyers are reachable, whether your offer has already been bought by someone, and whether the addressable market is large enough to sustain a programme.</p>
         <p>If the answer to any of those is no, we will tell you on the call rather than three months in.</p>`,
@@ -38,7 +38,7 @@ const hub = {
     asideLinks("Sector pages", [
       ["/industries/b2b-saas/", "B2B SaaS", "Five completed campaigns"],
       ["/industries/cybersecurity/", "Cybersecurity", "CISO-level meetings"],
-      ["/industries/marketing-agencies/", "Marketing agencies", "Our largest vertical"],
+      ["/industries/marketing-agencies/", "Marketing agencies", "Five completed campaigns"],
     ]),
   caseRefs: refs("cypago", "iscent", "easygenerator"),
   caseRefsHeading: "Across sectors.",
@@ -259,7 +259,7 @@ const agencies = {
   ctaLabel: "Get my outbound strategy",
   answerLabel: "In short",
   answer: [
-    "Marketing agencies are our <strong>largest single vertical</strong> - five completed campaigns across Sydney, Auckland, Philadelphia and beyond.",
+    "We have run <strong>five completed agency campaigns</strong> across Sydney, Auckland, Philadelphia and beyond.",
     "The pattern repeats almost exactly: referral-led growth that cannot be forecast, and a founder who becomes the bottleneck the moment delivery gets busy. Outbound fails internally not through lack of skill but because client work always wins the calendar.",
   ],
   body: `        <h2>The problem is not capability</h2>

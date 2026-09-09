@@ -400,6 +400,11 @@
       "source": "/case-study.html",
       "destination": "/#results",
       "permanent": true
+    },
+    {
+      "source": "/case-study.html/",
+      "destination": "/#results",
+      "permanent": true
     }
   ],
   "headers": [

@@ -8,6 +8,7 @@ const australia = {
   serviceName: "Outsourced SDR services in Australia",
   serviceType: "Sales development representative outsourcing",
   areaServed: ["Australia", "New Zealand", "Asia Pacific"],
+  breadcrumbName: "Australia",
   kicker: "AUSTRALIA & NEW ZEALAND",
   h1: "Outbound built for the Australian market.",
   standfirst: "Five of our completed campaigns ran for companies in Sydney, Perth and Auckland, and campaigns are staffed for the market being sold into rather than the market we sit in.",
@@ -27,7 +28,7 @@ const australia = {
           <div><b>Narrow</b><span>Targeting for a smaller TAM</span></div>
         </div>
         <h2>What we have actually run here</h2>
-        <p>Australia and New Zealand are not a new market for us. Nearly half of our published case studies are companies based in the region.</p>
+        <p>Australia and New Zealand are not a new market for us. We have run five campaigns in the region, four of which are published as case studies below.</p>
         <ul>
           <li><strong>A Sydney marketing agency</strong> moved from referral dependency to a repeatable route to new clients - 93 qualified leads and 47 meetings across three months.</li>
           <li><strong>Outbox AI</strong> in Perth turned scattered email activity into a repeatable process during a transition from agency to SaaS - 111 qualified leads and 12 new clients.</li>
@@ -99,6 +100,7 @@ const uk = {
   serviceName: "Outsourced SDR services in the United Kingdom",
   serviceType: "Sales development representative outsourcing",
   areaServed: ["United Kingdom", "Ireland", "Europe"],
+  breadcrumbName: "United Kingdom",
   kicker: "UNITED KINGDOM",
   h1: "Outsourced SDR for UK B2B companies.",
   standfirst: "A dedicated SDR working your UK accounts, live in week three, coached three times a week and fully recorded. Run from a UK-registered business with a London line.",

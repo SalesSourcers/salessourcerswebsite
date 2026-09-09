@@ -88,7 +88,7 @@ const entry = (loc, priority, changefreq, lastmod) =>
 const urls = [
   entry(`${SITE}/`, "1.0", "weekly", today),
   ...PAGES.map((p) => entry(SITE + p.path, p.path === "/industries/" ? "0.7" : "0.9", "monthly", today)),
-  ...CASE_SLUGS.map((s) => entry(`${SITE}/case-studies/${s}/`, "0.7", "monthly", "2026-06-26")),
+  ...CASE_SLUGS.map((s) => entry(`${SITE}/case-studies/${s}/`, "0.7", "monthly", today)),
 ];
 
 fs.writeFileSync(

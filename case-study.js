@@ -294,7 +294,7 @@ const cases = {
     quoteLabel: "CAMPAIGN EVIDENCE",
     quote: "The engagement shifted prospecting from broad volume toward senior conversations inside large organisations undergoing meaningful change.",
     quoteName: "SalesSourcers campaign record",
-    quoteRole: "No public client video has been published for this engagement",
+    quoteRole: "Summary from the campaign record, not a client statement",
     video: null,
     impactTitle: "A smaller number of carefully selected meetings created meaningful enterprise pipeline.",
     impact: "The campaign booked twelve C-suite and VP-level meetings at companies with more than 10,000 employees, contributing to more than $120K in open pipeline and $38K in reported revenue.",
