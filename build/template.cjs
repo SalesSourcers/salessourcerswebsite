@@ -8,7 +8,7 @@ const SITE = "https://www.salessourcers.com";
 const CAL_EMEA = "https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1";
 const OG_IMAGE = SITE + "/assets/og-salessourcers.png";
 const CSS_V = "33";
-const PAGE_CSS_V = "2";
+const PAGE_CSS_V = "3";
 const PAGE_JS_V = "1";
 
 const esc = (s) =>

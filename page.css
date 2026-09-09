@@ -75,7 +75,11 @@
 /* ---------- prose body ---------- */
 .page-body { background: var(--off-white); }
 .page-body-inner { display: grid; grid-template-columns: 1.55fr 1fr; gap: 76px; align-items: start; }
-.prose { max-width: 68ch; }
+/* min-width:0 is load-bearing. Grid items default to min-width:auto, so the
+   wide tables inside .prose force the column wider than its track and push
+   the whole page into horizontal overflow on narrow screens - which clips
+   body copy off-screen with no way to scroll to it. */
+.prose { max-width: 68ch; min-width: 0; }
 .prose h2 {
   margin: 0 0 18px;
   font-size: clamp(28px, 3.2vw, 40px);
