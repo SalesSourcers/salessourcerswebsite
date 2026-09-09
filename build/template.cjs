@@ -8,7 +8,7 @@ const SITE = "https://www.salessourcers.com";
 const CAL_EMEA = "https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1";
 const OG_IMAGE = SITE + "/assets/og-salessourcers.png";
 const CSS_V = "33";
-const PAGE_CSS_V = "3";
+const PAGE_CSS_V = "4";
 const PAGE_JS_V = "1";
 
 const esc = (s) =>
@@ -64,7 +64,7 @@ const footer = () => `
       </div>
       <div class="footer-links">
         <div><span>EXPLORE</span><a href="/#system">What we do</a><a href="/#dashboard">Dashboard</a><a href="/#results">Results</a></div>
-        <div><span>SERVICES</span><a href="/outsourced-sdr/">Outsourced SDR</a><a href="/b2b-appointment-setting/">Appointment setting</a><a href="/cold-calling-services/">Cold calling</a><a href="/b2b-lead-generation/">Lead generation</a><a href="/pricing/">Pricing</a></div>
+        <div><span>SERVICES</span><a href="/outsourced-sdr/">Outsourced SDR</a><a href="/b2b-appointment-setting/">Appointment setting</a><a href="/cold-calling-services/">Cold calling</a><a href="/b2b-lead-generation/">Lead generation</a><a href="/industries/">Industries</a><a href="/pricing/">Pricing</a></div>
         <div><span>COMPANY</span><a href="/#about">About</a><a href="/#team">Team</a><a href="/#careers">Careers</a><a href="/#packages">Packages</a><a href="https://www.linkedin.com/company/salessourcers/">LinkedIn</a></div>
         <div><span>CONTACT</span><a href="${CAL_EMEA}" data-calendly-route>Book a call</a><a href="tel:+442083304302">+44 208 330 4302</a><a class="footer-social-icon" href="https://www.linkedin.com/company/salessourcers/" target="_blank" rel="noopener noreferrer" aria-label="SalesSourcers on LinkedIn"><svg aria-hidden="true"><use href="#icon-linkedin"></use></svg></a></div>
       </div>
