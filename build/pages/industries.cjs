@@ -268,13 +268,13 @@ const agencies = {
         <p>The second problem is that the founder is usually the only credible seller. Prospects want to talk to the person whose judgement they are buying. That works until the founder is the constraint on growth.</p>
         <h2>What we have run for agencies</h2>
         <div class="stat-strip">
-          <div><b>$212K</b><span>Content Rebels revenue</span></div>
+          <div><b>$212K</b><span>Agency revenue, 3 months</span></div>
           <div><b>29</b><span>The Recipe verified meetings</span></div>
           <div><b>$15K MRR</b><span>Franchise Rocket, month one</span></div>
           <div><b>5</b><span>Agency campaigns completed</span></div>
         </div>
-        <h3>Content Rebels, Sydney</h3>
-        <p>A referral-led agency where the founder balanced operations, client work and sales. Referral volume had started slowing, and building an internal prospecting function would have taken time she did not have. The campaign produced 93 qualified leads, 47 meetings, six new clients and 212,000 dollars in revenue across three months. <a href="/case-studies/content-rebels/">Read the case study</a>.</p>
+        <h3>A Sydney marketing agency</h3>
+        <p>A referral-led agency where the founder balanced operations, client work and sales. Referral volume had started slowing, and building an internal prospecting function would have taken time they did not have. The campaign produced 93 qualified leads, 47 meetings, six new clients and 212,000 dollars in revenue across three months.</p>
         <h3>The Recipe, Auckland</h3>
         <p>Referral dependence replaced with a proactive engine for creating and forecasting opportunities - 86 qualified leads and 29 verified sales meetings. <a href="/case-studies/the-recipe/">Read the case study</a>.</p>
         <h3>Franchise Rocket, Sydney</h3>
@@ -295,7 +295,7 @@ ${HOW_IT_RUNS}
     asideCta("Book a strategy session", "We will map which client types are worth targeting and what the opening should say. Yours to keep either way.") +
     "\n" +
     asideFacts("Agency campaigns", [
-      "<strong>Content Rebels</strong>, Sydney - $212K revenue",
+      "<strong>A Sydney agency</strong> - $212K revenue",
       "<strong>The Recipe</strong>, Auckland - 29 verified meetings",
       "<strong>Franchise Rocket</strong>, Sydney - $15K MRR month one",
       "<strong>Conveyor</strong>, Philadelphia - steady pipeline",
@@ -307,7 +307,7 @@ ${HOW_IT_RUNS}
       ["/b2b-lead-generation/", "Lead generation", "How the motion works"],
       ["/pricing/", "What it costs", "Cost drivers and ranges"],
     ]),
-  caseRefs: refs("content-rebels", "the-recipe", "franchise-rocket"),
+  caseRefs: refs("conveyor", "the-recipe", "franchise-rocket"),
   caseRefsHeading: "Agency campaigns.",
   faqs: [
     {

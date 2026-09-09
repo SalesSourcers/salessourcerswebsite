@@ -2,7 +2,6 @@
    CASES mirrors the real data in /case-study.js - keep the numbers in sync. */
 
 const CASES = {
-  "content-rebels": { slug: "content-rebels", name: "Content Rebels", industry: "Marketing agency - Sydney", line: "A referral-led agency built a repeatable route to new clients without adding work for the founder.", metric: "$212K", metricLabel: "revenue in 3 months" },
   cypago: { slug: "cypago", name: "Cypago", industry: "Cybersecurity SaaS - New York", line: "Outbound had failed four times. A narrower strategy turned it into enterprise pipeline.", metric: "61", metricLabel: "meetings with CISO-level buyers" },
   "sales-savvy": { slug: "sales-savvy", name: "Sales Savvy", industry: "eCommerce marketing - Sydney", line: "An outsourced sales department removed the founder bottleneck and created six-figure growth.", metric: "23", metricLabel: "meetings in 2 months" },
   outbox: { slug: "outbox", name: "Outbox AI", industry: "AI agency to SaaS - Perth", line: "Scattered email activity became a repeatable process that supported the move to SaaS.", metric: "12", metricLabel: "new clients in 3 months" },

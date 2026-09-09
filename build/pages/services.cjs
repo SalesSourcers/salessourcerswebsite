@@ -62,7 +62,7 @@ ${HOW_IT_RUNS}
       ["/pricing/", "What it costs", "Cost drivers and market ranges"],
       ["/b2b-appointment-setting/", "Appointment setting", "If you only need the meeting"],
     ]),
-  caseRefs: refs("cypago", "revcat", "content-rebels"),
+  caseRefs: refs("cypago", "revcat", "sales-savvy"),
   caseRefsHeading: "SDR programmes we have run.",
   faqs: [
     {
@@ -312,7 +312,7 @@ ${HOW_IT_RUNS}
       ["/cold-calling-services/", "Cold calling", "The primary channel"],
       ["/industries/marketing-agencies/", "For agencies", "Five agency case studies"],
     ]),
-  caseRefs: refs("content-rebels", "iscent", "conveyor"),
+  caseRefs: refs("the-recipe", "iscent", "conveyor"),
   caseRefsHeading: "Lead generation programmes.",
   faqs: [
     {

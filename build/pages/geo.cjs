@@ -30,7 +30,7 @@ const australia = {
         <h2>What we have actually run here</h2>
         <p>Australia and New Zealand are not a new market for us. Nearly half of our published case studies are companies based in the region.</p>
         <ul>
-          <li><strong>Content Rebels</strong>, a Sydney marketing agency, moved from referral dependency to a repeatable route to new clients - 93 qualified leads and 47 meetings across three months.</li>
+          <li><strong>A Sydney marketing agency</strong> moved from referral dependency to a repeatable route to new clients - 93 qualified leads and 47 meetings across three months.</li>
           <li><strong>Outbox AI</strong> in Perth turned scattered email activity into a repeatable process during a transition from agency to SaaS - 111 qualified leads and 12 new clients.</li>
           <li><strong>Sales Savvy</strong>, an eCommerce marketing agency in Sydney, removed a founder bottleneck and reached six-figure growth in two months.</li>
           <li><strong>Franchise Rocket</strong> in Sydney reduced partner dependency and closed its first client in month one.</li>
@@ -58,10 +58,10 @@ const australia = {
     "\n" +
     asideLinks("Related", [
       ["/b2b-appointment-setting/", "Appointment setting", "How meetings get qualified"],
-      ["/industries/marketing-agencies/", "For agencies", "Four of the five AU cases"],
+      ["/industries/marketing-agencies/", "For agencies", "Agency campaigns in AU and NZ"],
       ["/pricing/", "What it costs", "Cost drivers and ranges"],
     ]),
-  caseRefs: refs("content-rebels", "outbox", "the-recipe"),
+  caseRefs: refs("sales-savvy", "outbox", "the-recipe"),
   caseRefsHeading: "Australian and New Zealand campaigns.",
   faqs: [
     {
@@ -70,7 +70,7 @@ const australia = {
     },
     {
       q: "Have you worked with Australian companies before?",
-      a: "Five of our published case studies are Australian or New Zealand companies: Content Rebels, Sales Savvy and Franchise Rocket in Sydney, Outbox AI in Perth, and The Recipe in Auckland. They span marketing agencies, eCommerce marketing and an AI agency moving into SaaS.",
+      a: "Four of our published case studies are Australian or New Zealand companies: Sales Savvy and Franchise Rocket in Sydney, Outbox AI in Perth, and The Recipe in Auckland. They span marketing agencies, eCommerce marketing and an AI agency moving into SaaS.",
     },
     {
       q: "Is outbound different in Australia compared with the US or UK?",

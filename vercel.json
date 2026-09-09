@@ -53,12 +53,12 @@
     },
     {
       "source": "/created-a-sustainable-lead-generation-system-that-delivered-consistent-growth-and-freed-time-for-client-work",
-      "destination": "/case-studies/content-rebels/",
+      "destination": "/#results",
       "permanent": true
     },
     {
       "source": "/created-a-sustainable-lead-generation-system-that-delivered-consistent-growth-and-freed-time-for-client-work/",
-      "destination": "/case-studies/content-rebels/",
+      "destination": "/#results",
       "permanent": true
     },
     {
@@ -267,15 +267,13 @@
       "permanent": true
     },
     {
-      "source": "/case-study.html",
-      "has": [
-        {
-          "type": "query",
-          "key": "case",
-          "value": "content-rebels"
-        }
-      ],
-      "destination": "/case-studies/content-rebels/",
+      "source": "/case-studies/content-rebels",
+      "destination": "/#results",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies/content-rebels/",
+      "destination": "/#results",
       "permanent": true
     },
     {

@@ -25,9 +25,9 @@ const PAGES = [
   ...require("./pages/industries.cjs"),
 ];
 
-/* The 11 pre-rendered case studies, which stay in the sitemap. */
+/* The pre-rendered case studies, which stay in the sitemap. */
 const CASE_SLUGS = [
-  "content-rebels", "cypago", "sales-savvy", "outbox", "iscent", "revcat",
+  "cypago", "sales-savvy", "outbox", "iscent", "revcat",
   "easygenerator", "the-recipe", "fivex", "franchise-rocket", "conveyor",
 ];
 
