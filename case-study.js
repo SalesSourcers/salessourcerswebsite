@@ -635,10 +635,15 @@ if (data.video) {
   document.querySelector("[data-video-wrap]").hidden = true;
 }
 
+// The "original case source" link was removed: every `source` value is a
+// salessourcers.com URL that 301s back to this very page, so presenting it as an
+// external source was self-citation. `source` is kept in the data as provenance.
+// Both lookups are guarded — an unguarded null assignment here throws and takes
+// out every listener registered below it, including the Calendly region routing.
 const sourceLink = document.querySelector("[data-source-link]");
-sourceLink.href = data.source;
+if (sourceLink) sourceLink.href = data.source;
 const websiteLink = document.querySelector("[data-website]");
-websiteLink.href = data.website;
+if (websiteLink) websiteLink.href = data.website;
 
 const currentIndex = order.indexOf(key);
 const nextKey = order[(currentIndex + 1) % order.length];
