@@ -66,7 +66,7 @@ const cases = {
     summary: "SalesSourcers built and ran a complete sales motion spanning prospecting, qualification, follow-up and closing support so leadership could return its attention to delivery.",
     primaryMetric: "$100K+",
     primaryLabel: "new revenue generated in two months",
-    metrics: [["40", "qualified leads"], ["23", "sales meetings"], ["4", "new clients"], ["2 months", "campaign period"]],
+    metrics: [["40", "qualified leads"], ["23", "sales meetings"], ["8", "new clients"], ["2 months", "campaign period"]],
     challengeTitle: "The founder was carrying delivery, operations and sales at the same time.",
     challenge: "Referrals created occasional opportunities, but there was no repeatable process for prospecting or follow-up. Potential business went cold whenever client work became the immediate priority.",
     challenges: [
@@ -89,7 +89,7 @@ const cases = {
     quoteRole: "Founder, Sales Savvy",
     video: "EZzPpKQIfwM",
     impactTitle: "The business gained revenue and the founder gained operating space.",
-    impact: "In two months, the programme produced 40 qualified leads, 23 meetings, four new clients and more than $100K in revenue. The sales process no longer depended on Mareike personally holding every task together.",
+    impact: "In two months, the programme produced 40 qualified leads, 23 meetings, eight new clients and more than $100K in revenue. The sales process no longer depended on Mareike personally holding every task together.",
     outcomes: [
       "A full sales engine replaced an inconsistent referral-led approach.",
       "Follow-up continued while the founder concentrated on client delivery.",
@@ -482,7 +482,7 @@ const cases = {
     summary: "SalesSourcers identified the industries where Conveyor had the strongest proof, mapped the addressable market and ran prospecting consistently regardless of the team's client workload.",
     primaryMetric: "$62K",
     primaryLabel: "revenue generated",
-    metrics: [["53", "qualified leads"], ["21", "sales meetings"], ["4", "new clients"], ["3 months", "campaign period"]],
+    metrics: [["53", "qualified leads"], ["21", "sales meetings"], ["6", "new clients"], ["3 months", "campaign period"]],
     challengeTitle: "Prospecting stopped whenever client work demanded leadership's attention.",
     challenge: "Head of Strategic Partnerships Amy Klewiec was carrying lead generation, sales, account management and operational responsibilities. LinkedIn outreach alone could not create the scale or consistency required.",
     challenges: [
@@ -505,7 +505,7 @@ const cases = {
     quoteRole: "Head of Strategic Partnerships, Conveyor",
     video: null,
     impactTitle: "Pipeline became an operating system rather than a task squeezed between client commitments.",
-    impact: "Within three months, the campaign generated 53 qualified leads, 21 meetings, four new clients and $62K in revenue while freeing leadership to focus on existing client relationships.",
+    impact: "Within three months, the campaign generated 53 qualified leads, 21 meetings, six new clients and $62K in revenue while freeing leadership to focus on existing client relationships.",
     outcomes: [
       "Prospecting continued during busy delivery periods instead of repeatedly stopping.",
       "Targeting focused on industries where the agency's existing evidence was strongest.",
