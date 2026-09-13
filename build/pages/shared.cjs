@@ -9,9 +9,9 @@ const CASES = {
   revcat: { slug: "revcat", name: "Revcat", industry: "B2B SaaS - London", line: "Founder-led selling became a repeatable revenue channel, with the first outbound client in week one.", metric: "$380K", metricLabel: "pipeline opportunities" },
   easygenerator: { slug: "easygenerator", name: "Easygenerator", industry: "eLearning SaaS - Rotterdam", line: "A targeted enterprise campaign reached senior L&D buyers inside 10,000-plus employee companies.", metric: "12", metricLabel: "enterprise meetings" },
   "the-recipe": { slug: "the-recipe", name: "The Recipe", industry: "Marketing agency - Auckland", line: "A referral-dependent agency built a proactive engine for creating and forecasting opportunities.", metric: "29", metricLabel: "verified sales meetings" },
-  fivex: { slug: "fivex", name: "FiveX", industry: "B2B SaaS - Amsterdam", line: "A coordinated outbound programme tested a new market and created early commercial traction.", metric: "23", metricLabel: "sales meetings" },
+  fivex: { slug: "fivex", name: "FiveX", industry: "B2B SaaS - Amsterdam", line: "A coordinated outbound programme tested a new market and created early commercial traction.", metric: "28", metricLabel: "sales meetings" },
   "franchise-rocket": { slug: "franchise-rocket", name: "Franchise Rocket", industry: "Marketing agency - Sydney", line: "A direct outbound system reduced partner dependency and created the first client in month one.", metric: "$15K MRR", metricLabel: "closed in month one" },
-  conveyor: { slug: "conveyor", name: "Conveyor", industry: "Marketing agency - Philadelphia", line: "A stop-start prospecting routine became steady pipeline that no longer depended on leadership.", metric: "45", metricLabel: "qualified leads" },
+  conveyor: { slug: "conveyor", name: "Conveyor", industry: "Marketing agency - Philadelphia", line: "A stop-start prospecting routine became steady pipeline that no longer depended on leadership.", metric: "53", metricLabel: "qualified leads" },
 };
 
 const refs = (...slugs) => slugs.map((s) => CASES[s]);
