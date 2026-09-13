@@ -244,6 +244,8 @@ img, video { display: block; max-width: 100%; }
 
 .logo-strip { padding: 35px 24px 42px; text-align: center; border-bottom: 1px solid var(--line); }
 .logo-strip p { margin: 0 0 25px; color: #868686; font-family: "DM Mono"; font-size: 9px; text-transform: uppercase; letter-spacing: .13em; }
+.logo-strip p:has(+ .logo-strip-note) { margin-bottom: 7px; }
+.logo-strip .logo-strip-note { color: #9a9a9a; font-size: 11px; text-transform: none; letter-spacing: .02em; }
 .logos { max-width: 1050px; margin: auto; display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; }
 .logo-word { color: #747474; font-weight: 700; font-size: 15px; letter-spacing: -.03em; }
 .accent-x { color: var(--rose); }
