@@ -452,8 +452,8 @@ const cases = {
     quoteName: "Jaryd Neethling",
     quoteRole: "Founder, Franchise Rocket",
     video: "I1N1jDjlGoY",
-    impactTitle: "The business gained ownership of a direct pipeline and validated recurring revenue potential quickly.",
-    impact: "The first month produced 23 qualified leads, ten meetings and the first new client, with the early pipeline representing an estimated $10K-$15K in potential monthly recurring revenue.",
+    impactTitle: "The business gained ownership of a direct pipeline and closed recurring revenue in its first month.",
+    impact: "In the first month the campaign produced 23 qualified leads and ten meetings, and closed the first new client at $15K in monthly recurring revenue.",
     outcomes: [
       "The agency reduced its dependence on commission-taking partners.",
       "Advertising behaviour became a practical signal for prioritising the market.",
