@@ -12,9 +12,9 @@ const cases = {
     accent: "#6f5cff",
     headline: "Outbound had failed four times. A narrower strategy turned it into enterprise pipeline.",
     summary: "After an internal SDR team and three agencies failed to create consistent traction, SalesSourcers rebuilt the motion around senior cybersecurity buyers, tighter segmentation and meeting quality.",
-    primaryMetric: "$630K+",
-    primaryLabel: "pipeline opportunities generated",
-    metrics: [["61", "sales meetings"], ["$120K", "closed revenue"], ["CISO", "priority buyer"], ["Day one", "time to meetings booked"]],
+    primaryMetric: "$120K",
+    primaryLabel: "closed revenue",
+    metrics: [["61", "sales meetings"], ["$630K+", "pipeline opportunities"], ["CISO", "priority buyer"], ["Day one", "time to meetings booked"]],
     challengeTitle: "The channel had been written off, but the real failure was a lack of precision.",
     challenge: "Cypago needed access to CISOs, Heads of Cybersecurity and other senior security leaders. Broad activity and generic outreach could not earn attention in a technically demanding market.",
     challenges: [
