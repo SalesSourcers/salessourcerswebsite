@@ -640,20 +640,31 @@ img, video { display: block; max-width: 100%; }
 .about-story h2 { max-width: 690px; margin: 0; font-size: clamp(40px,5vw,64px); line-height: 1.06; letter-spacing: -.055em; font-weight: 600; }
 .about-copy { padding-top: 43px; }
 .about-copy p { margin: 0 0 18px; color: #4f4f4f; font-size: 17px; line-height: 1.65; }
-.about-copy p:last-child { margin-bottom: 0; color: var(--ink); font-weight: 600; }
-.about-founders { margin-top: 64px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
+.about-copy p:last-child { margin-bottom: 0; }
+.about-founders { max-width: 600px; margin-top: 56px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 20px; }
 .founder-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--off-white); }
 .founder-photo { aspect-ratio: 5 / 4; overflow: hidden; background: var(--rose); }
 .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-.founder-meta { padding: 22px 26px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.founder-meta h3 { margin: 0; font-size: 26px; line-height: 1.15; letter-spacing: -.035em; }
-.founder-meta p { margin: 4px 0 0; color: #4f4f4f; font-size: 16px; }
+.founder-meta { padding: 16px 18px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.founder-meta h3 { margin: 0; font-size: 19px; line-height: 1.2; letter-spacing: -.02em; }
+.founder-meta p { margin: 3px 0 0; color: #4f4f4f; font-size: 14px; }
 .linkedin-icon { width: 25px; height: 25px; display: grid; place-items: center; flex: 0 0 25px; color: #0a66c2; }
 .linkedin-icon svg { width: 21px; height: 21px; fill: currentColor; }
-.founder-meta .linkedin-icon { width: 48px; height: 48px; flex-basis: 48px; border: 1px solid var(--line); border-radius: 12px; background: white; transition: border-color .2s; }
+.founder-meta .linkedin-icon { width: 40px; height: 40px; flex-basis: 40px; border: 1px solid var(--line); border-radius: 12px; background: white; transition: border-color .2s; }
 .founder-meta .linkedin-icon:hover { border-color: #0a66c2; }
 .founder-meta .linkedin-icon:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-.founder-meta .linkedin-icon svg { width: 22px; height: 22px; }
+.founder-meta .linkedin-icon svg { width: 19px; height: 19px; }
+.team-section { background: var(--off-white); }
+.team-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
+.team-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: white; }
+.team-photo { aspect-ratio: 1 / 1; overflow: hidden; background: var(--rose); }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.team-card-copy { padding: 18px 20px 20px; }
+.team-name { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.team-name h3 { margin: 0; font-size: 18px; line-height: 1.2; letter-spacing: -.02em; }
+.team-card p { margin: 6px 0 0; color: #4f4f4f; font-size: 14px; }
+.team-card small { margin-top: 10px; display: block; color: #6c6c6c; font-size: 13px; line-height: 1.5; }
+.linkedin-icon-inactive { opacity: .4; cursor: default; }
 
 .careers-section { background: var(--blush); }
 .career-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
@@ -766,6 +777,7 @@ main { display: flex; flex-direction: column; }
 .engagement-section { order: 11; }
 .strategy-offer-section { order: 12; }
 .about-section { order: 13; }
+.team-section { order: 14; }
 .careers-section { order: 15; }
 .faq-section { order: 16; }
 .final-cta { order: 17; }
@@ -1097,8 +1109,8 @@ body.modal-open { overflow: hidden; }
   .career-card { min-height: 400px; }
   .about-copy p { font-size: 16px; }
   .about-founders { margin-top: 40px; grid-template-columns: 1fr; gap: 16px; }
-  .founder-meta { padding: 18px 20px 20px; }
-  .founder-meta h3 { font-size: 23px; }
+  .founder-meta { padding: 13px 14px 15px; }
+  .founder-meta h3 { font-size: 17px; }
   .expanded-cases { grid-template-columns: 1fr; }
   .case-study-mini { min-height: 290px; }
   .case-filters { margin-top: 0; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
@@ -1251,4 +1263,17 @@ body.modal-open { overflow: hidden; }
   .culture-grid p { font-size: 15px; }
   .final-cta.home-final-cta { padding-top: 96px; padding-bottom: 104px; }
   .final-cta.home-final-cta .button { margin-top: 36px; }
+}
+
+@media (max-width: 1020px) {
+  .team-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; }
+}
+@media (max-width: 680px) {
+  .about-founders { max-width: none; }
+  .team-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+  .team-card-copy { padding: 13px 14px 15px; }
+  .team-name h3 { font-size: 15px; }
+  .team-name { gap: 6px; }
+  .team-card p { font-size: 12.5px; }
+  .team-card small { display: none; }
 }
