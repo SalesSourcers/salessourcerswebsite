@@ -62,7 +62,7 @@ const footer = () => `
     <div class="footer-main">
       <div class="footer-brand">
         <img loading="lazy" src="/assets/salessourcers-logo.png" alt="SalesSourcers">
-        <p>Outbound strategy and execution for ambitious B2B companies.</p>
+        <p>Cold calling, email and appointment setting for B2B companies.</p>
       </div>
       <div class="footer-links">
         <div><span>EXPLORE</span><a href="/#system">What we do</a><a href="/#dashboard">Dashboard</a><a href="/#results">Results</a></div>
@@ -71,7 +71,7 @@ const footer = () => `
         <div><span>CONTACT</span><a href="${CAL_EMEA}" data-calendly-route>Book a call</a><a href="tel:+442083304302">+44 208 330 4302</a><a class="footer-social-icon" href="https://www.linkedin.com/company/salessourcers/" target="_blank" rel="noopener noreferrer" aria-label="SalesSourcers on LinkedIn"><svg aria-hidden="true"><use href="#icon-linkedin"></use></svg></a></div>
       </div>
     </div>
-    <div class="footer-bottom"><span>&copy; 2026 SalesSourcers. All rights reserved.</span><span>Built for better conversations.</span></div>
+    <div class="footer-bottom"><span>&copy; 2026 SalesSourcers. All rights reserved.</span></div>
   </footer>`;
 
 const caseRefs = (refs) =>
@@ -96,8 +96,8 @@ const faqBlock = (faqs) => `
     <div class="page-faq-inner">
       <div class="faq-intro">
         <p class="section-kicker">COMMON QUESTIONS</p>
-        <h2>The things buyers ask before they commit.</h2>
-        <p>If your question is not here, ask it on a call. We would rather answer it properly than leave you guessing.</p>
+        <h2>Questions buyers ask before signing.</h2>
+        <p>If your question is not answered here, book a call and ask us directly.</p>
         <a class="button button-dark" href="${CAL_EMEA}" data-calendly-route>Schedule a call <span>-&gt;</span></a>
       </div>
       <div class="faq-list">
@@ -257,7 +257,6 @@ ${linkCluster(p.links)}
 
   <section class="final-cta">
     <div class="cta-grid" aria-hidden="true"></div>
-    <div class="cta-badge"><span></span>ACCEPTING NEW PARTNERS</div>
     <h2>${esc(p.ctaHeadingA)} <span>${esc(p.ctaHeadingB)}</span></h2>
     <div class="page-hero-actions" style="justify-content:center">
       <a class="button button-blush" href="${CAL_EMEA}" data-calendly-route>Schedule a call <span>-&gt;</span></a>

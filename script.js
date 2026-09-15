@@ -141,7 +141,7 @@ const methodContent = [
   {
     label: "STEP 02 / BUYING SIGNALS",
     title: "Find credible reasons to reach out now.",
-    copy: "We monitor company, hiring, technology and commercial signals that indicate change. Outreach starts with a relevant reason for the conversation, not a generic list.",
+    copy: "We monitor company, hiring, technology and commercial signals that indicate change. Every conversation then opens with a relevant reason to talk.",
     points: ["Hiring and leadership changes", "Funding, growth and technology events", "Source-backed reasons to engage"],
     cards: [["Signal detected", "A verified event creates a timely reason to engage"], ["Account context", "The signal is connected to your offer"], ["Outreach priority", "The strongest opportunities move first"]]
   },
@@ -154,7 +154,7 @@ const methodContent = [
   },
   {
     label: "STEP 04 / BUYER MAPPING",
-    title: "Identify the people who own the pain.",
+    title: "Find the people who feel the problem.",
     copy: "We map the buying committee and find the people most likely to feel the problem your offer solves. Messaging changes by role, responsibility and likely commercial impact.",
     points: ["Pain owner and decision-maker mapping", "Verified email and phone data", "Role-specific value propositions"],
     cards: [["Pain owner", "The person closest to the operational problem"], ["Buying committee", "Influencers and decision-makers mapped"], ["Contact verified", "Direct details checked before outreach"]]
@@ -162,7 +162,7 @@ const methodContent = [
   {
     label: "STEP 05 / SDR ENABLEMENT",
     title: "Train an SDR to represent your business properly.",
-    copy: "Your dedicated, market-aligned SDR learns your offer, proof, buyers and qualification criteria before launch. Role play, call reviews and coaching continue throughout the campaign.",
+    copy: "Your dedicated SDR learns your offer, proof, buyers and qualification criteria before launch. Role play, call reviews and coaching continue throughout the campaign.",
     points: ["Industry-experienced SDR matching", "SPIN and Gap Selling methodology", "Manager coaching three times a week"],
     cards: [["Sales playbook", "Positioning, discovery and objections documented"], ["Live role play", "Messaging tested before prospects hear it"], ["Launch ready", "SDR certified against campaign criteria"]]
   },
@@ -178,7 +178,7 @@ const methodContent = [
     title: "Book qualified meetings and improve every cycle.",
     copy: "Qualified meetings land directly in your calendar with recordings and AI notes. Every call and reply then improves targeting, messaging, coaching and the next campaign decision.",
     points: ["Meetings booked in your calendar", "AI notes and call recordings", "Market intelligence feeds the next cycle"],
-    cards: [["Qualified meeting", "Right buyer, relevant need and agreed next step"], ["Meeting context", "Recording, summary and buyer notes included"], ["Campaign learning", "Real market evidence improves the next cycle"]]
+    cards: [["Qualified meeting", "Right buyer, relevant need and agreed next step"], ["Meeting context", "Recording, summary and buyer notes included"], ["Campaign learning", "What the market says shapes the next cycle"]]
   }
 ];
 

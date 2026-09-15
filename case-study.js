@@ -11,18 +11,18 @@ const cases = {
     logo: "assets/client-cypago-color.png",
     accent: "#6f5cff",
     headline: "Outbound had failed four times. A narrower strategy turned it into enterprise pipeline.",
-    summary: "After an internal SDR team and three agencies failed to create consistent traction, SalesSourcers rebuilt the motion around senior cybersecurity buyers, tighter segmentation and meeting quality.",
+    summary: "After an internal SDR team and three agencies failed to create consistent traction, SalesSourcers rebuilt the campaign around senior cybersecurity buyers, tighter segmentation and meeting quality.",
     primaryMetric: "$120K",
     primaryLabel: "closed revenue",
     metrics: [["61", "sales meetings"], ["$630K+", "pipeline opportunities"], ["CISO", "priority buyer"], ["Day one", "time to meetings booked"]],
-    challengeTitle: "The channel had been written off, but the real failure was a lack of precision.",
+    challengeTitle: "Outbound had been written off, but the earlier campaigns lacked precision.",
     challenge: "Cypago needed access to CISOs, Heads of Cybersecurity and other senior security leaders. Broad activity and generic outreach could not earn attention in a technically demanding market.",
     challenges: [
       "The in-house SDR team had not delivered enough qualified opportunities and was shut down.",
       "Three outsourced agencies had also failed, leaving outbound activity close to non-existent.",
-      "The company needed senior security conversations, not a larger volume of loosely qualified meetings."
+      "The company needed conversations with senior security leaders. More loosely qualified meetings would not help."
     ],
-    approachTitle: "Treat cybersecurity credibility and account selection as prerequisites, not campaign extras.",
+    approachTitle: "Earn credibility with security buyers and pick the right accounts before any outreach.",
     approach: "SalesSourcers used specialist CyberTech knowledge to refine the market, train the SDR and focus execution on senior buyers with a credible reason to engage.",
     campaign: [
       ["Narrow the ICP", "Prioritise CISOs, Heads of Cybersecurity and relevant GRC leaders inside suitable accounts."],
@@ -44,9 +44,9 @@ const cases = {
       "The company established a repeatable path into a market that had resisted previous outbound attempts."
     ],
     lessons: [
-      ["Diagnose the failure", "The previous result did not prove outbound was impossible; it showed that the market and execution needed rebuilding."],
+      ["Diagnose the failure", "The earlier campaigns failed because the market and the execution were wrong, and both could be rebuilt."],
       ["Earn technical trust", "Senior security buyers require relevance and fluency before they will accept a commercial conversation."],
-      ["Quality compounds", "A smaller, better-prioritised market produced more useful meetings and stronger pipeline."]
+      ["Focus on fewer accounts", "A smaller, better-prioritised market produced more useful meetings and stronger pipeline."]
     ],
     fitTitle: "Relevant for technical SaaS teams whose previous outbound attempts produced activity but little pipeline.",
     fit: "The approach works when the buyer group is narrow, the product requires domain fluency and the team is willing to prioritise qualified senior conversations over inflated meeting totals."
@@ -54,7 +54,7 @@ const cases = {
   "sales-savvy": {
     name: "Sales Savvy",
     seoTitle: "Outsourced Sales for an eCommerce Agency | SalesSourcers",
-    seoDescription: "How an eCommerce marketing agency used an outsourced sales department to remove the founder bottleneck: 23 sales meetings and six-figure growth in 2 months.",
+    seoDescription: "How an eCommerce marketing agency used an outsourced sales department to remove the founder bottleneck, with 23 sales meetings and six-figure growth in 2 months.",
     industry: "eCommerce marketing agency",
     location: "Sydney, Australia",
     size: "1-10 employees",
@@ -63,7 +63,7 @@ const cases = {
     logo: "assets/client-sales-savvy-color.png",
     accent: "#1ba39c",
     headline: "An outsourced sales department removed the founder bottleneck and created six-figure growth.",
-    summary: "SalesSourcers built and ran a complete sales motion spanning prospecting, qualification, follow-up and closing support so leadership could return its attention to delivery.",
+    summary: "SalesSourcers built and ran the whole sales process, from prospecting and qualification to follow-up and closing support, so leadership could get back to client delivery.",
     primaryMetric: "$100K+",
     primaryLabel: "new revenue generated in two months",
     metrics: [["40", "qualified leads"], ["23", "sales meetings"], ["8", "new clients"], ["2 months", "campaign period"]],
@@ -72,9 +72,9 @@ const cases = {
     challenges: [
       "Revenue depended on referrals and could not be forecast with confidence.",
       "Founder Mareike Niedermeier had too little time to prospect and follow up consistently.",
-      "The agency lacked a defined sales presentation, closing process and accountable operating cadence."
+      "The agency had no defined sales presentation, closing process or regular sales routine with clear ownership."
     ],
-    approachTitle: "Build the sales function, not merely a lead list.",
+    approachTitle: "Build a complete sales function, from first call to close.",
     approach: "SalesSourcers acted as the agency's outsourced sales department, combining lead generation with a structured two-step close and consistent management of both inbound and outbound opportunities.",
     campaign: [
       ["Define the sales process", "Build a repeatable presentation, qualification criteria and two-step route to close."],
@@ -88,17 +88,17 @@ const cases = {
     quoteName: "Mareike Niedermeier",
     quoteRole: "Founder, Sales Savvy",
     video: "EZzPpKQIfwM",
-    impactTitle: "The business gained revenue and the founder gained operating space.",
+    impactTitle: "Revenue grew and the founder got time back for client delivery.",
     impact: "In two months, the programme produced 40 qualified leads, 23 meetings, eight new clients and more than $100K in revenue. The sales process no longer depended on Mareike personally holding every task together.",
     outcomes: [
-      "A full sales engine replaced an inconsistent referral-led approach.",
+      "A complete sales process replaced inconsistent, referral-led selling.",
       "Follow-up continued while the founder concentrated on client delivery.",
       "The agency gained a documented process that could continue beyond the initial campaign."
     ],
     lessons: [
       ["Remove the bottleneck", "More demand only helps when ownership of qualification and follow-up is clear."],
       ["Build for conversion", "The two-step close and sales presentation supported the work happening before the meeting."],
-      ["Create one operating rhythm", "Inbound and outbound opportunities were managed through the same accountable process."]
+      ["Run one process for every lead", "Inbound and outbound opportunities were managed through the same process, with clear ownership."]
     ],
     fitTitle: "Relevant for founder-led agencies where sales stops whenever delivery becomes busy.",
     fit: "This approach suits proven service businesses that need more than appointment setting and want a managed system for prospecting, qualification, follow-up and sales progression."
@@ -106,7 +106,7 @@ const cases = {
   "outbox": {
     name: "Outbox AI",
     seoTitle: "Outbound for an AI Agency Moving to SaaS | SalesSourcers",
-    seoDescription: "How a Perth AI agency moving into SaaS turned scattered email activity into a repeatable process: 111 qualified leads and 12 new clients in 3 months.",
+    seoDescription: "How a Perth AI agency moving into SaaS turned scattered email activity into a repeatable process, with 111 qualified leads and 12 new clients in 3 months.",
     industry: "AI agency turned SaaS",
     location: "Perth, Australia",
     size: "1-10 employees",
@@ -119,18 +119,18 @@ const cases = {
     primaryMetric: "$76K",
     primaryLabel: "revenue generated in three months",
     metrics: [["111", "qualified leads"], ["58", "sales meetings"], ["12", "new clients"], ["3 months", "campaign period"]],
-    challengeTitle: "Outbound existed, but targeting, follow-up and qualification did not.",
+    challengeTitle: "The team was sending outbound email without clear targeting, follow-up or qualification.",
     challenge: "The team had been sending high volumes of email with little return. Referral dependence and an unclear outbound process made it harder to create the predictable revenue base needed for a SaaS transition.",
     challenges: [
       "Previous outreach lacked clear segmentation and a consistent reason for targeting each niche.",
       "Follow-up was not structured enough to turn initial interest into qualified demonstrations.",
       "The business needed a reliable pipeline while shifting from project revenue toward a recurring product."
     ],
-    approachTitle: "Turn outreach into a managed learning and conversion system.",
+    approachTitle: "Use outreach to win clients and learn which niches respond.",
     approach: "SalesSourcers analysed the offer, prioritised relevant niches and decision-makers, then created sequences around the practical outcomes AI chat and voice agents could deliver.",
     campaign: [
       ["Select the niches", "Identify segments where AI agents could directly improve support, response speed or bookings."],
-      ["Clarify the message", "Connect the product to a recognisable operational problem rather than leading with generic AI claims."],
+      ["Clarify the message", "Tie the product to a problem the prospect already recognises, and skip the generic AI claims."],
       ["Coordinate channels", "Use email, calling and structured follow-up to progress interest into qualified demos."],
       ["Learn from response", "Use replies and live conversations to refine the product narrative and target market."]
     ],
@@ -140,7 +140,7 @@ const cases = {
     quoteName: "Conor Davies",
     quoteRole: "Founder, Outbox AI",
     video: "6qHh2kwEl1o",
-    impactTitle: "The sales motion created both immediate clients and confidence in the new SaaS direction.",
+    impactTitle: "The campaign brought in clients quickly and gave the team confidence in the move to SaaS.",
     impact: "The campaign generated 111 qualified leads, 58 sales meetings, 12 new clients and $76K in revenue within three months. That foundation supported hiring and the company's move toward a software product.",
     outcomes: [
       "A repeatable process replaced unstructured high-volume email activity.",
@@ -148,7 +148,7 @@ const cases = {
       "Live market feedback helped sharpen both the target customer and the product story."
     ],
     lessons: [
-      ["Strategy before scale", "More sends did not help until the audience, problem and message were made specific."],
+      ["Get specific first", "More sends did not help until the audience, problem and message were made specific."],
       ["Sell the outcome", "Operational impact created a stronger conversation than broad claims about AI capability."],
       ["Use outbound to learn", "The campaign informed the evolving SaaS proposition as well as creating meetings."]
     ],
@@ -158,7 +158,7 @@ const cases = {
   "iscent": {
     name: "iScent",
     seoTitle: "Appointment Setting in Luxury Hospitality | SalesSourcers",
-    seoDescription: "How a scent marketing specialist reached premium hotel, spa and luxury retail buyers across the GCC and Southeast Asia: 141 meetings and 721% ROI.",
+    seoDescription: "How a scent marketing specialist reached premium hotel, spa and luxury retail buyers across the GCC and Southeast Asia, with 141 meetings and 721% ROI.",
     industry: "Product and scent marketing",
     location: "Dubai, United Arab Emirates",
     size: "11-50 employees",
@@ -166,17 +166,17 @@ const cases = {
     source: "https://www.salessourcers.com/created-a-steady-pipeline-that-opened-doors-to-premium-global-clients/",
     logo: "assets/client-iscent-color.png",
     accent: "#0d0d0d",
-    headline: "A specialist service built a deliberate route into premium hotel, spa and luxury retail accounts.",
-    summary: "SalesSourcers mapped priority markets across the GCC and Southeast Asia, tracked live buying signals and created a multi-channel system for reaching high-value brands.",
+    headline: "iScent built a steady route into premium hotel, spa and luxury retail accounts.",
+    summary: "SalesSourcers mapped priority markets across the GCC and Southeast Asia, tracked live buying signals and used calling and email to reach high-value brands.",
     primaryMetric: "721%",
     primaryLabel: "return on investment",
     metrics: [["470", "qualified leads"], ["141", "sales meetings"], ["31", "new clients"], ["721%", "ROI"]],
     challengeTitle: "The business knew which brands it wanted, but referrals and advertising could not reach them consistently.",
     challenge: "Pipeline was uneven, sales cycles were long and the team lacked a repeatable route into premium hospitality and retail accounts with the strongest potential value.",
     challenges: [
-      "Growth depended heavily on referrals and advertising rather than direct access to target brands.",
+      "Growth depended heavily on referrals and advertising, with no direct route to target brands.",
       "The sales team could not consistently identify which premium properties had a current buying trigger.",
-      "The business needed a scalable system capable of supporting longer, relationship-led sales cycles."
+      "The business needed a repeatable way to manage longer, relationship-led sales cycles."
     ],
     approachTitle: "Combine account mapping with signals that indicate a property may be ready to invest.",
     approach: "The campaign mapped premium hotels, spas and luxury retailers, then prioritised events such as openings, refurbishments and sudden increases in advertising activity.",
@@ -192,12 +192,12 @@ const cases = {
     quoteName: "Saif Madhat",
     quoteRole: "Founder, iScent",
     video: null,
-    impactTitle: "A predictable pipeline opened doors to premium global brands.",
-    impact: "Within twelve months, the campaign generated 470 qualified leads, 141 sales meetings, 31 new clients and a 721% ROI. iScent moved from unpredictable referrals to a scalable outbound motion into premium hotel and fashion house accounts.",
+    impactTitle: "Consistent meetings led to contracts with premium global brands.",
+    impact: "Within twelve months, the campaign generated 470 qualified leads, 141 sales meetings, 31 new clients and a 721% ROI. iScent went from relying on referrals to a steady flow of meetings with premium hotels and fashion houses.",
     outcomes: [
       "The campaign generated 470 qualified leads and 141 sales meetings across premium hospitality and retail accounts.",
       "Thirty-one new clients were won, creating a 721% ROI from the outbound programme.",
-      "iScent moved from unpredictable referrals to becoming the go-to scent-marketing partner for world-class global brands."
+      "iScent won work with major global brands that referrals alone had not reached."
     ],
     lessons: [
       ["Timing creates relevance", "Openings and refurbishments gave the outreach a commercial reason beyond a generic introduction."],
@@ -209,8 +209,8 @@ const cases = {
   },
   "revcat": {
     name: "Revcat",
-    seoTitle: "B2B SaaS Outbound Case Study: Revcat | SalesSourcers",
-    seoDescription: "How a London B2B SaaS founder turned founder-led selling into a repeatable channel: first outbound client in week one, 49 meetings and $380K pipeline.",
+    seoTitle: "Revcat B2B SaaS Outbound Case Study | SalesSourcers",
+    seoDescription: "How a London B2B SaaS founder turned founder-led selling into a repeatable channel, with a first outbound client in week one, 49 meetings and $380K pipeline.",
     industry: "B2B SaaS",
     location: "London, United Kingdom",
     size: "1-10 employees",
@@ -219,7 +219,7 @@ const cases = {
     logo: "assets/client-revcat-color.png",
     accent: "#1fb576",
     headline: "Revcat landed its first outbound client in week one and turned founder-led selling into a repeatable revenue channel.",
-    summary: "SalesSourcers built a focused outbound motion for Revcat, prioritising accounts with immediate revenue pressure and using cold calling plus personalised email to convert early market interest into qualified meetings.",
+    summary: "SalesSourcers built a focused outbound campaign for Revcat, prioritising accounts with immediate revenue pressure and using cold calling plus personalised email to convert early market interest into qualified meetings.",
     primaryMetric: "$48K",
     primaryLabel: "revenue generated from the first outbound client",
     metrics: [["Week one", "first outbound client"], ["49", "sales meetings"], ["5", "new clients"], ["$380K", "pipeline opportunities"]],
@@ -228,14 +228,14 @@ const cases = {
     challenges: [
       "New business was tied to the founder's personal network and therefore difficult to scale.",
       "Warm introductions created opportunities, but did not create a controllable route to new customers.",
-      "The team needed revenue-generating meetings quickly, not months of vague market testing.",
-      "Previous providers had not delivered the bespoke, founder-calibre approach required to open serious commercial conversations."
+      "The team needed meetings that could turn into revenue within weeks.",
+      "Previous providers had not matched the founder's standard for opening serious commercial conversations."
     ],
     approachTitle: "Build a focused outbound route to accounts with a clear revenue problem.",
     approach: "SalesSourcers identified companies where Revcat's revenue operations offer had an urgent commercial reason to land, then used multi-channel outreach to turn those triggers into qualified sales conversations.",
     campaign: [
       ["Find revenue pressure", "Prioritise companies showing expansion, hiring, funding or sales-leadership change that suggested a need to improve revenue execution."],
-      ["Map the right owner", "Target founders, CROs and sales leaders closest to the revenue problem rather than broad operational contacts."],
+      ["Map the right owner", "Target founders, CROs and sales leaders, the people closest to the revenue problem."],
       ["Run multi-channel outreach", "Use cold calling to create live commercial conversations and personalised email to support timing, context and follow-up."],
       ["Convert early traction", "Qualify opportunities tightly and move serious prospects into the founder's calendar with enough context to progress."]
     ],
@@ -248,7 +248,7 @@ const cases = {
     impactTitle: "The first outbound client closed in week one, proving the channel could generate revenue quickly.",
     impact: "The campaign produced Revcat's first outbound client in week one, generating $48K in revenue. It then continued to create 49 sales meetings, five new clients and $380K in pipeline opportunities.",
     outcomes: [
-      "The first outbound client landed in the first week, validating the new motion quickly.",
+      "The first outbound client landed in the first week, proving the channel could work.",
       "Pipeline no longer depended exclusively on the founder's existing network.",
       "Revenue from the first outbound client gave the team confidence to keep investing in the channel."
     ],
@@ -257,13 +257,13 @@ const cases = {
       ["Call the pain owner", "Founder and revenue-leader conversations moved faster than generic operational outreach."],
       ["Prove the channel early", "A first client in week one created internal confidence and gave the campaign momentum."]
     ],
-    fitTitle: "Relevant for B2B SaaS companies that need founder-calibre outbound to create revenue, not just activity.",
+    fitTitle: "Relevant for B2B SaaS founders who need outbound that produces revenue.",
     fit: "This model works when the offer is proven, leadership needs more control over pipeline and the team wants qualified conversations with buyers who have a current revenue reason to act."
   },
   "easygenerator": {
     name: "Easygenerator",
     seoTitle: "Enterprise SaaS Appointment Setting | SalesSourcers",
-    seoDescription: "How an eLearning platform reached senior L&D buyers inside 10,000-plus employee companies: 12 enterprise meetings with C-suite and VP-level buyers.",
+    seoDescription: "How an eLearning platform reached senior L&D buyers inside 10,000-plus employee companies, with 12 enterprise meetings at C-suite and VP level.",
     industry: "eLearning and B2B SaaS",
     location: "Rotterdam, Netherlands",
     size: "201-500 employees",
@@ -276,10 +276,10 @@ const cases = {
     primaryMetric: "$120K+",
     primaryLabel: "current open pipeline",
     metrics: [["12", "enterprise meetings"], ["$38K", "reported revenue"], ["10K+", "employee companies"], ["C-suite + VP", "buyer seniority"]],
-    challengeTitle: "The internal team had activity, but ambitious growth required more high-value enterprise conversations.",
+    challengeTitle: "The internal team was busy, but its growth targets needed more senior enterprise conversations.",
     challenge: "Mass prospecting generated volume without enough senior opportunities. Easygenerator needed a more precise way to identify large organisations undergoing changes that made learning and development a current priority.",
     challenges: [
-      "The in-house SDR team needed additional capacity to support ambitious growth targets.",
+      "The in-house SDR team needed extra capacity to reach its growth targets.",
       "Broad prospecting was not consistently reaching enterprise-level opportunities.",
       "The campaign had to identify senior L&D decision-makers inside complex organisations."
     ],
@@ -289,14 +289,14 @@ const cases = {
       ["Segment enterprise accounts", "Prioritise organisations where the potential value justified a more researched approach."],
       ["Identify change signals", "Use mass hiring, leadership changes and restructuring as indicators of a current L&D need."],
       ["Map senior stakeholders", "Reach the executives and VPs responsible for learning, enablement and organisational capability."],
-      ["Coordinate with the team", "Complement internal SDR capacity with a distinct, enterprise-focused campaign motion."]
+      ["Coordinate with the team", "Run a separate enterprise campaign alongside the internal SDR team."]
     ],
     quoteLabel: "CAMPAIGN EVIDENCE",
-    quote: "The engagement shifted prospecting from broad volume toward senior conversations inside large organisations undergoing meaningful change.",
+    quote: "The campaign moved prospecting away from broad volume and toward senior conversations inside large organisations going through change.",
     quoteName: "SalesSourcers campaign record",
     quoteRole: "Summary from the campaign record, not a client statement",
     video: null,
-    impactTitle: "A smaller number of carefully selected meetings created meaningful enterprise pipeline.",
+    impactTitle: "Twelve well-chosen senior meetings contributed to more than $120K of open pipeline.",
     impact: "The campaign booked twelve C-suite and VP-level meetings at companies with more than 10,000 employees, contributing to more than $120K in open pipeline and $38K in reported revenue.",
     outcomes: [
       "Meeting quality increased by concentrating on senior stakeholders inside very large companies.",
@@ -306,7 +306,7 @@ const cases = {
     lessons: [
       ["Enterprise volume is different", "A dozen relevant senior meetings can be more valuable than a much larger pool of junior conversations."],
       ["Use organisational context", "Change inside the account made the outreach more credible and specific."],
-      ["Complement, do not duplicate", "The campaign had a distinct enterprise role alongside the internal team's broader activity."]
+      ["Work alongside the internal team", "The campaign had its own enterprise focus alongside the internal team's broader activity."]
     ],
     fitTitle: "Relevant for established SaaS teams that need targeted enterprise capacity alongside an internal SDR function.",
     fit: "The approach is designed for companies with a proven product, meaningful enterprise contract value and a need to reach senior stakeholders inside complex accounts."
@@ -314,7 +314,7 @@ const cases = {
   "the-recipe": {
     name: "The Recipe",
     seoTitle: "Outbound for a New Zealand Agency | SalesSourcers",
-    seoDescription: "How an Auckland marketing agency replaced referral dependence with a forecastable opportunity engine: 86 qualified leads and 29 verified sales meetings.",
+    seoDescription: "How an Auckland marketing agency replaced referral dependence with a steady flow of opportunities, including 86 qualified leads and 29 verified sales meetings.",
     industry: "Marketing agency",
     location: "Auckland, New Zealand",
     size: "1-10 employees",
@@ -322,7 +322,7 @@ const cases = {
     source: "https://www.salessourcers.com/built-a-scalable-outbound-system-that-turned-a-referral-based-agency-into-a-predictable-growth-engine/",
     logo: "assets/client-recipe-color.png",
     accent: "#0d0d0d",
-    headline: "A referral-dependent agency built a proactive engine for creating and forecasting new opportunities.",
+    headline: "A referral-dependent agency built a steady, forecastable flow of new opportunities.",
     summary: "SalesSourcers defined the market, identified relevant growth signals and created a structured outbound system that let the agency plan beyond the next referral.",
     primaryMetric: "$132K",
     primaryLabel: "revenue generated",
@@ -334,12 +334,12 @@ const cases = {
       "Revenue forecasting remained uncertain and affected confidence in team planning.",
       "The agency had no defined market or repeatable process for proactive prospecting."
     ],
-    approachTitle: "Turn the ideal client profile into a signal-led, measurable campaign.",
+    approachTitle: "Define the ideal client, then target businesses showing signs they need marketing help.",
     approach: "The campaign focused on smaller businesses ready to invest in marketing, then prioritised signals such as rapid staff growth and paid-search activity without corresponding organic visibility.",
     campaign: [
       ["Define the market", "Focus on businesses with the size, growth stage and willingness to invest in marketing."],
       ["Find visible signals", "Prioritise staff growth and advertising behaviour that indicated current acquisition pressure."],
-      ["Personalise the reason", "Connect each message to a specific gap or growth event rather than a broad agency introduction."],
+      ["Personalise the reason", "Connect each message to a specific gap or growth event the prospect would recognise."],
       ["Track every conversion", "Use structured follow-up and CRM visibility to understand how outreach progressed."]
     ],
     quoteLabel: "CLIENT QUOTE",
@@ -348,7 +348,7 @@ const cases = {
     quoteName: "Daniel Baird",
     quoteRole: "Founder, The Recipe",
     video: "E-y7N_gj2tY",
-    impactTitle: "The agency moved from reactive survival mode to a more forecastable growth system.",
+    impactTitle: "The agency stopped waiting for referrals and could plan its growth.",
     impact: "The campaign generated 86 qualified leads, 29 verified sales meetings, three new clients and $132K in revenue, giving leadership a stronger basis for investment and team planning.",
     outcomes: [
       "New opportunities no longer depended entirely on the timing of referrals.",
@@ -366,7 +366,7 @@ const cases = {
   "fivex": {
     name: "FiveX",
     seoTitle: "Testing a New Market with Outbound | SalesSourcers",
-    seoDescription: "How an Amsterdam B2B SaaS company tested a new market with two coordinated outbound campaigns: 45 qualified leads and 28 sales meetings.",
+    seoDescription: "How an Amsterdam B2B SaaS company tested a new market with two coordinated outbound campaigns, producing 45 qualified leads and 28 sales meetings.",
     industry: "B2B SaaS and services",
     location: "Amsterdam, Netherlands",
     size: "11-50 employees",
@@ -382,7 +382,7 @@ const cases = {
     challengeTitle: "A new service and new geography required evidence before the team could confidently invest.",
     challenge: "FiveX wanted to help German companies expand through Bol.com while continuing to grow in the Netherlands, but lacked the bandwidth to research accounts, test pain points and sustain outreach.",
     challenges: [
-      "Growth relied on referrals and small-scale outreach rather than a repeatable system.",
+      "Growth relied on referrals and small-scale outreach, with no repeatable system behind it.",
       "The team needed to validate a new offer for German companies entering the Dutch market.",
       "Different regions and buyer situations required separate messages and propositions."
     ],
@@ -392,7 +392,7 @@ const cases = {
       ["Separate the markets", "Create distinct campaigns for cross-border expansion and domestic marketplace performance."],
       ["Prioritise growth signals", "Find companies showing the scale and readiness to expand into the Netherlands."],
       ["Test the pain points", "Compare messages across regions and buyer situations to identify what created response."],
-      ["Manage execution", "Own data, messaging, deliverability, calling and continuous optimisation end to end."]
+      ["Manage execution", "Run the data, messaging, deliverability and calling, and keep improving all of it."]
     ],
     quoteLabel: "CLIENT QUOTE",
     quote: "Breaking into a new market seemed daunting, but the structured outreach and constant testing gave us clarity fast. We now have a steady pipeline and real wins in a space we hadn't touched before.",
@@ -401,9 +401,9 @@ const cases = {
     quoteRole: "Founder, FiveX",
     video: "hJ0UiXjsQgg",
     impactTitle: "The campaign produced revenue while proving that the new market was commercially reachable.",
-    impact: "Forty-five qualified leads generated 28 meetings, four new clients and $56K in revenue. FiveX gained both early wins and the confidence to continue investing in previously untapped regions.",
+    impact: "Forty-five qualified leads generated 28 meetings, four new clients and $56K in revenue. FiveX gained early wins and the confidence to keep investing in new regions.",
     outcomes: [
-      "The new-market proposition was tested through real buyer conversations rather than assumptions.",
+      "The new-market proposition was tested in real buyer conversations.",
       "Separate campaigns made regional differences visible and easier to optimise.",
       "Early clients validated the service before the company committed further resources."
     ],
@@ -436,14 +436,14 @@ const cases = {
     challenges: [
       "Partner-led opportunities reduced profitability and kept the agency dependent on third parties.",
       "Paid channels were competitive and generated insufficient lead quality.",
-      "The business needed a direct, scalable route to active franchise operators."
+      "The business needed a direct route to active franchise operators that could grow with it."
     ],
-    approachTitle: "Map the franchise universe and prioritise businesses already demonstrating belief in marketing.",
+    approachTitle: "Map every franchise business and start with those already paying for advertising.",
     approach: "SalesSourcers sourced franchise directories across Australia, Europe and the United States, then prioritised companies already investing in advertising but likely to need better results.",
     campaign: [
       ["Build the market", "Aggregate active franchise businesses from relevant directories across three regions."],
       ["Add intent", "Prioritise franchises already spending on advertising and therefore more likely to value marketing support."],
-      ["Tailor the message", "Connect outreach to the prospect's current acquisition activity rather than leading with a generic agency pitch."],
+      ["Tailor the message", "Open with the prospect's current advertising and acquisition activity."],
       ["Create a direct channel", "Manage outreach and follow-up without relying on partners to introduce each opportunity."]
     ],
     quoteLabel: "CLIENT QUOTE",
@@ -457,7 +457,7 @@ const cases = {
     outcomes: [
       "The agency reduced its dependence on commission-taking partners.",
       "Advertising behaviour became a practical signal for prioritising the market.",
-      "Early conversion demonstrated that direct outbound could support a self-sustaining pipeline."
+      "Closing a client in the first month showed direct outbound could keep the pipeline full."
     ],
     lessons: [
       ["Build the whole addressable market", "Directory data made the opportunity visible and measurable."],
@@ -470,7 +470,7 @@ const cases = {
   "conveyor": {
     name: "Conveyor",
     seoTitle: "Building Consistent Agency Pipeline | SalesSourcers",
-    seoDescription: "How a Philadelphia marketing agency turned stop-start prospecting into steady pipeline that no longer depended on leadership bandwidth: 53 qualified leads.",
+    seoDescription: "How a Philadelphia marketing agency turned stop-start prospecting into steady pipeline that no longer depended on leadership's spare time, with 53 qualified leads.",
     industry: "Marketing agency",
     location: "Philadelphia, United States",
     size: "11-50 employees",
@@ -490,11 +490,11 @@ const cases = {
       "LinkedIn messaging could not reach enough of the market to support growth goals.",
       "The agency needed a repeatable system built around the sectors where it had credible proof."
     ],
-    approachTitle: "Concentrate the market around proven expertise, then keep coverage running every week.",
+    approachTitle: "Target the sectors where Conveyor had proof, and keep outreach running every week.",
     approach: "The campaign identified industries supported by strong Conveyor case studies, mapped the target accounts and built outreach around the agency's SEO, advertising and content strengths.",
     campaign: [
       ["Lead with proof", "Prioritise sectors where Conveyor could demonstrate relevant client outcomes."],
-      ["Map the accounts", "Build a defined addressable market instead of relying on ad hoc LinkedIn searches."],
+      ["Map the accounts", "Build a defined list of target accounts to replace ad hoc LinkedIn searches."],
       ["Tailor the outreach", "Connect SEO, advertising and content expertise to the needs of each segment."],
       ["Maintain consistency", "Run prospecting and follow-up regardless of fluctuations in leadership workload."]
     ],
@@ -504,16 +504,16 @@ const cases = {
     quoteName: "Amy Klewiec",
     quoteRole: "Head of Strategic Partnerships, Conveyor",
     video: null,
-    impactTitle: "Pipeline became an operating system rather than a task squeezed between client commitments.",
+    impactTitle: "Prospecting kept running, even when client work was busy.",
     impact: "Within three months, the campaign generated 53 qualified leads, 21 meetings, six new clients and $62K in revenue while freeing leadership to focus on existing client relationships.",
     outcomes: [
-      "Prospecting continued during busy delivery periods instead of repeatedly stopping.",
+      "Prospecting continued through busy delivery periods.",
       "Targeting focused on industries where the agency's existing evidence was strongest.",
       "Leadership could spend more time on clients without sacrificing future pipeline."
     ],
     lessons: [
       ["Use the proof you already have", "Existing case studies helped determine which markets were most credible to pursue."],
-      ["Consistency is a capability", "Reliable weekly execution mattered as much as the message itself."],
+      ["Keep it running every week", "Reliable weekly execution mattered as much as the message itself."],
       ["Separate delivery from prospecting", "Growth became less vulnerable to day-to-day changes in leadership workload."]
     ],
     fitTitle: "Relevant for agencies where one senior person owns sales, partnerships and delivery at once.",
@@ -534,12 +534,12 @@ const videoThumbs = {
 };
 
 const signalPlans = {
-  cypago: [["Signals used", "Security leadership changes, compliance hiring, public GRC initiatives, audit pressure and companies with complex cloud or vendor-risk environments."], ["Account logic", "Filter for senior cybersecurity ownership and organisations where compliance automation could create measurable operational savings."], ["Outreach angle", "Open with the risk or workload signal, not a generic platform pitch, then qualify whether the buyer owned the compliance or security operations pain."]],
+  cypago: [["Signals used", "Security leadership changes, compliance hiring, public GRC initiatives, audit pressure and companies with complex cloud or vendor-risk environments."], ["Account logic", "Filter for senior cybersecurity ownership and organisations where compliance automation could create measurable operational savings."], ["Outreach angle", "Open with the risk or workload signal, then qualify whether the buyer owned the compliance or security operations pain."]],
   "sales-savvy": [["Signals used", "eCommerce brands increasing ad spend, weak retention mechanics, founder-led growth and stores showing active acquisition but inconsistent conversion."], ["Account logic", "Focus on brands with enough transaction volume to benefit from specialist retention and performance marketing support."], ["Outreach angle", "Position the call around missed revenue and founder capacity, then progress suitable prospects through a two-step sales process."]],
   outbox: [["Signals used", "Service-heavy companies with slow response times, high inbound enquiry volume, manual booking workflows and visible customer support bottlenecks."], ["Account logic", "Segment by operational pain where AI voice or chat agents could produce a practical commercial outcome within weeks."], ["Outreach angle", "Avoid broad AI language. Tie the message to response speed, booking efficiency or support coverage, then test which niche produced the clearest buying intent."]],
   iscent: [["Signals used", "New hotel openings, refurbishments, premium retail expansion, spa launches and luxury venues investing in customer experience."], ["Account logic", "Map the finite premium account universe by region, then prioritise properties with a timely reason to discuss scent and guest experience."], ["Outreach angle", "Make every message feel account-specific by referencing the property, launch, renovation or customer-experience opportunity behind the approach."]],
   revcat: [["Signals used", "Funding events, sales-leadership changes, hiring activity, expansion signals and companies visibly investing in revenue growth."], ["Account logic", "Prioritise founders, CROs and sales leaders who owned the revenue problem and had enough urgency to act quickly."], ["Outreach angle", "Lead with the commercial trigger, use calling to qualify the pain, and book founder-level conversations where Revcat could show the revenue impact clearly."]],
-  easygenerator: [["Signals used", "Mass hiring, leadership change, restructuring, L&D investment, enterprise growth and large teams needing faster knowledge transfer."], ["Account logic", "Select 10,000-plus employee organisations where organisational change made learning enablement a board-level operational problem."], ["Outreach angle", "Reach senior L&D and enablement buyers with a change-led reason to talk, rather than a broad software introduction."]],
+  easygenerator: [["Signals used", "Mass hiring, leadership change, restructuring, L&D investment, enterprise growth and large teams needing faster knowledge transfer."], ["Account logic", "Select 10,000-plus employee organisations where organisational change made learning enablement a board-level operational problem."], ["Outreach angle", "Give senior L&D and enablement buyers a reason to talk that is tied to change inside their organisation."]],
   "the-recipe": [["Signals used", "Staff growth, paid-search spend, weak organic visibility, inconsistent social presence and businesses investing in marketing without a clear strategy."], ["Account logic", "Prioritise companies with visible acquisition pressure and enough growth ambition to value a strategic agency relationship."], ["Outreach angle", "Reference the observable gap, show why it matters commercially, then qualify whether the buyer had the appetite to fix it now."]],
   fivex: [["Signals used", "Cross-border expansion, marketplace presence, Bol.com activity, ecommerce growth and brands showing operational pressure in new regions."], ["Account logic", "Separate German, Polish and Dutch market hypotheses so each segment had its own message, list and response benchmark."], ["Outreach angle", "Use expansion or marketplace friction as the reason to engage, then compare which region and pain converted into meetings fastest."]],
   "franchise-rocket": [["Signals used", "Franchise directory presence, active advertising spend, expansion signals and franchise brands already trying to generate more applications."], ["Account logic", "Build the franchise universe first, then prioritise operators already spending on acquisition but likely frustrated with lead quality or cost."], ["Outreach angle", "Replace partner dependency with direct conversations by showing the prospect why their current acquisition activity could be improved."]],
@@ -750,4 +750,4 @@ document.addEventListener("keydown", (event) => {
     setCalendlyModal(false);
   }
 });
-if (nextLink) nextLink.textContent = `Next: ${cases[nextKey].name} ->`;
+if (nextLink) nextLink.textContent = `${cases[nextKey].name} case study ->`;
