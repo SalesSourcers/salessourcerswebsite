@@ -25,7 +25,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="case-study.css?v=9">
+  <link rel="stylesheet" href="case-study.css?v=10">
 </head>
 <body>
   <header class="case-header">
@@ -51,8 +51,10 @@
           </div>
         </aside>
       </div>
-      <div class="company-profile" data-profile></div>
-      <div class="metric-rail" data-metrics></div>
+      <div class="case-facts">
+        <div class="company-profile" data-profile></div>
+        <div class="metric-rail" data-metrics></div>
+      </div>
       <div class="case-video-panel" data-video-wrap>
         <button class="embedded-video-poster" type="button" data-video-play>
           <img data-video-thumb alt="">
@@ -74,15 +76,11 @@
     </section>
 
     <section class="campaign-section case-section">
-      <div class="section-intro split-intro">
-        <div>
-          <div class="case-kicker light">THE CAMPAIGN DESIGN</div>
-          <h2 data-field="approachTitle"></h2>
-        </div>
-        <p data-field="approach"></p>
+      <div class="section-intro">
+        <div class="case-kicker">THE CAMPAIGN DESIGN</div>
+        <h2 data-field="approachTitle"></h2>
       </div>
-      <div class="campaign-grid" data-campaign></div>
-      <div class="signal-strategy" data-signal-strategy></div>
+      <div class="campaign-flow" data-campaign-flow></div>
       <div class="case-inline-cta">
         <span>Want to see the signals and strategy for your business?</span>
         <a href="https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1" data-calendly-route>Book a strategy session -&gt;</a>
@@ -108,22 +106,18 @@
     </section>
 
     <section class="lessons-section case-section">
-      <div class="section-intro split-intro">
-        <div>
-          <div class="case-kicker">WHY IT WORKED</div>
-          <h2>What turned activity into qualified pipeline.</h2>
-        </div>
-        <p>Strong results rarely come from one script or one channel. They come from making the market, message, people and feedback loop work together.</p>
+      <div class="section-intro">
+        <div class="case-kicker">WHY IT WORKED</div>
+        <h2>What turned activity into qualified pipeline.</h2>
       </div>
       <div class="lessons-grid" data-lessons></div>
     </section>
 
     <section class="relevance-section case-section">
-      <div>
+      <div class="relevance-intro">
         <div class="case-kicker light">IS THIS RELEVANT TO YOU?</div>
         <h2 data-field="fitTitle"></h2>
       </div>
-      <p data-field="fit"></p>
       <div class="relevance-actions">
         <a class="relevance-cta" href="https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1" data-calendly-route>Book a strategy session -&gt;</a>
         <a data-website target="_blank" rel="noopener noreferrer">Visit client website -&gt;</a>
@@ -136,16 +130,13 @@
     </nav>
 
     <section class="case-close">
-      <span>YOUR MARKET / YOUR OPPORTUNITY</span>
-      <h2>Build an outbound motion that gives you more control over who enters pipeline.</h2>
-      <p>We will assess your market, offer and sales capacity, then tell you plainly whether SalesSourcers is the right partner.</p>
+      <h2>Want more of the right companies in your pipeline?</h2>
       <a href="https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1" class="primary-link" data-calendly-route>Schedule a call -&gt;</a>
     </section>
   </main>
 
   <footer class="site-footer">
     <img src="assets/salessourcers-logo.png" alt="SalesSourcers">
-    <span>Qualified sales meetings through cold calling, cold email and buyer-intent data.</span>
   </footer>
 
   <div class="media-modal calendly-modal" aria-hidden="true" data-calendly-modal>
@@ -153,7 +144,7 @@
     <div class="media-modal-card calendly-modal-card" role="dialog" aria-modal="true" aria-label="Schedule a call">
       <button class="modal-close" type="button" data-calendly-close aria-label="Close scheduler">x</button>
       <div class="scheduler-routing scheduler-routing-modal" data-modal-routing>
-        <span>Choose the calendar for your region:</span>
+        <span>Choose the calendar for your region</span>
         <button type="button" data-region-option="emea">US / UK / Europe</button>
         <button type="button" data-region-option="apac">APAC / Australia / New Zealand</button>
       </div>
@@ -161,6 +152,6 @@
     </div>
   </div>
 
-  <script src="case-study.js?v=19"></script>
+  <script src="case-study.js?v=20"></script>
 </body>
 </html>

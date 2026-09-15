@@ -31,10 +31,17 @@ const calendlyModal = document.querySelector("[data-calendly-modal]");
 const calendlyFrame = document.querySelector("[data-calendly-frame]");
 const calendlyCloseButtons = document.querySelectorAll("[data-calendly-close]");
 const methodSteps = document.querySelectorAll("[data-method-step]");
-const methodLabel = document.querySelector("[data-method-label]");
-const methodTitle = document.querySelector("[data-method-title]");
-const methodCopy = document.querySelector("[data-method-copy]");
-const methodPoints = document.querySelector("[data-method-points]");
+const methodBoard = document.querySelector(".system-board");
+const methodSpine = document.querySelector(".system-spine");
+const methodLines = document.querySelectorAll(".system-spine .spine-line");
+const methodDetail = document.querySelector(".system-detail");
+const methodPrevButton = document.querySelector("[data-method-prev]");
+const methodNextButton = document.querySelector("[data-method-next]");
+const methodPrevLabel = document.querySelector("[data-method-prev-label]");
+const methodNextLabel = document.querySelector("[data-method-next-label]");
+const methodNextKicker = document.querySelector("[data-method-next-kicker]");
+const methodProgress = document.querySelector("[data-method-progress]");
+const methodProgressFill = document.querySelector("[data-method-progress-fill]");
 const autoresponseField = document.querySelector("[data-autoresponse]");
 const regionButtons = document.querySelectorAll("[data-region-option]");
 
@@ -44,6 +51,8 @@ let dashboardTourTimer;
 let strategySubmitted = false;
 let selectedCaseFilter = "all";
 let casesExpanded = false;
+let methodIndex = 0;
+let methodResizeTimer;
 let testimonialsExpanded = false;
 let offerAutoOpened = false;
 let popupEngaged = false;
@@ -132,7 +141,7 @@ const methodContent = [
   {
     label: "STEP 02 / BUYING SIGNALS",
     title: "Find credible reasons to reach out now.",
-    copy: "We monitor company, hiring, technology and commercial signals that indicate change. Outreach starts with a relevant reason for the conversation, not a generic list.",
+    copy: "We monitor company, hiring, technology and commercial signals that indicate change. Every conversation then opens with a relevant reason to talk.",
     points: ["Hiring and leadership changes", "Funding, growth and technology events", "Source-backed reasons to engage"],
     cards: [["Signal detected", "A verified event creates a timely reason to engage"], ["Account context", "The signal is connected to your offer"], ["Outreach priority", "The strongest opportunities move first"]]
   },
@@ -145,7 +154,7 @@ const methodContent = [
   },
   {
     label: "STEP 04 / BUYER MAPPING",
-    title: "Identify the people who own the pain.",
+    title: "Find the people who feel the problem.",
     copy: "We map the buying committee and find the people most likely to feel the problem your offer solves. Messaging changes by role, responsibility and likely commercial impact.",
     points: ["Pain owner and decision-maker mapping", "Verified email and phone data", "Role-specific value propositions"],
     cards: [["Pain owner", "The person closest to the operational problem"], ["Buying committee", "Influencers and decision-makers mapped"], ["Contact verified", "Direct details checked before outreach"]]
@@ -153,7 +162,7 @@ const methodContent = [
   {
     label: "STEP 05 / SDR ENABLEMENT",
     title: "Train an SDR to represent your business properly.",
-    copy: "Your dedicated, market-aligned SDR learns your offer, proof, buyers and qualification criteria before launch. Role play, call reviews and coaching continue throughout the campaign.",
+    copy: "Your dedicated SDR learns your offer, proof, buyers and qualification criteria before launch. Role play, call reviews and coaching continue throughout the campaign.",
     points: ["Industry-experienced SDR matching", "SPIN and Gap Selling methodology", "Manager coaching three times a week"],
     cards: [["Sales playbook", "Positioning, discovery and objections documented"], ["Live role play", "Messaging tested before prospects hear it"], ["Launch ready", "SDR certified against campaign criteria"]]
   },
@@ -169,7 +178,7 @@ const methodContent = [
     title: "Book qualified meetings and improve every cycle.",
     copy: "Qualified meetings land directly in your calendar with recordings and AI notes. Every call and reply then improves targeting, messaging, coaching and the next campaign decision.",
     points: ["Meetings booked in your calendar", "AI notes and call recordings", "Market intelligence feeds the next cycle"],
-    cards: [["Qualified meeting", "Right buyer, relevant need and agreed next step"], ["Meeting context", "Recording, summary and buyer notes included"], ["Campaign learning", "Real market evidence improves the next cycle"]]
+    cards: [["Qualified meeting", "Right buyer, relevant need and agreed next step"], ["Meeting context", "Recording, summary and buyer notes included"], ["Campaign learning", "What the market says shapes the next cycle"]]
   }
 ];
 
@@ -230,30 +239,114 @@ dashboardTourToggle.addEventListener("click", () => {
 selectDashboardPanel(0);
 startDashboardTour();
 
+const methodCardFields = [
+  ["[data-method-card-one]", "[data-method-card-one-copy]"],
+  ["[data-method-card-two]", "[data-method-card-two-copy]"],
+  ["[data-method-card-three]", "[data-method-card-three-copy]"]
+];
+
+// Writes one step's content into `root` (the live panel, or an off-screen measuring copy).
+function fillMethodContent(root, content) {
+  const setText = (selector, value) => {
+    const element = root.querySelector(selector);
+    if (element) element.textContent = value;
+  };
+  setText("[data-method-label]", content.label);
+  setText("[data-method-title]", content.title);
+  setText("[data-method-copy]", content.copy);
+  const points = root.querySelector("[data-method-points]");
+  if (points) points.innerHTML = content.points.map((point) => `<li>${point}</li>`).join("");
+  methodCardFields.forEach(([titleSelector, copySelector], cardIndex) => {
+    const card = content.cards[cardIndex] || ["", ""];
+    setText(titleSelector, card[0]);
+    setText(copySelector, card[1]);
+  });
+}
+
+function methodStepName(index) {
+  const name = methodSteps[index] ? methodSteps[index].querySelector("strong") : null;
+  return name ? name.textContent.trim() : `Step ${index + 1}`;
+}
+
+// On narrow screens the step spine scrolls sideways; keep the active step centred in it.
+function keepMethodStepInView(index) {
+  const step = methodSteps[index];
+  if (!methodSpine || !step || methodSpine.scrollWidth <= methodSpine.clientWidth + 1) return;
+  const maxLeft = methodSpine.scrollWidth - methodSpine.clientWidth;
+  const left = Math.max(0, Math.min(maxLeft, step.offsetLeft - (methodSpine.clientWidth - step.offsetWidth) / 2));
+  const smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (typeof methodSpine.scrollTo === "function") methodSpine.scrollTo({ left, behavior: smooth ? "smooth" : "auto" });
+  else methodSpine.scrollLeft = left;
+}
+
+function updateMethodNav(index) {
+  const total = methodSteps.length;
+  if (!total) return;
+  const nextIndex = (index + 1) % total;
+  const prevIndex = (index - 1 + total) % total;
+  if (methodProgress) methodProgress.textContent = `Step ${index + 1} of ${total}`;
+  if (methodProgressFill) methodProgressFill.style.width = `${((index + 1) / total) * 100}%`;
+  if (methodNextKicker) methodNextKicker.textContent = nextIndex === 0 ? "Back to start" : "Next step";
+  if (methodNextLabel) methodNextLabel.textContent = methodStepName(nextIndex);
+  if (methodPrevLabel) methodPrevLabel.textContent = methodStepName(prevIndex);
+}
+
 function selectMethodStep(index) {
   const content = methodContent[index];
   if (!content) return;
+  methodIndex = index;
 
   methodSteps.forEach((step, stepIndex) => {
     const active = stepIndex === index;
     step.classList.toggle("active", active);
+    step.classList.toggle("done", stepIndex < index);
     step.setAttribute("aria-selected", String(active));
     step.tabIndex = active ? 0 : -1;
   });
+  methodLines.forEach((line, lineIndex) => line.classList.toggle("done", lineIndex < index));
 
-  methodLabel.textContent = content.label;
-  methodTitle.textContent = content.title;
-  methodCopy.textContent = content.copy;
-  methodPoints.innerHTML = content.points.map((point) => `<li>${point}</li>`).join("");
+  fillMethodContent(document, content);
+  updateMethodNav(index);
+  keepMethodStepInView(index);
+}
 
-  const cardFields = [
-    ["[data-method-card-one]", "[data-method-card-one-copy]"],
-    ["[data-method-card-two]", "[data-method-card-two-copy]"],
-    ["[data-method-card-three]", "[data-method-card-three-copy]"]
-  ];
-  cardFields.forEach(([titleSelector, copySelector], cardIndex) => {
-    document.querySelector(titleSelector).textContent = content.cards[cardIndex][0];
-    document.querySelector(copySelector).textContent = content.cards[cardIndex][1];
+// Sizes the detail panel to its tallest step so the next and previous buttons never jump.
+function lockMethodDetailHeight() {
+  if (!methodDetail || !methodDetail.parentNode || !methodDetail.offsetWidth || !methodContent.length) return;
+  const probe = methodDetail.cloneNode(true);
+  probe.removeAttribute("role");
+  probe.removeAttribute("aria-live");
+  probe.setAttribute("aria-hidden", "true");
+  probe.style.cssText = `position:absolute;left:0;top:0;width:${methodDetail.offsetWidth}px;min-height:0;visibility:hidden;pointer-events:none;`;
+  methodDetail.parentNode.appendChild(probe);
+  let tallest = 0;
+  methodContent.forEach((content) => {
+    fillMethodContent(probe, content);
+    tallest = Math.max(tallest, probe.offsetHeight);
+  });
+  probe.remove();
+  methodDetail.style.minHeight = tallest ? `${Math.ceil(tallest)}px` : "";
+}
+
+// Next and previous buttons: if the new step's content is scrolled out of view, bring the board back.
+function goToMethodStep(index) {
+  selectMethodStep(index);
+  if (!methodBoard || !methodDetail || !header) return;
+  const headerBottom = header.getBoundingClientRect().bottom;
+  if (methodDetail.getBoundingClientRect().top >= headerBottom) return;
+  const smooth = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollBy({ top: methodBoard.getBoundingClientRect().top - headerBottom - 12, behavior: smooth ? "smooth" : "auto" });
+}
+
+if (methodNextButton) {
+  methodNextButton.addEventListener("click", () => {
+    if (methodSteps.length) goToMethodStep((methodIndex + 1) % methodSteps.length);
+  });
+}
+
+if (methodPrevButton) {
+  methodPrevButton.addEventListener("click", () => {
+    if (methodSteps.length) goToMethodStep((methodIndex - 1 + methodSteps.length) % methodSteps.length);
   });
 }
 
@@ -273,6 +366,16 @@ methodSteps.forEach((step, index) => {
 });
 
 selectMethodStep(0);
+lockMethodDetailHeight();
+window.addEventListener("resize", () => {
+  window.clearTimeout(methodResizeTimer);
+  methodResizeTimer = window.setTimeout(() => {
+    lockMethodDetailHeight();
+    keepMethodStepInView(methodIndex);
+  }, 150);
+});
+window.addEventListener("load", lockMethodDetailHeight);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(lockMethodDetailHeight).catch(() => {});
 
 function updateCaseStudies() {
   const collapsedCaseCount = halfScreenCases.matches ? 4 : 3;

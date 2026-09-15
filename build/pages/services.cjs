@@ -4,50 +4,50 @@ const { refs, asideCta, asideFacts, asideLinks, HOW_IT_RUNS, STANDARD_FAQS } = r
 const hub = {
   path: "/services/",
   title: "Outbound Services | Outsourced SDR & Cold Calling | SalesSourcers",
-  description: "The four ways we build outbound pipeline: outsourced SDR, B2B appointment setting, cold calling and lead generation. What each covers and which one you need.",
+  description: "Outsourced SDR, B2B appointment setting, cold calling and lead generation. What each service covers and how to choose the right one for your team.",
   serviceName: "Outbound services",
   serviceType: "Sales development representative outsourcing",
   breadcrumbName: "Services",
   kicker: "SERVICES",
-  h1: "Four ways in. One motion underneath.",
-  standfirst: "Most agencies sell these as separate products. They are the same programme described from different angles, and the one you should ask for depends on what you already have.",
+  h1: "Four outbound services, one way of working.",
+  standfirst: "All four services below run on the same programme. Which one to ask for depends on what your sales team already has in place.",
   ctaLabel: "Get my outbound strategy",
   answerLabel: "Which one do you need?",
   answer: [
-    "If you have nobody prospecting, you want <strong>an outsourced SDR</strong>. If you have closers but an empty calendar, you want <strong>appointment setting</strong>. If your buyers answer phones, you want <strong>cold calling</strong>. If you are not yet sure who to target, you want <strong>lead generation</strong>.",
-    "Underneath, all four run the same way: define the market, build the playbook, live in week three, coached three times a week, every call recorded.",
+    "With nobody prospecting for you, start with <strong>an outsourced SDR</strong>. If you have closers but an empty calendar, <strong>appointment setting</strong> fits. <strong>Cold calling</strong> suits buyers who answer the phone, and <strong>lead generation</strong> is the place to start if you are still unsure who to target.",
+    "All four follow the same process. We define the market and build the playbook, go live in week three, coach the SDR three times a week and record every call.",
   ],
-  body: `        <h2>The four, and what actually separates them</h2>
+  body: `        <h2>How the four services differ</h2>
         <h3>Outsourced SDR</h3>
-        <p>A dedicated rep who works your accounts and nobody else's. You are buying the person and the management around them - recruitment, training, coaching and replacement all move to us. Choose this when the constraint is that nobody is prospecting and nobody has the hours to manage someone who does. <a href="/outsourced-sdr/">Outsourced SDR services</a>.</p>
+        <p>A dedicated rep who works your accounts and nobody else's. You are paying for the person and for everything around them, since recruitment, training, coaching and replacement all become our job. Choose this when nobody is prospecting and nobody has the hours to manage someone who would. <a href="/outsourced-sdr/">Outsourced SDR services</a>.</p>
         <h3>B2B appointment setting</h3>
-        <p>The same work, bought by the outcome rather than the head. Choose this when you already have closers and the problem is a thin calendar. The thing to interrogate is the qualification bar, because a meeting number is the easiest metric in B2B to hit dishonestly. <a href="/b2b-appointment-setting/">B2B appointment setting</a>.</p>
+        <p>The same work, focused on filling your sales team's calendar. Choose this when you already have closers and the problem is too few meetings. Ask any provider about their qualification bar, because a meeting count is the easiest number in B2B to inflate. <a href="/b2b-appointment-setting/">B2B appointment setting</a>.</p>
         <h3>Cold calling</h3>
-        <p>The channel rather than the arrangement. Choose this when your buyers are reachable by phone and email alone has stalled. Between 1,500 and 5,000 targeted calls a month, recorded, with the recordings available to you. <a href="/cold-calling-services/">Cold calling services</a>.</p>
+        <p>Here the difference is the channel. Choose this when your buyers can be reached by phone and email on its own has stalled. Between 1,500 and 5,000 targeted calls a month, all recorded and available for you to hear. <a href="/cold-calling-services/">Cold calling services</a>.</p>
         <h3>B2B lead generation</h3>
-        <p>The widest of the four, and the term most abused. Ours ends in a booked conversation, not a list or a form fill. Choose this when the market itself is still an open question and the definition work matters as much as the outreach. <a href="/b2b-lead-generation/">B2B lead generation</a>.</p>
-        <h2>What is identical across all four</h2>
-        <p>The engagement does not change shape depending on which name you bought. Strategy and build in weeks one and two, live in week three, manager coaching three times a week, every call recorded with AI notes, and reporting broken down by role, region and message.</p>
-        <p>If you are comparing us with hiring instead, the <a href="/outsourced-sdr-vs-in-house/">loaded-cost comparison</a> is the honest place to start. If you want to know what it costs, <a href="/pricing/">the pricing page</a> explains the drivers rather than hiding behind a form.</p>`,
+        <p>The broadest of the four, and the term that gets misused most. Ours ends with a booked meeting, where many providers stop at a list or a form fill. Choose this when you are still working out which market to target and that groundwork matters as much as the outreach. <a href="/b2b-lead-generation/">B2B lead generation</a>.</p>
+        <h2>What stays the same across all four</h2>
+        <p>Whichever service you choose, the engagement runs the same way. Strategy and build take weeks one and two, the campaign goes live in week three, a manager coaches the SDR three times a week, every call is recorded with AI notes, and reporting is broken down by role, region and message.</p>
+        <p>If you are weighing us against hiring, start with the <a href="/outsourced-sdr-vs-in-house/">full cost comparison</a>. To see what shapes the price, read <a href="/pricing/">the pricing page</a>.</p>`,
   aside:
-    asideCta("Not sure which one?", "Tell us what you already have and we will say which of the four actually fits - including if the answer is none of them.") +
+    asideCta("Not sure which one?", "Tell us what you already have and we will tell you which of the four fits, even if the answer is none of them.") +
     "\n" +
     asideLinks("The four services", [
       ["/outsourced-sdr/", "Outsourced SDR", "A dedicated rep, live in week three"],
-      ["/b2b-appointment-setting/", "Appointment setting", "Bought by the meeting"],
+      ["/b2b-appointment-setting/", "Appointment setting", "Meetings booked into your calendar"],
       ["/cold-calling-services/", "Cold calling", "1,500-5,000 calls a month"],
-      ["/b2b-lead-generation/", "Lead generation", "Ends in a conversation"],
+      ["/b2b-lead-generation/", "Lead generation", "Ends with a booked meeting"],
     ]),
   caseRefs: refs("cypago", "revcat", "iscent"),
-  caseRefsHeading: "What the work produces.",
+  caseRefsHeading: "Recent results.",
   faqs: [
     {
       q: "What is the difference between outsourced SDR and appointment setting?",
-      a: "Mostly what you are buying rather than what happens. Outsourced SDR gives you a dedicated person whose recruitment, training, coaching and replacement are our problem. Appointment setting buys the outcome instead. The work underneath is the same, so the question that matters in either case is the qualification bar.",
+      a: "Mostly how the service is framed. Outsourced SDR gives you a dedicated person, and their recruitment, training, coaching and replacement are our responsibility. Appointment setting is framed around the meetings booked into your calendar. The work underneath is the same, so in both cases the thing to check is the qualification bar.",
     },
     {
       q: "Can we start with one and add another?",
-      a: "There is nothing to add. All four descriptions cover one programme, so a campaign that starts as email-led appointment setting and becomes phone-heavy is a change of emphasis, not a new contract.",
+      a: "You would not need to add anything. All four describe one programme, so a campaign that starts as email-led appointment setting and later leans on the phone is a change of emphasis within the same contract.",
     },
     ...STANDARD_FAQS,
   ],
@@ -59,87 +59,87 @@ const hub = {
     { href: "/uk/", label: "Outbound in the UK" },
   ],
   ctaHeadingA: "Find out which one",
-  ctaHeadingB: "you actually need.",
+  ctaHeadingB: "suits your team.",
 };
 
 /* ============================ 1. OUTSOURCED SDR ============================ */
 const outsourcedSdr = {
   path: "/outsourced-sdr/",
   title: "Outsourced SDR Services | Dedicated B2B SDRs | SalesSourcers",
-  description: "A dedicated, market-aligned SDR who cold calls and emails your target accounts, coached three times a week and live in week three.",
+  description: "A dedicated SDR, matched to your market, who cold calls and emails your target accounts. Coached three times a week and live in week three.",
   serviceName: "Outsourced SDR services",
   serviceType: "Sales development representative outsourcing",
   breadcrumbName: "Outsourced SDR",
   kicker: "OUTSOURCED SDR",
   h1: "A dedicated SDR, without the hiring drag.",
-  standfirst: "You get one experienced sales development representative aligned to your market, trained on your offer, coached by a manager three times a week, and live in week three. Not a shared pool. Not a call centre.",
+  standfirst: "One experienced sales development representative, matched to your market and trained on your offer. A manager coaches them three times a week, they start calling in week three, and they work on your account alone.",
   ctaLabel: "Get my outbound strategy",
   answerLabel: "What outsourced SDR means here",
   answer: [
-    "<strong>Outsourced SDR</strong> means hiring a sales development representative through a partner rather than employing one directly. You get a dedicated rep who prospects, cold calls and emails your target accounts and books qualified meetings into your team's calendar.",
-    "The partner handles recruitment, training, management, coaching, tooling and replacement. You keep the meetings and the market intelligence.",
+    "<strong>Outsourced SDR</strong> means hiring a sales development representative through a partner instead of employing one yourself. You get a dedicated rep who prospects, cold calls and emails your target accounts and books qualified meetings into your team's calendar.",
+    "The partner handles recruitment, training, management, coaching, tools and replacement. You keep the meetings and everything the campaign learns about your market.",
   ],
-  body: `        <h2>What you are actually buying</h2>
-        <p>An in-house SDR hire is four separate problems: finding someone good, training them on a market they do not know yet, managing them well enough that they improve, and replacing them when they leave. Most companies solve the first and lose on the other three.</p>
-        <p>Outsourcing moves all four to us. What arrives on your side is a named person who works your accounts, and a calendar that fills.</p>
+  body: `        <h2>What you get</h2>
+        <p>Hiring an SDR yourself means solving four problems. You have to find someone good, train them on a market they do not know yet, manage them well enough that they improve, and replace them when they leave. Most companies manage the first and struggle with the other three.</p>
+        <p>Outsourcing hands all four to us. On your side, you get a named person working your accounts and meetings arriving in your calendar.</p>
         <div class="stat-strip">
-          <div><b>Week 3</b><span>Typical time to live</span></div>
+          <div><b>Week 3</b><span>Typical go-live</span></div>
           <div><b>3x weekly</b><span>Manager coaching</span></div>
           <div><b>1,500-5,000</b><span>Targeted calls per month</span></div>
           <div><b>10-40</b><span>Expected meetings per month</span></div>
         </div>
-        <h2>A dedicated SDR, not a shared resource</h2>
-        <p>The word "outsourced" covers two very different models, and the difference matters more than anything else on this page.</p>
-        <p>A shared pool means your campaign sits in a queue with other clients. Whoever is free picks up your list that day. They will never learn your market, because they are not in it long enough to.</p>
-        <p>A dedicated SDR works your accounts and only your accounts. They hear the same objections repeatedly, recognise which job titles engage, and get better at your specific conversation every week. That compounding is the entire value.</p>
-        <h3>Matched to your market, not just assigned</h3>
-        <p>We hire experienced, market-aligned talent across the UK, South Africa, the United States and Australia, then match on the market you sell into. Someone who has sold to CISOs before does not need six weeks to understand why a security buyer will not take a generic call.</p>
-        <h3>Trained before they touch your pipeline</h3>
-        <p>Every SDR completes a structured programme covering discovery, SPIN Selling and Gap Selling, then trains specifically on your offer. Scripts are tested through role play and call listening before a single real prospect hears them.</p>
+        <h2>A dedicated SDR on your account</h2>
+        <p>"Outsourced" covers two very different models, and the difference matters more than anything else on this page.</p>
+        <p>In a shared pool, your campaign sits in a queue with other clients and whoever is free picks up your list that day. Nobody stays on it long enough to learn your market.</p>
+        <p>A dedicated SDR works only your accounts. They hear the same objections again and again, learn which job titles respond, and get better at your conversation every week. That steady improvement is what you are paying for.</p>
+        <h3>Matched to your market</h3>
+        <p>We hire experienced SDRs across the UK, South Africa, the United States and Australia, then match them to the market you sell into. Someone who has sold to CISOs before already knows why a security buyer hangs up on a generic call, so they do not need six weeks to learn it.</p>
+        <h3>Trained before they call your prospects</h3>
+        <p>Every SDR completes a structured programme covering discovery, SPIN Selling and Gap Selling, then trains on your offer. Scripts are tested through role play and call listening before any prospect hears them.</p>
 ${HOW_IT_RUNS}
-        <h2>What qualifies as a meeting</h2>
-        <p>Loose qualification is how agencies hit a meeting number while producing nothing you can close. Every lead is vetted against three things before outreach even begins:</p>
+        <h2>What counts as a qualified meeting</h2>
+        <p>Loose qualification lets an agency hit its meeting number without producing anything you can close. We check every lead against three tests before outreach begins.</p>
         <ul>
-          <li><strong>Fit</strong> - do they match the profile of customers you already win?</li>
-          <li><strong>Intent</strong> - is there evidence they are in market now?</li>
-          <li><strong>Timing</strong> - is there a reason to have the conversation this quarter?</li>
+          <li><strong>Fit.</strong> Do they match the customers you already win?</li>
+          <li><strong>Intent.</strong> Is there evidence they are in the market now?</li>
+          <li><strong>Timing.</strong> Is there a reason to talk this quarter?</li>
         </ul>
-        <p>A meeting that fails those tests is a meeting your account executive resents attending. We would rather book fewer.</p>
+        <p>Your account executives will resent a meeting that fails those tests, so we would rather book fewer, better ones.</p>
         <h2>Is outsourced SDR right for you?</h2>
-        <p>It works well when you know which customers you want, have evidence your offer converts, and need a managed route to those buyers without making a founder or AE the full-time prospector.</p>
-        <p>It works badly when the offer has not yet been validated with anyone. If nobody has bought it, outbound will not be the thing that proves it should exist. Fix positioning first.</p>`,
+        <p>It works well when you know which customers you want, have evidence your offer sells, and need a managed way to reach those buyers without turning a founder or AE into a full-time prospector.</p>
+        <p>It works badly when nobody has bought the offer yet. Outbound cannot prove a product should exist, so sort out the positioning first.</p>`,
   aside:
-    asideCta("Start with the strategy, not the contract", "We map your addressable market and show you the opportunity before you commit to anything.") +
+    asideCta("Start with the strategy", "We map your addressable market and show you the opportunity before you commit to anything.") +
     "\n" +
     asideFacts("At a glance", [
-      "<strong>Model:</strong> one dedicated SDR, matched to your market",
-      "<strong>Channels:</strong> cold calling and personalised email",
-      "<strong>Live in:</strong> week three",
-      "<strong>Coaching:</strong> manager-led, three times weekly",
-      "<strong>Visibility:</strong> recordings, AI notes, live dashboard",
-      "<strong>Hiring pool:</strong> UK, South Africa, US, Australia",
+      "One dedicated SDR, matched to your market",
+      "Cold calling and personalised email",
+      "Live in week three",
+      "Manager coaching three times a week",
+      "Recordings, AI notes and a live dashboard",
+      "SDRs hired in the UK, South Africa, US and Australia",
     ]) +
     "\n" +
     asideLinks("Compare the options", [
-      ["/outsourced-sdr-vs-in-house/", "Outsourced vs in-house", "The real loaded cost of each"],
-      ["/pricing/", "What it costs", "Cost drivers and market ranges"],
-      ["/b2b-appointment-setting/", "Appointment setting", "If you only need the meeting"],
+      ["/outsourced-sdr-vs-in-house/", "Outsourced vs in-house", "The full cost of each"],
+      ["/pricing/", "What it costs", "Cost drivers and market prices"],
+      ["/b2b-appointment-setting/", "Appointment setting", "If you only need meetings"],
     ]),
   caseRefs: refs("cypago", "revcat", "sales-savvy"),
   caseRefsHeading: "SDR programmes we have run.",
   faqs: [
     {
       q: "What is an outsourced SDR?",
-      a: "An outsourced SDR is a sales development representative provided by a partner rather than employed directly. They prospect your target accounts through cold calling and email, qualify interest and book meetings into your team's calendar. The partner handles recruitment, training, management, coaching, tooling and replacement.",
+      a: "An outsourced SDR is a sales development representative provided by a partner instead of employed directly. They prospect your target accounts by phone and email, qualify interest and book meetings into your team's calendar. The partner handles recruitment, training, management, coaching, tools and replacement.",
     },
     {
       q: "Is the SDR dedicated to us or shared with other clients?",
-      a: "Dedicated. Your SDR works your accounts only. A shared pool cannot learn your market, because no individual is in it long enough to recognise the recurring objections or the job titles that actually engage.",
+      a: "Dedicated. Your SDR works only on your accounts. Reps in a shared pool never stay on one market long enough to learn its recurring objections or which job titles respond.",
     },
     ...STANDARD_FAQS,
     {
       q: "What happens if the SDR is not working out?",
-      a: "Replacement is our problem, not yours. That is one of the main structural differences from an in-house hire, where a bad fit costs you the recruitment cycle, the ramp time and the pipeline gap.",
+      a: "We replace them at our cost. With an in-house hire, a bad fit costs you another recruitment cycle, more ramp time and a gap in your pipeline.",
     },
   ],
   links: [
@@ -163,66 +163,66 @@ const appointmentSetting = {
   breadcrumbName: "Appointment setting",
   kicker: "APPOINTMENT SETTING",
   h1: "Meetings your sales team is glad to take.",
-  standfirst: "Anyone can fill a calendar. We book conversations with people who match your customer profile, show real intent and have a reason to talk this quarter.",
+  standfirst: "We book meetings with people who match your customer profile, show they are in the market and have a reason to talk this quarter.",
   ctaLabel: "Get my outbound strategy",
   answerLabel: "In short",
   answer: [
     "<strong>B2B appointment setting</strong> is the outsourced work of contacting target companies, qualifying interest and booking a meeting directly into your sales team's calendar.",
-    "The measure that matters is not meetings booked. It is meetings attended by the right person with a genuine reason to be there. We vet every lead on fit, intent and timing before outreach starts.",
+    "What counts is how many meetings the right people attend with a clear reason to be there. We check every lead for fit, intent and timing before outreach starts.",
   ],
-  body: `        <h2>The number that gets gamed</h2>
-        <p>Appointment setting is the easiest service in B2B to fake. Lower the bar far enough and you can book anyone. The invoice looks the same; the pipeline does not.</p>
-        <p>You will recognise a gamed meeting number by the symptoms: high booking volume, poor attendance, and account executives who quietly stop preparing because most of the calendar turns out to be unqualified.</p>
+  body: `        <h2>Why meeting numbers get inflated</h2>
+        <p>Appointment setting is easy to fake. Lower the bar far enough and you can book almost anyone, and the invoice looks the same whether your pipeline grows or not.</p>
+        <p>You can spot an inflated meeting count quickly. Bookings are high, attendance is poor, and account executives stop preparing because so many meetings turn out to be unqualified.</p>
         <h2>Our qualification bar</h2>
-        <p>Every prospect is vetted against three tests before they are ever contacted, and again before a meeting is confirmed.</p>
+        <p>We check every prospect against three tests before contacting them, and again before confirming a meeting.</p>
         <div class="table-scroll">
           <table class="page-table">
             <thead><tr><th>Test</th><th>What we check</th><th>Why it matters</th></tr></thead>
             <tbody>
-              <tr><td>Fit</td><td>Company profile, size, sector and role seniority against the customers you already win</td><td>Stops meetings with people who could never buy</td></tr>
-              <tr><td>Intent</td><td>Evidence the company is active in market now, not simply a name on a list</td><td>Separates a real conversation from a polite one</td></tr>
-              <tr><td>Timing</td><td>A reason this quarter rather than some day</td><td>Protects your AE's calendar from indefinite nurture</td></tr>
+              <tr><td>Fit</td><td>Company profile, size, sector and role seniority compared with the customers you already win</td><td>Stops meetings with people who could never buy</td></tr>
+              <tr><td>Intent</td><td>Evidence the company is in the market now</td><td>Separates a buying conversation from a polite one</td></tr>
+              <tr><td>Timing</td><td>A reason to act this quarter</td><td>Keeps your AE's calendar free of long-term nurture</td></tr>
             </tbody>
           </table>
         </div>
-        <h2>How the meeting gets booked</h2>
-        <p>Cold calling and personalised email run together rather than as separate campaigns. A call that does not connect leaves a reason for the email to land; an email that gets read gives the call a warmer opening. Prospects do not experience two channels, they experience one conversation.</p>
-        <p>When a prospect agrees to a meeting, it goes straight into your team's calendar with the context attached: what was said, what they are trying to solve, what objection came up and who else is involved.</p>
+        <h2>How meetings get booked</h2>
+        <p>Cold calling and personalised email run as one campaign. A call that does not connect gives the follow-up email a reason to be opened, and an email that gets read makes the next call warmer. To the prospect it feels like a single conversation.</p>
+        <p>When a prospect agrees to meet, the meeting goes straight into your team's calendar with notes on what was said, what they want to solve, any objections and who else is involved.</p>
 ${HOW_IT_RUNS}
-        <h2>Attendance, not just bookings</h2>
-        <p>A booked meeting nobody attends is worse than no meeting, because it consumed preparation time. Confirmation sequences, sensible scheduling windows and honest framing on the call all matter more than the raw booking count.</p>
-        <p>This is also why we record everything. If a meeting was booked on a promise your product does not keep, you will hear it on the recording rather than discover it live in the room.</p>
-        <h2>What you get alongside the meetings</h2>
-        <p>Every call and email reply is market intelligence. Across a campaign you learn which competitors keep coming up, which objections recur, where pricing pressure sits, and which roles and regions actually convert. Clients regularly tell us the intelligence reshaped their positioning more than the meetings changed their quarter.</p>`,
+        <h2>Making sure meetings are attended</h2>
+        <p>A booked meeting nobody attends costs more than no meeting, because someone prepared for it. Confirmation messages, sensible scheduling and clear framing on the call all matter more than the raw number of bookings.</p>
+        <p>We also record every call. If a meeting was booked on a promise your product cannot keep, you will hear it on the recording before you walk into the room.</p>
+        <h2>What you learn along the way</h2>
+        <p>Every call and email reply tells you something about your market. Over a campaign you learn which competitors come up, which objections repeat, where buyers push back on price, and which roles and regions convert. Clients often tell us this changed their positioning more than the meetings changed their quarter.</p>`,
   aside:
-    asideCta("See the opportunity first", "We will map your addressable market and show you what a realistic meeting volume looks like before you commit.") +
+    asideCta("See the opportunity first", "We will map your addressable market and show you a realistic meeting volume before you commit.") +
     "\n" +
     asideFacts("Capacity by package", [
-      "<strong>10-15 meetings</strong> per month - 1,500 targeted calls",
-      "<strong>15-25 meetings</strong> per month - 3,000 targeted calls",
-      "<strong>25-40 meetings</strong> per month - 5,000 targeted calls",
-      "Every meeting vetted on fit, intent and timing",
+      "<strong>10-15 meetings</strong> a month from 1,500 targeted calls",
+      "<strong>15-25 meetings</strong> a month from 3,000 targeted calls",
+      "<strong>25-40 meetings</strong> a month from 5,000 targeted calls",
+      "Every meeting checked for fit, intent and timing",
     ]) +
     "\n" +
     asideLinks("Related", [
       ["/cold-calling-services/", "Cold calling", "The channel that books most of them"],
       ["/outsourced-sdr/", "Outsourced SDR", "The person who makes the calls"],
-      ["/pricing/", "What it costs", "Cost drivers and market ranges"],
+      ["/pricing/", "What it costs", "Cost drivers and market prices"],
     ]),
   caseRefs: refs("iscent", "easygenerator", "the-recipe"),
   caseRefsHeading: "Appointment setting in practice.",
   faqs: [
     {
       q: "What is B2B appointment setting?",
-      a: "B2B appointment setting is the outsourced work of contacting target companies, qualifying their interest and booking a meeting directly into your sales team's calendar. It covers the prospecting and qualification stages so your closers spend their time in conversations rather than looking for them.",
+      a: "B2B appointment setting is the outsourced work of contacting target companies, qualifying their interest and booking meetings into your sales team's calendar. It covers prospecting and qualification, so your closers can spend their time in sales conversations.",
     },
     {
       q: "How do you define a qualified meeting?",
-      a: "A meeting passes three tests: fit against the profile of customers you already win, evidence of real intent rather than simple list membership, and a reason to have the conversation this quarter. A meeting that fails any of those is a meeting your account executive resents attending.",
+      a: "A meeting has to pass three tests. The company fits the profile of customers you already win, there is evidence they are in the market now, and there is a reason to talk this quarter. Your account executives would resent a meeting that fails any of them.",
     },
     {
       q: "How many meetings should we expect per month?",
-      a: "Packages are built around 10 to 15, 15 to 25, or 25 to 40 expected meetings per month, matched to 1,500, 3,000 and 5,000 targeted calls respectively. The right tier depends on your market size, deal value and how much closing capacity your team actually has.",
+      a: "Our packages are built around 10 to 15, 15 to 25, or 25 to 40 expected meetings a month, from 1,500, 3,000 and 5,000 targeted calls. The right package depends on your market size, deal value and how much closing capacity your team has.",
     },
     ...STANDARD_FAQS,
   ],
@@ -245,17 +245,17 @@ const coldCalling = {
   serviceType: "Cold calling",
   breadcrumbName: "Cold calling",
   kicker: "COLD CALLING",
-  h1: "Cold calling that survives contact with a real buyer.",
-  standfirst: "Between 1,500 and 5,000 targeted calls a month, made by a trained SDR who knows your market, recorded in full so you can hear exactly what your buyers say back.",
+  h1: "Cold calling by trained SDRs who know your market.",
+  standfirst: "Between 1,500 and 5,000 targeted calls a month, every one recorded so you can hear what your buyers say.",
   ctaLabel: "Get my outbound strategy",
   answerLabel: "In short",
   answer: [
     "<strong>Outsourced cold calling</strong> puts a trained sales development representative on the phone to your target accounts, working from a researched list and a tested script, to open conversations and book qualified meetings.",
-    "Volume alone does not work. What makes calling work is a defined market, a reason to call this company, and a rep coached often enough to improve week to week.",
+    "Calling works when the market is defined, there is a clear reason to call each company, and the rep gets coached often enough to improve every week.",
   ],
-  body: `        <h2>Cold calling is not dead. Bad cold calling is.</h2>
-        <p>The case against calling is really a case against a specific version of it: an untrained rep, an unfiltered list, a script written for nobody in particular, and no feedback loop. That version deserves its reputation.</p>
-        <p>What still works is narrow. A defined market, a credible reason to be calling this specific company, someone on the phone who can hold a real conversation about the buyer's problem, and a manager listening closely enough to fix what is not landing.</p>
+  body: `        <h2>Why cold calling gets a bad name</h2>
+        <p>Most complaints about cold calling describe the same setup. An untrained rep works through an unfiltered list with a script written for nobody in particular, and nobody gives them feedback. Calling done that way fails, and people are right to dislike it.</p>
+        <p>Calling still works when it is done with care. You need a defined market, a good reason to call each company, someone who can talk credibly about the buyer's problem, and a manager listening closely enough to fix what is not landing.</p>
         <div class="stat-strip">
           <div><b>1,500-5,000</b><span>Targeted calls per month</span></div>
           <div><b>100%</b><span>Calls recorded</span></div>
@@ -263,30 +263,30 @@ const coldCalling = {
           <div><b>AI notes</b><span>On every conversation</span></div>
         </div>
         <h2>Who makes the calls</h2>
-        <p>One dedicated SDR, matched to your market, hired from an experienced pool across the UK, South Africa, the United States and Australia. They complete a structured programme covering discovery, SPIN Selling and Gap Selling before training specifically on your offer.</p>
-        <p>Then they call your accounts and nobody else's. By month two they have heard your market's objections enough times to answer them without reaching for a script.</p>
-        <h3>Coached, not just monitored</h3>
-        <p>Manager coaching runs three times a week against real recorded calls. The difference between a rep who improves and one who plateaus is almost entirely how often somebody good listens to them and tells them what to change.</p>
+        <p>One dedicated SDR, matched to your market and hired from our experienced pool across the UK, South Africa, the United States and Australia. They complete a structured programme covering discovery, SPIN Selling and Gap Selling, then train on your offer.</p>
+        <p>After that they call your accounts and nobody else's. By month two they have heard your market's objections often enough to answer them without a script.</p>
+        <h3>Coaching every week</h3>
+        <p>A manager coaches your SDR three times a week using their recorded calls. Whether a rep keeps improving or plateaus comes down mostly to how often someone good listens to them and tells them what to change.</p>
         <h2>The list matters as much as the call</h2>
-        <p>Before a number is dialled, the market is defined: ideal customer profile, priority sectors and regions, and explicit exclusions. Every lead is checked against fit, intent and timing.</p>
-        <p>Calling a badly built list is how teams conclude that cold calling does not work. Usually the calling was fine and the list was the problem.</p>
+        <p>Before anyone dials, we define the market with an ideal customer profile, priority sectors and regions, and a list of companies to exclude. Every lead is checked for fit, intent and timing.</p>
+        <p>Teams that call a badly built list often decide cold calling does not work, when the list was the problem.</p>
 ${HOW_IT_RUNS}
-        <h2>You can hear everything</h2>
-        <p>Every call is recorded with AI-generated notes attached. That gives you three things most calling engagements never produce:</p>
+        <h2>You can hear every call</h2>
+        <p>Every call is recorded with AI-generated notes, which gives you three things most calling services never provide.</p>
         <ul>
-          <li><strong>Verification</strong> - you can confirm what was promised on your behalf, in the prospect's own words.</li>
-          <li><strong>Objection patterns</strong> - the same three objections usually explain most of your lost pipeline.</li>
-          <li><strong>Positioning feedback</strong> - which framing makes a buyer lean in, tested hundreds of times a month.</li>
+          <li><strong>Proof.</strong> You can check what was said on your behalf, in the prospect's own words.</li>
+          <li><strong>Objection patterns.</strong> A handful of objections usually explains most of your lost pipeline.</li>
+          <li><strong>Positioning feedback.</strong> You learn which framing gets a buyer interested, tested hundreds of times a month.</li>
         </ul>
-        <p>Most clients find the recordings change how they sell generally, not only how the campaign performs.</p>`,
+        <p>Many clients find the recordings change how their whole team sells.</p>`,
   aside:
-    asideCta("Hear your market first", "Get a complimentary outbound strategy showing which segments are worth calling and what the opening should be.") +
+    asideCta("Hear your market first", "Get a free outbound strategy showing which segments are worth calling and how the calls should open.") +
     "\n" +
     asideFacts("Call volumes", [
-      "<strong>1,500 calls</strong> per month - 10-15 expected meetings",
-      "<strong>3,000 calls</strong> per month - 15-25 expected meetings",
-      "<strong>5,000 calls</strong> per month - 25-40 expected meetings",
-      "All recorded, with AI call notes",
+      "<strong>1,500 calls</strong> a month, 10-15 expected meetings",
+      "<strong>3,000 calls</strong> a month, 15-25 expected meetings",
+      "<strong>5,000 calls</strong> a month, 25-40 expected meetings",
+      "Every call recorded, with AI notes",
     ]) +
     "\n" +
     asideLinks("Related", [
@@ -299,15 +299,15 @@ ${HOW_IT_RUNS}
   faqs: [
     {
       q: "Does cold calling still work in B2B?",
-      a: "Yes, when the market is defined, the list is built on fit and intent, and the person calling has been trained and is coached regularly. What does not work is high volume against an unfiltered list with a generic script and no feedback loop, which is the version most people mean when they say calling is dead.",
+      a: "Yes, when the market is defined, the list is built on fit and intent, and the caller is trained and coached regularly. High volume against an unfiltered list with a generic script and no feedback does not work, and that is usually what people mean when they say calling is dead.",
     },
     {
       q: "How many calls will you make?",
-      a: "Between 1,500 and 5,000 targeted calls per month depending on the package. Volume is matched to market size and expected meeting capacity rather than treated as the goal in itself.",
+      a: "Between 1,500 and 5,000 targeted calls a month, depending on the package. We set the volume by market size and the meeting capacity you need.",
     },
     {
       q: "Can we listen to the calls?",
-      a: "Every call is recorded and carries AI-generated notes. You can listen to any conversation, verify what was said on your behalf, and see the objection patterns that recur across the campaign.",
+      a: "Yes. Every call is recorded with AI-generated notes. You can listen to any conversation, check what was said on your behalf and see which objections keep coming up.",
     },
     ...STANDARD_FAQS,
   ],
@@ -317,81 +317,81 @@ ${HOW_IT_RUNS}
     { href: "/b2b-lead-generation/", label: "B2B lead generation" },
     { href: "/pricing/", label: "What it costs" },
   ],
-  ctaHeadingA: "Find out what your buyers",
-  ctaHeadingB: "actually say.",
+  ctaHeadingA: "Hear what your buyers",
+  ctaHeadingB: "say about your offer.",
 };
 
 /* ========================= 4. B2B LEAD GENERATION ========================= */
 const leadGeneration = {
   path: "/b2b-lead-generation/",
   title: "B2B Lead Generation Company | SalesSourcers",
-  description: "A B2B lead generation company running the full motion: market definition, buyer-intent data, cold calling and email, and qualified meetings booked.",
+  description: "A B2B lead generation company that defines your market, uses buyer-intent data, runs cold calling and email, and books qualified meetings.",
   serviceName: "B2B lead generation",
   serviceType: "Lead generation",
   breadcrumbName: "Lead generation",
   kicker: "LEAD GENERATION",
   h1: "Lead generation that ends in a conversation.",
-  standfirst: "Most lead generation stops at a list or a form fill and calls it a lead. We run the whole motion through to a qualified meeting with someone who can actually buy.",
+  standfirst: "Many lead generation services hand over a list or a form fill and call it a lead. We carry the work through to a qualified meeting with someone who can buy.",
   ctaLabel: "Get my outbound strategy",
   answerLabel: "In short",
   answer: [
-    "<strong>B2B lead generation</strong> covers identifying companies that fit your customer profile, establishing that they are in market, and creating a real conversation with the person who can buy.",
-    "The distinction that matters is where the service stops. A list is not a lead. A form fill is not a lead. We take it through to a qualified meeting, then hand you the intelligence the campaign produced along the way.",
+    "<strong>B2B lead generation</strong> covers identifying companies that fit your customer profile, establishing that they are in the market, and starting a conversation with the person who can buy.",
+    "The main difference between providers is where the service stops. We finish with a qualified meeting, and give you everything the campaign learned about your market along the way.",
   ],
-  body: `        <h2>What most agencies call a lead</h2>
-        <p>The word covers wildly different things, which is why buyers compare quotes that are not comparable.</p>
+  body: `        <h2>What agencies mean by a lead</h2>
+        <p>The word covers very different things, which is why quotes for lead generation are so hard to compare.</p>
         <div class="table-scroll">
           <table class="page-table">
-            <thead><tr><th>What is delivered</th><th>What it actually is</th><th>Who does the selling</th></tr></thead>
+            <thead><tr><th>What is delivered</th><th>What you get</th><th>Who does the selling</th></tr></thead>
             <tbody>
-              <tr><td>A data list</td><td>Contact records matching a filter</td><td>You, entirely</td></tr>
+              <tr><td>A data list</td><td>Contact records that match a filter</td><td>You, all of it</td></tr>
               <tr><td>An email campaign</td><td>Sends and open rates</td><td>You, once someone replies</td></tr>
-              <tr><td>A marketing qualified lead</td><td>Somebody downloaded something</td><td>You, from a cold start</td></tr>
-              <tr><td>A qualified meeting</td><td>A booked conversation with a vetted buyer</td><td>Us up to the meeting, you from there</td></tr>
+              <tr><td>A marketing qualified lead</td><td>Someone downloaded something</td><td>You, from a cold start</td></tr>
+              <tr><td>A qualified meeting</td><td>A booked conversation with a checked buyer</td><td>Us up to the meeting, you from there</td></tr>
             </tbody>
           </table>
         </div>
-        <p>We do the last one. It is more expensive per unit and considerably cheaper per closed deal.</p>
-        <h2>Defining the market before generating anything</h2>
-        <p>We turn your best existing customers, your commercial goals and your offer into a clearly bounded addressable market. That produces three things: an ideal customer profile, a ranked set of sectors and regions, and a written list of exclusions.</p>
-        <p>Exclusions matter more than people expect. Knowing who not to contact protects your brand, your deliverability and your team's time.</p>
-        <h2>Intent, not just fit</h2>
-        <p>Fit tells you a company could buy. Intent tells you they might buy now. Buyer-intent data narrows a large addressable market down to the companies worth a conversation this quarter, which is what makes a modest call volume produce a serious meeting count.</p>
-        <h2>Multi-channel, run as one motion</h2>
-        <p>Cold calling and personalised email run together, not as separate campaigns competing for the same inbox. The call gives the email a reason to exist; the email gives the call a warmer opening.</p>
+        <p>We deliver the last one. It takes more work up front and wastes far less of your sales team's time.</p>
+        <h2>Defining the market first</h2>
+        <p>We start from your best customers, your commercial goals and your offer, and turn them into a clearly bounded market. That gives you an ideal customer profile, a ranked list of sectors and regions, and a written list of exclusions.</p>
+        <p>The exclusions matter more than most people expect. Knowing who to leave alone protects your brand, your email deliverability and your team's time.</p>
+        <h2>Fit and intent</h2>
+        <p>Fit tells you a company could buy. Intent tells you it might buy now. Buyer-intent data narrows a large market to the companies worth calling this quarter, which is how a modest call volume can still produce a strong meeting count.</p>
+        <h2>Calling and email in one campaign</h2>
+        <p>Cold calling and personalised email run together as one campaign. A call gives the follow-up email a reason to be read, and an email makes the next call warmer.</p>
 ${HOW_IT_RUNS}
-        <h2>The intelligence is half the value</h2>
-        <p>Running hundreds of real conversations a month against a defined market produces something no report can: you learn what the market thinks of your offer. Which competitors keep coming up. Which objections recur and in what order. Where pricing resistance actually sits. Which roles and regions convert, and which quietly never do.</p>
-        <p>Clients frequently change their positioning off the back of the first two months, before the pipeline effect has even fully landed.</p>`,
+        <h2>What the campaign teaches you</h2>
+        <p>Hundreds of conversations a month with a defined market tell you what that market thinks of your offer. You find out which competitors keep coming up, which objections repeat and in what order, where buyers push back on price, and which roles and regions convert.</p>
+        <p>Clients often change their positioning within the first two months, before the full pipeline effect has landed.</p>`,
   aside:
-    asideCta("Start with the opportunity map", "A complimentary outbound strategy: your addressable market, priority segments and a realistic view of the volume available.") +
+    asideCta("Start with the opportunity map", "A free outbound strategy covering your addressable market, priority segments and a realistic view of the volume available.") +
     "\n" +
     asideFacts("What counts as a lead here", [
-      "Vetted on <strong>fit</strong> against customers you already win",
-      "Vetted on <strong>intent</strong> - active in market now",
-      "Vetted on <strong>timing</strong> - a reason this quarter",
-      "Delivered as a <strong>booked meeting</strong>, not a record",
+      "Checked for <strong>fit</strong> against customers you already win",
+      "Checked for <strong>intent</strong>, meaning in the market now",
+      "Checked for <strong>timing</strong>, with a reason to talk this quarter",
+      "Delivered as a <strong>booked meeting</strong>",
     ]) +
     "\n" +
     asideLinks("Related", [
       ["/b2b-appointment-setting/", "Appointment setting", "How the meeting gets booked"],
-      ["/cold-calling-services/", "Cold calling", "The primary channel"],
-      ["/industries/marketing-agencies/", "For agencies", "Five agency case studies"],
+      ["/cold-calling-services/", "Cold calling", "The main channel"],
+      ["/industries/marketing-agencies/", "For agencies", "Agency campaigns we have run"],
     ]),
   caseRefs: refs("the-recipe", "iscent", "conveyor"),
   caseRefsHeading: "Lead generation programmes.",
   faqs: [
     {
       q: "How are you different from a lead generation agency?",
-      a: "Every lead is vetted against fit, intent and timing before outreach begins. Your dedicated, market-aligned SDR completes a proven training programme covering discovery, SPIN Selling and Gap Selling, then works across cold calling and personalised email. You also receive full call visibility, AI notes, manager coaching three times a week and qualified meetings from as early as week three.",
+      a: "Every lead is checked for fit, intent and timing before outreach begins. Your dedicated SDR completes our training programme covering discovery, SPIN Selling and Gap Selling, then works across cold calling and personalised email. You also get full call visibility, AI notes, manager coaching three times a week and qualified meetings from as early as week three.",
     },
     {
       q: "Do you sell data lists?",
-      a: "No. Data is an input to the campaign, not the deliverable. The deliverable is a qualified meeting with a vetted buyer, plus the market intelligence the campaign produces along the way.",
+      a: "No. Data goes into the campaign, and what you receive is a qualified meeting with a checked buyer, plus what the campaign learns about your market.",
     },
     {
-      q: "What does buyer-intent data actually do?",
-      a: "Fit tells you a company could buy from you. Intent narrows that to companies showing evidence they are active in market now. It is what allows a moderate call volume to produce a serious meeting count instead of spraying a large list thinly.",
+      q: "What does buyer-intent data do?",
+      a: "Fit tells you a company could buy from you. Intent narrows that to companies showing signs they are in the market now. That is how a moderate call volume can produce a strong meeting count without spreading effort thinly across a huge list.",
     },
     ...STANDARD_FAQS,
   ],
@@ -402,8 +402,8 @@ ${HOW_IT_RUNS}
     { href: "/uk/", label: "Lead generation in the UK" },
     { href: "/australia/", label: "Lead generation in Australia" },
   ],
-  ctaHeadingA: "Stop buying lists.",
-  ctaHeadingB: "Start having conversations.",
+  ctaHeadingA: "Swap contact lists for",
+  ctaHeadingB: "booked sales meetings.",
 };
 
 module.exports = [hub, outsourcedSdr, appointmentSetting, coldCalling, leadGeneration];
