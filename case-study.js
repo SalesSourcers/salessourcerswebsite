@@ -545,6 +545,44 @@ const signalPlans = {
   "franchise-rocket": [["Signals used", "Franchise directory presence, active advertising spend, expansion signals and franchise brands already trying to generate more applications."], ["Account logic", "Build the franchise universe first, then prioritise operators already spending on acquisition but likely frustrated with lead quality or cost."], ["Outreach angle", "Replace partner dependency with direct conversations by showing the prospect why their current acquisition activity could be improved."]],
   conveyor: [["Signals used", "Industries where Conveyor had proof, SEO gaps, paid media activity, content inconsistency and companies with visible demand-generation pressure."], ["Account logic", "Prioritise segments where existing case studies made the outreach credible and the agency could speak from relevant experience."], ["Outreach angle", "Lead with proof and a specific commercial gap, then use structured follow-up so prospecting continued even when leadership was busy."]]
 };
+
+// Markup builders. The live render below AND the static bake of
+// case-studies/<slug>/index.html use these, so the hydrated DOM equals the baked
+// HTML. Text is escaped the way the browser serialises it (e.g. "L&D" -> "L&amp;D").
+// Keep everything above `const params` free of DOM access: the bake evaluates it in node.
+const escapeHtml = (value) => String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const stepNumber = (index) => String(index + 1).padStart(2, "0");
+const caseMarkup = {
+  facts: (items) => items.map(([label, value]) =>
+    `<div class="case-fact"><span>${label}</span><strong>${value}</strong></div>`
+  ).join(""),
+  profile: (entry) => caseMarkup.facts([
+    ["INDUSTRY", escapeHtml(entry.industry)],
+    ["HEADQUARTERS", escapeHtml(entry.location)],
+    ["COMPANY SIZE", escapeHtml(entry.size)],
+    ["WEBSITE", `<a href="${entry.website}" target="_blank" rel="noopener noreferrer">${new URL(entry.website).hostname.replace("www.", "")} -&gt;</a>`]
+  ]),
+  metrics: (entry) => caseMarkup.facts(entry.metrics.map(([value, label]) => [escapeHtml(label), escapeHtml(value)])),
+  numbered: (items) => items.map((copy, index) =>
+    `<article><span>${stepNumber(index)}</span><p>${escapeHtml(copy)}</p></article>`
+  ).join(""),
+  lessons: (items) => items.map(([title, copy], index) =>
+    `<article><span>${stepNumber(index)}</span><h3>${escapeHtml(title)}</h3><p>${escapeHtml(copy)}</p></article>`
+  ).join(""),
+  flowGroup: (phase, title, items, offset) =>
+    `<div class="flow-group"><div class="flow-group-head"><span>${phase}</span><h3>${title}</h3></div>` +
+    `<ol class="flow-list" role="list"${offset ? ` start="${offset + 1}"` : ""}>` +
+    items.map(([stepTitle, copy], index) =>
+      `<li class="flow-step"><span class="flow-number">${stepNumber(offset + index)}</span><h4>${escapeHtml(stepTitle)}</h4><p>${escapeHtml(copy)}</p></li>`
+    ).join("") +
+    `</ol></div>`,
+  // One chronological sequence: the signal strategy that prioritised the market
+  // comes first (01-03), then the campaign execution steps continue the count.
+  campaignFlow: (signals, campaign) =>
+    caseMarkup.flowGroup("Before outreach", "How the market was prioritised.", signals, 0) +
+    caseMarkup.flowGroup("During the campaign", "How the campaign was run.", campaign, signals.length)
+};
+
 const params = new URLSearchParams(window.location.search);
 const pathSlug = (window.location.pathname.match(/\/case-studies\/([^/?#]+)/) || [])[1];
 const requestedCase = params.get("case") || pathSlug;
@@ -567,72 +605,42 @@ document.querySelectorAll("[data-field]").forEach((element) => {
 });
 
 const founderImage = document.querySelector("[data-founder-image]");
-if (data.founderImage) {
+if (data.founderImage && founderImage) {
   founderImage.src = toAbs(data.founderImage);
   founderImage.alt = data.quoteName;
   founderImage.hidden = false;
 }
 
-const profile = [
-  ["INDUSTRY", data.industry],
-  ["HEADQUARTERS", data.location],
-  ["COMPANY SIZE", data.size],
-  ["WEBSITE", `<a href="${data.website}" target="_blank" rel="noopener noreferrer">${new URL(data.website).hostname.replace("www.", "")} -&gt;</a>`]
-];
-document.querySelector("[data-profile]").innerHTML = profile.map(([label, value]) =>
-  `<div class="profile-item"><span>${label}</span><strong>${value}</strong></div>`
-).join("");
+// Every section render is guarded: a null innerHTML assignment would throw and
+// take out the Calendly routing and listeners registered further down.
+const setMarkup = (selector, html) => {
+  const element = document.querySelector(selector);
+  if (element) element.innerHTML = html;
+};
 
-document.querySelector("[data-metrics]").innerHTML = data.metrics.map(([value, label]) =>
-  `<div><strong>${value}</strong><span>${label}</span></div>`
-).join("");
-
-function renderNumbered(selector, items) {
-  document.querySelector(selector).innerHTML = items.map((copy, index) =>
-    `<article><span>${String(index + 1).padStart(2, "0")}</span><p>${copy}</p></article>`
-  ).join("");
-}
-
-renderNumbered("[data-challenges]", data.challenges);
-renderNumbered("[data-outcomes]", data.outcomes);
-
-document.querySelector("[data-campaign]").innerHTML = data.campaign.map(([title, copy], index) =>
-  `<article><span>${String(index + 1).padStart(2, "0")}</span><h3>${title}</h3><p>${copy}</p></article>`
-).join("");
-
-document.querySelector("[data-lessons]").innerHTML = data.lessons.map(([title, copy], index) =>
-  `<article><span>${String(index + 1).padStart(2, "0")}</span><h3>${title}</h3><p>${copy}</p></article>`
-).join("");
-
-document.querySelector("[data-signal-strategy]").innerHTML = `
-  <div class="signal-strategy-intro">
-    <span>SIGNAL STRATEGY</span>
-    <h3>How the market was prioritised before outreach started.</h3>
-  </div>
-  ${signalPlans[key].map(([title, copy], index) => `
-    <article>
-      <span>${String(index + 1).padStart(2, "0")}</span>
-      <h4>${title}</h4>
-      <p>${copy}</p>
-    </article>
-  `).join("")}
-`;
+setMarkup("[data-profile]", caseMarkup.profile(data));
+setMarkup("[data-metrics]", caseMarkup.metrics(data));
+setMarkup("[data-challenges]", caseMarkup.numbered(data.challenges || []));
+setMarkup("[data-outcomes]", caseMarkup.numbered(data.outcomes || []));
+setMarkup("[data-campaign-flow]", caseMarkup.campaignFlow(signalPlans[key] || [], data.campaign || []));
+setMarkup("[data-lessons]", caseMarkup.lessons(data.lessons || []));
 
 const testimonialSection = document.querySelector("[data-testimonial-section]");
-if (data.video) {
-  const videoFrame = document.querySelector("[data-video]");
-  const videoThumb = document.querySelector("[data-video-thumb]");
-  const videoPlay = document.querySelector("[data-video-play]");
+const videoWrap = document.querySelector("[data-video-wrap]");
+const videoFrame = document.querySelector("[data-video]");
+const videoThumb = document.querySelector("[data-video-thumb]");
+const videoPlay = document.querySelector("[data-video-play]");
+if (data.video && videoWrap && videoFrame && videoThumb && videoPlay) {
   videoThumb.src = toAbs(videoThumbs[key]) || `https://img.youtube.com/vi/${data.video}/maxresdefault.jpg`;
   videoThumb.alt = `${data.quoteName} video testimonial`;
   videoPlay.addEventListener("click", () => {
     videoFrame.src = `https://www.youtube-nocookie.com/embed/${data.video}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
     videoPlay.hidden = true;
-    document.querySelector("[data-video-wrap]").classList.add("is-playing");
+    videoWrap.classList.add("is-playing");
   });
 } else {
-  testimonialSection.classList.add("no-video");
-  document.querySelector("[data-video-wrap]").hidden = true;
+  if (testimonialSection) testimonialSection.classList.add("no-video");
+  if (videoWrap) videoWrap.hidden = true;
 }
 
 // The "original case source" link was removed: every `source` value is a
@@ -648,7 +656,7 @@ if (websiteLink) websiteLink.href = data.website;
 const currentIndex = order.indexOf(key);
 const nextKey = order[(currentIndex + 1) % order.length];
 const nextLink = document.querySelector("[data-next-case]");
-nextLink.href = `/case-studies/${nextKey}/`;
+if (nextLink) nextLink.href = `/case-studies/${nextKey}/`;
 
 const calendlyModal = document.querySelector("[data-calendly-modal]");
 const calendlyFrame = document.querySelector("[data-calendly-frame]");
@@ -742,4 +750,4 @@ document.addEventListener("keydown", (event) => {
     setCalendlyModal(false);
   }
 });
-nextLink.textContent = `Next: ${cases[nextKey].name} ->`;
+if (nextLink) nextLink.textContent = `Next: ${cases[nextKey].name} ->`;
