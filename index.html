@@ -804,7 +804,7 @@
   <script>
     window.SS_CONFIG = {
       relayPath: "/api/strategy-request",
-      turnstileSiteKey: "", // set the Cloudflare Turnstile site key to enable the widget on the strategy form
+      turnstileSiteKey: "0x4AAAAAAFAEyImAsyBJ7R5E", // Cloudflare Turnstile. Clearing this disables the widget, which also disables verification, so keep it in step with TURNSTILE_SECRET_KEY on Vercel.
       calendly: {
         // Region routing. `default` is the fallback for unmatched timezones.
         default: "https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1",

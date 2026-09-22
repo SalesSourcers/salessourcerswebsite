@@ -464,11 +464,40 @@ regionButtons.forEach((button) => {
 
 setSelectedRegion(selectedRegion, false);
 
+// Cloudflare Turnstile. The widget is loaded and rendered when the strategy modal first opens, not
+// on page load: a token expires five minutes after it is minted, so minting one on load would fail
+// verification for anyone who reads the page for a while before opening the form.
+let turnstileRequested = false;
+let turnstileWidgetId = null;
+
+function renderTurnstile() {
+  if (!window.turnstile || turnstileWidgetId !== null) return;
+  turnstileWidgetId = window.turnstile.render(turnstileContainer, {
+    sitekey: SS.turnstileSiteKey,
+    "refresh-expired": "auto"
+  });
+}
+
+function loadTurnstile() {
+  if (!SS.turnstileSiteKey || !turnstileContainer || turnstileRequested) return;
+  turnstileRequested = true;
+  turnstileContainer.hidden = false;
+  const ts = document.createElement("script");
+  ts.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+  ts.async = true;
+  ts.defer = true;
+  ts.onload = renderTurnstile;
+  document.head.appendChild(ts);
+}
+
 function setOfferModal(open) {
   offerModal.classList.toggle("open", open);
   offerModal.setAttribute("aria-hidden", String(!open));
   document.body.classList.toggle("modal-open", open);
-  if (open) modalClose.focus();
+  if (open) {
+    loadTurnstile();
+    modalClose.focus();
+  }
 }
 
 offerTriggers.forEach((trigger) => {
@@ -609,19 +638,6 @@ opportunityForm.addEventListener("submit", async (event) => {
     submitButton.innerHTML = "Try again <span>-&gt;</span>";
   }
 });
-
-// Optional Cloudflare Turnstile: only loads + renders when a site key is configured.
-if (SS.turnstileSiteKey && turnstileContainer) {
-  turnstileContainer.hidden = false;
-  const ts = document.createElement("script");
-  ts.src = "https://challenges.cloudflare.com/turnstile/v0/api.js";
-  ts.async = true;
-  ts.defer = true;
-  ts.onload = () => {
-    if (window.turnstile) window.turnstile.render(turnstileContainer, { sitekey: SS.turnstileSiteKey });
-  };
-  document.head.appendChild(ts);
-}
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
