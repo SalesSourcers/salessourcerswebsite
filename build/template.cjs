@@ -5,11 +5,11 @@
    ========================================================================== */
 
 const SITE = "https://www.salessourcers.com";
-const CAL_EMEA = "https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1";
+const CAL_EMEA = "https://calendly.com/zaid-wasati/salessourcers-strat-session";
 const OG_IMAGE = SITE + "/assets/og-salessourcers.png";
-const CSS_V = "33";
-const PAGE_CSS_V = "4";
-const PAGE_JS_V = "1";
+const CSS_V = "37";
+const PAGE_CSS_V = "5";
+const PAGE_JS_V = "5";
 
 const esc = (s) =>
   String(s == null ? "" : s)
@@ -71,7 +71,7 @@ const footer = () => `
         <div><span>CONTACT</span><a href="${CAL_EMEA}" data-calendly-route>Book a call</a><a href="tel:+442083304302">+44 208 330 4302</a><a class="footer-social-icon" href="https://www.linkedin.com/company/salessourcers/" target="_blank" rel="noopener noreferrer" aria-label="SalesSourcers on LinkedIn"><svg aria-hidden="true"><use href="#icon-linkedin"></use></svg></a></div>
       </div>
     </div>
-    <div class="footer-bottom"><span>&copy; 2026 SalesSourcers. All rights reserved.</span></div>
+    <div class="footer-bottom"><span>&copy; 2026 SalesSourcers FZ-LLC. All rights reserved.</span><a href="/privacy/">Privacy notice</a></div>
   </footer>`;
 
 const caseRefs = (refs) =>
@@ -200,9 +200,8 @@ function render(p) {
   <meta name="twitter:description" content="${esc(p.description)}">
   <meta name="twitter:image" content="${OG_IMAGE}">
   <title>${esc(p.title)}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts.css?v=1">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg?v=1">
   <link rel="stylesheet" href="/styles.css?v=${CSS_V}">
   <link rel="stylesheet" href="/page.css?v=${PAGE_CSS_V}">
@@ -271,8 +270,8 @@ ${footer()}
         default: "${CAL_EMEA}",
         emea: "${CAL_EMEA}",
         intl: "${CAL_EMEA}",
-        apac: "https://calendly.com/zane-xgu/salessourcers-strategy-session?hide_gdpr_banner=1",
-        anz: "https://calendly.com/zane-xgu/salessourcers-strategy-session?hide_gdpr_banner=1"
+        apac: "https://calendly.com/zane-xgu/salessourcers-strategy-session",
+        anz: "https://calendly.com/zane-xgu/salessourcers-strategy-session"
       }
     };
   </script>

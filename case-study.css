@@ -122,6 +122,8 @@ img { display:block; max-width:100%; }
 .primary-link { min-width:230px; min-height:54px; padding:0 26px; display:inline-flex; align-items:center; justify-content:center; border-radius:12px; color:var(--ink); background:var(--rose); font-size:15px; font-weight:700; }
 .site-footer { padding:40px max(24px,calc((100vw - 1180px)/2)); display:flex; align-items:center; justify-content:space-between; gap:30px; }
 .site-footer img { width:125px; }
+.footer-legal { color:var(--muted); font-family:"DM Mono"; font-size:9px; letter-spacing:.06em; text-decoration:underline; text-underline-offset:3px; }
+.footer-legal:hover { color:var(--ink); }
 .media-modal { position:fixed; z-index:220; inset:0; display:none; place-items:center; padding:22px; }
 .media-modal.open { display:grid; }
 .media-modal-backdrop { position:absolute; inset:0; background:rgba(0,0,0,.72); backdrop-filter:blur(9px); }

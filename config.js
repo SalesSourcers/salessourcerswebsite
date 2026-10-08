@@ -12,10 +12,10 @@ window.SS_CONFIG = {
   turnstileSiteKey: "0x4AAAAAAFAEyImAsyBJ7R5E",
   calendly: {
     // Region routing. `default` is the fallback for unmatched timezones.
-    default: "https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1",
-    emea: "https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1",
-    intl: "https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1",
-    apac: "https://calendly.com/zane-xgu/salessourcers-strategy-session?hide_gdpr_banner=1",
-    anz: "https://calendly.com/zane-xgu/salessourcers-strategy-session?hide_gdpr_banner=1"
+    default: "https://calendly.com/zaid-wasati/salessourcers-strat-session",
+    emea: "https://calendly.com/zaid-wasati/salessourcers-strat-session",
+    intl: "https://calendly.com/zaid-wasati/salessourcers-strat-session",
+    apac: "https://calendly.com/zane-xgu/salessourcers-strategy-session",
+    anz: "https://calendly.com/zane-xgu/salessourcers-strategy-session"
   }
 };

@@ -35,7 +35,7 @@
   }
 
   var region = detectVisitorRegion();
-  var target = (calendlyRoutes[region] || calendlyRoutes.emea) + "?hide_gdpr_banner=1";
+  var target = calendlyRoutes[region] || calendlyRoutes.emea;
 
   document.querySelectorAll("[data-calendly-route]").forEach(function (link) {
     link.href = target;

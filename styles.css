@@ -763,6 +763,8 @@ footer { padding: 65px max(24px, calc((100vw - 1180px) / 2)) 28px; background: w
 .footer-links .footer-social-icon svg { width: 20px; height: 20px; fill: currentColor; }
 .footer-links .footer-social-icon:hover { opacity: 1; }
 .footer-bottom { margin-top: 60px; padding-top: 20px; display: flex; justify-content: space-between; border-top: 1px solid var(--line); color: #969696; font-family: "DM Mono"; font-size: 8px; }
+.footer-bottom a { color: #969696; text-decoration: underline; text-underline-offset: 3px; letter-spacing: .06em; }
+.footer-bottom a:hover { color: var(--ink); }
 
 main { display: flex; flex-direction: column; }
 .hero { order: 1; }
@@ -906,6 +908,9 @@ main { display: flex; flex-direction: column; }
 .scheduler-routing-modal { position: absolute; z-index: 3; left: 18px; right: 66px; top: 15px; margin: 0; box-shadow: 0 10px 35px rgba(0,0,0,.08); }
 .calendly-modal-card iframe { padding-top: 66px; box-sizing: border-box; }
 .modal-footnote { margin-top: 10px; display: block; color: #999; text-align: center; font-size: 8px; }
+.form-privacy { margin: 14px 0 0; color: #8f8f8f; font-size: 10px; line-height: 1.5; }
+.form-privacy a { color: #6f6f6f; text-decoration: underline; text-underline-offset: 2px; }
+.form-privacy a:hover { color: var(--ink); }
 body.modal-open { overflow: hidden; }
 
 .mobile-sticky-cta { display: none; }

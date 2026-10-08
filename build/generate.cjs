@@ -85,8 +85,14 @@ for (const p of PAGES) {
 const entry = (loc, priority, changefreq, lastmod) =>
   `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${changefreq}</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
 
+/* Standing pages that are hand-written rather than generated, but still belong
+   in the sitemap. The privacy notice is linked from every footer, so dropping it
+   here on a rebuild would orphan it from search. */
+const STATIC_PAGES = [{ path: "/privacy/", priority: "0.3", changefreq: "yearly" }];
+
 const urls = [
   entry(`${SITE}/`, "1.0", "weekly", today),
+  ...STATIC_PAGES.map((p) => entry(SITE + p.path, p.priority, p.changefreq, today)),
   ...PAGES.map((p) => entry(SITE + p.path, p.path === "/industries/" ? "0.7" : "0.9", "monthly", today)),
   ...CASE_SLUGS.map((s) => entry(`${SITE}/case-studies/${s}/`, "0.7", "monthly", today)),
 ];

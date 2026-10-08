@@ -93,7 +93,7 @@ function detectVisitorRegion() {
 
 function calendlyUrl(region = selectedRegion) {
   const route = calendlyRoutes[region] || calendlyRoutes.emea;
-  return `${route.url}?hide_gdpr_banner=1`;
+  return route.url;
 }
 
 function updateRegionButtons() {
@@ -425,7 +425,7 @@ function setVideoModal(open, videoId = "", title = "Client video testimonial") {
   document.body.classList.toggle("modal-open", open || calendlyModal.classList.contains("open") || offerModal.classList.contains("open"));
   videoFrame.title = title;
   const origin = window.location.origin.startsWith("http") ? `&origin=${encodeURIComponent(window.location.origin)}` : "";
-  videoFrame.src = open ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1${origin}` : "";
+  videoFrame.src = open ? `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1${origin}` : "";
 }
 
 document.querySelectorAll("[data-youtube-id]").forEach((trigger) => {

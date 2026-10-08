@@ -692,7 +692,7 @@ function detectVisitorRegion() {
 
 function calendlyUrl(region = selectedRegion) {
   const route = calendlyRoutes[region] || calendlyRoutes.emea;
-  return `${route.url}?hide_gdpr_banner=1`;
+  return route.url;
 }
 
 function updateRegionButtons() {

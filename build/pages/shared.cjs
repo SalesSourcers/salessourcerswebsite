@@ -21,7 +21,7 @@ const refs = (...slugs) => slugs.map((s) => CASES[s]);
 const asideCta = (heading, copy) => `        <div class="aside-card">
           <h3>${heading}</h3>
           <p>${copy}</p>
-          <a class="button button-dark" href="https://calendly.com/zaid-wasati/salessourcers-strat-session?hide_gdpr_banner=1" data-calendly-route>Schedule a call <span>-&gt;</span></a>
+          <a class="button button-dark" href="https://calendly.com/zaid-wasati/salessourcers-strat-session" data-calendly-route>Schedule a call <span>-&gt;</span></a>
         </div>`;
 
 const asideFacts = (heading, items) => `        <div class="aside-card">
