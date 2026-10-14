@@ -395,6 +395,16 @@
       "source": "/case-study.html/",
       "destination": "/#results",
       "permanent": true
+    },
+    {
+      "source": "/login",
+      "destination": "https://dashboard.salessourcers.com/login",
+      "permanent": false
+    },
+    {
+      "source": "/gtm",
+      "destination": "https://gtm.salessourcers.com/login",
+      "permanent": false
     }
   ],
   "headers": [
