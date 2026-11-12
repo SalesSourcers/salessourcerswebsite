@@ -2,6 +2,11 @@
    build/template.cjs - the shared HTML shell for generated landing pages.
    Keep this in the repo. The July case-study generator lived only in a
    scratch directory and was lost, which made those 11 pages unmaintainable.
+
+   Runtime config is loaded from /config.js, never emitted inline: the CSP sets
+   script-src to 'self' with no 'unsafe-inline', so an inline block here is
+   blocked and window.SS_CONFIG never exists. That shipped twice - it sends
+   APAC visitors to the EMEA calendar. See the comment at the top of config.js.
    ========================================================================== */
 
 const SITE = "https://www.salessourcers.com";
@@ -264,17 +269,7 @@ ${linkCluster(p.links)}
 
 ${footer()}
 
-  <script>
-    window.SS_CONFIG = {
-      calendly: {
-        default: "${CAL_EMEA}",
-        emea: "${CAL_EMEA}",
-        intl: "${CAL_EMEA}",
-        apac: "https://calendly.com/zane-xgu/salessourcers-strategy-session",
-        anz: "https://calendly.com/zane-xgu/salessourcers-strategy-session"
-      }
-    };
-  </script>
+  <script src="/config.js?v=1"></script>
   <script src="/page.js?v=${PAGE_JS_V}"></script>
 </body>
 </html>
